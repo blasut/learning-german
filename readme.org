@@ -19,7 +19,7 @@ GET http://sv.bab.la/:path
 #+END_SRC
 
 Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/" i namnet. Mitten-delen av pathen är namnet på sektionen.
-#+BEGIN_SRC emacs-lisp :session=links :var src=fetch(path="fraser")
+#+BEGIN_SRC emacs-lisp :session=links
 (require 'cl)
 (require 'xml)
 (require 'dom)
@@ -49,14 +49,17 @@ Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/
 (defun rm-dups (links)
   (cl-remove-duplicates links :test #'string-equal))
 
+(defun add-correct-lang-per-link (link)
+  (concat link "svensk-tysk"))
+
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :session=links :var src=fetch(path="fraser")
 (defun fraser-p (l) 
   (string-match "fraser" l))
 
 (defun direct-link-p (l)
   (= 5 (length (split-string l "/"))))
-
-(defun add-correct-lang-per-link (link)
-  (concat link "svensk-tysk"))
 
 (defun direct-links (src)
   (mapcar #'add-correct-lang-per-link 
@@ -68,7 +71,6 @@ Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/
 
 (defvar links-to-phrases '())
 (setq links-to-phrases (direct-links src))
-
 #+END_SRC
 
 #+RESULTS:
