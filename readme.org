@@ -1,4 +1,18 @@
 * original data
+
+Idén med projektet är två: 
+
+- Dels bygga upp en ordentlig fras/ordlista för svenska till tyska
+- Dels att lära mig elisp och org-mode bättre
+  
+- Länkar att låna från, i ordning av troligtvis mest nytta:
+
+  - https://sv.speaklanguages.com/tyska/fraser/
+  - https://sv.speaklanguages.com/tyska/ordlista/
+  - http://www.engoi.com/sv/de/index.html
+  - http://www.ord.se/reseparlorer/tysk-parlor/ (JS, men innehållet ligger i DOMen)
+  - https://www.swedishnomad.com/sv/tyska-fraser-och-uttryck/
+  - https://sv.wiktionary.org/wiki/Kategori:Tyska/Fraser (mer fraser som i ordspråk)
   
 #+BEGIN_SRC csv
 back,front
