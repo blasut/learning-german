@@ -15,7 +15,7 @@ Idén med projektet är två:
   - https://sv.wiktionary.org/wiki/Kategori:Tyska/Fraser (mer fraser som i ordspråk)
   
 #+BEGIN_SRC csv
-back,front
+back,front,tags(comma separated list of tags for each card)
 från,von
 dig,euch
 har,habe
@@ -32,7 +32,6 @@ ficka,Tashen
 GET http://sv.bab.la/:path
 #+END_SRC
 
-Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/" i namnet. Mitten-delen av pathen är namnet på sektionen.
 #+BEGIN_SRC emacs-lisp :session=links
 (require 'cl)
 (require 'xml)
@@ -67,6 +66,8 @@ Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/
   (concat link "svensk-tysk"))
 
 #+END_SRC
+
+Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/" i namnet. Mitten-delen av pathen är namnet på sektionen.
 
 #+BEGIN_SRC emacs-lisp :session=links :var src=fetch(path="fraser")
 (defun fraser-p (l) 
@@ -216,9 +217,10 @@ Måste ha egen get-url pga funkar inte o köra den via org mode.
            (append-section-to-csv-file (get-section (car links)))
            (setq links (cdr links)))))
 
-(append-all-links-as-sections-to-csv-file all-section-links)
+;(append-all-links-as-sections-to-csv-file all-section-links)
 
-(get-section (car all-section-links))
+(append-all-links-as-sections-to-csv-file '("/fraser/resa/generellt/svensk-tysk"))
+
 (mapcar (lambda (x) x) all-section-links)
 
 #+END_SRC
