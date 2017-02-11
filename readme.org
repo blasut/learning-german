@@ -331,25 +331,28 @@ Gör en kopia, tror jag, av links-to-phrases
 Det funkade lite dåligt att ha alla i samma fil, mest för att många fraser var ointressanta. Kör ny fil för varje istället, så blir det lättare att hålla reda på.
 #+BEGIN_SRC emacs-lisp :session=links
 (defun append-links-as-sections-to-separate-csv-files (links)
-  (while links
-    (let* ((section (get-section (car links)))
-           (filename (concat (plist-get section :tag) ".csv")))
-      (progn (message "Add: %s to file" (car links))
-             (if (file-exists-p filename)
-                 (delete-file filename))
-             (append-header-to-csv-file filename)
-             (append-section-to-csv-file filename section)
-             (setq links (cdr links))))))
+  (let* ((files (rm-dups (mapcar (lambda (l) (plist-get (get-section l) :tag)) links))))
+    (progn 
+      (mapcar (lambda (f) (append-header-to-csv-file (concat f ".csv"))) files)
+      (while links
+        (let* ((section (get-section (car links)))
+               (filename (concat (plist-get section :tag) ".csv")))
+          (progn (message "Add: %s to file" (car links))
+                 (append-section-to-csv-file filename section)
+                 (setq links (cdr links))))))))
 #+END_SRC
 
 #+RESULTS:
 : append-links-as-sections-to-separate-csv-files
+
+TOD: ändra tagen till den "tredje" istället. ha en "tag" och ett "filnamn" istället
 
 #+BEGIN_SRC emacs-lisp :session=links
 (append-links-as-sections-to-separate-csv-files all-section-links)
 #+END_SRC
 
 #+RESULTS:
+
 
 #+BEGIN_SRC emacs-lisp :session=links :results list :exports both
 (mapcar (lambda (x) x) all-section-links)
