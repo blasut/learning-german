@@ -1,4 +1,4 @@
-* original data
+* Emacs Lisp Literate Programming Example
 
 Idén med projektet är två: 
 
@@ -14,76 +14,97 @@ Idén med projektet är två:
   - https://www.swedishnomad.com/sv/tyska-fraser-och-uttryck/
   - https://sv.wiktionary.org/wiki/Kategori:Tyska/Fraser (mer fraser som i ordspråk)
   
+    
+Tanken är att få ut en CSV lista som ser ut ungefär såhär:
 #+BEGIN_SRC csv
 back,front,tags(comma separated list of tags for each card)
-från,von
-dig,euch
-har,habe
-grönsaker,Gemüse
-förklara,erklären
-ficka,Tashen
+från,von,word
+har,habe,word
 #+END_SRC
+Ordlistan laddas in ett ett verktyg som heter "Ankiapp", vilket är ett verktyg för att lära sig nya saker med hjälp av deras lösning för att koncentrera på det som är viktigast att repetera. 
 
-* requests
-
-  Get the source code
+Vi börjar experimentet med att definera ett "source block", som kan avändas av andra "source blocks" för att göra requests. 
 #+NAME: fetch
 #+BEGIN_SRC restclient :var path="" :exports none
 GET http://sv.bab.la/:path
 #+END_SRC
 
+Börjar med att ladda in dom bibliotek som behövs. 
 #+BEGIN_SRC emacs-lisp :session=links
 (require 'cl)
 (require 'xml)
 (require 'dom)
+#+END_SRC
 
+get-url hämtar innehållet från en url, och ser till att innehåll decodas i utf-8. Denna funktion behövs senare för att den ovanstående lösningen med source-block fungerar inte.
+#+BEGIN_SRC emacs-lisp :session=links
 (defun get-url (url)
   (with-current-buffer 
       (url-retrieve-synchronously url) 
     (decode-coding-string (buffer-string) 'utf-8)))
+#+END_SRC
 
+parse tar en sträng med html och parse domen till en associationslista
+#+BEGIN_SRC emacs-lisp :session=links
 (defun parse (src)
   (with-temp-buffer
     (insert src)
     (libxml-parse-html-region (point-min) (point-max))))
+#+END_SRC
 
+clean-link tar en sträng och tar bort allting i en sträng från '#' och framåt
+#+BEGIN_SRC emacs-lisp :session=links
+(defun clean-link (link)
+  "Removes # and everything after it in strings. twitter.com#lol -> twitter.com"
+  (substring link 0 (string-match "#" link)))
+#+END_SRC
 
+rm-dups är en liten wrapper kring cl-remove-duplicates. cl biblioteket, som står för "common lisp", ger oss massa fler funktioner. Men ofta är dom generella och det finns olika typer av sätt att jämföra om två 'saker' är lika. Så istället för att skriva ut det hela tiden äre smidigt med en wrapper.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun rm-dups (links)
+  (cl-remove-duplicates links :test #'string-equal))
+#+END_SRC
+
+parse-links tar den parsade domen, alltså en associationslista och hittar alla länkar, tar deras href-attribut och städar lite
+#+BEGIN_SRC emacs-lisp :session=links
 (defun parse-links (dom) 
   (rm-dups (mapcar #'clean-link (remove-if-not #'stringp 
                                                (mapcar 
                                                 (lambda (tag) 
                                                   (dom-attr tag 'href)) 
                                                 (dom-by-tag dom 'a))))))
+#+END_SRC
 
-(defun clean-link (link)
-  "Removes # and everything after it in strings"
-  (substring link 0 (string-match "#" link)))
-
-(defun rm-dups (links)
-  (cl-remove-duplicates links :test #'string-equal))
-
+#+BEGIN_SRC emacs-lisp :session=links
 (defun add-correct-lang-per-link (link)
   (concat link "svensk-tysk"))
+#+END_SRC
 
+Här börjar den mer specifika delen för just fraser från http://sv.bab.la/. 
+
+fraser-p är en enkelt predicate function, som kollar om ordet "fraser" finns i den specifierade strängen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun fraser-p (l) 
+  (string-match "fraser" l))
+#+END_SRC
+
+direct-link-p är specifik till dessa typer av länkar, det antas att dom ser ut på ett visst sätt.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun direct-link-p (l)
+  (= 5 (length (split-string l "/"))))
 #+END_SRC
 
 Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/" i namnet. Mitten-delen av pathen är namnet på sektionen.
-
-#+BEGIN_SRC emacs-lisp :session=links :var src=fetch(path="fraser")
-(defun fraser-p (l) 
-  (string-match "fraser" l))
-
-(defun direct-link-p (l)
-  (= 5 (length (split-string l "/"))))
-
+#+BEGIN_SRC emacs-lisp :session=links
 (defun direct-links (src)
   (mapcar #'add-correct-lang-per-link 
-          (remove-duplicates (remove-if-not #'direct-link-p 
+          (rm-dups (remove-if-not #'direct-link-p 
                                             (remove-if-not #'fraser-p 
                                                            (parse-links 
-                                                            (parse src))))
-                             :test #'string-equal)))
+                                                            (parse src)))))))
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp :session=links :var src=fetch(path="fraser")
 (defvar links-to-phrases '())
 (setq links-to-phrases (direct-links src))
 #+END_SRC
