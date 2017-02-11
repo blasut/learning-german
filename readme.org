@@ -36,6 +36,17 @@ Börjar med att ladda in dom bibliotek som behövs.
 (require 'dom)
 #+END_SRC
 
+#+RESULTS:
+: dom
+
+#+BEGIN_SRC emacs-lisp :session=links
+(defun make-url (path) 
+  (concat "http://sv.bab.la/" path))
+#+END_SRC
+
+#+RESULTS:
+: make-url
+
 get-url hämtar innehållet från en url, och ser till att innehåll decodas i utf-8. Denna funktion behövs senare för att den ovanstående lösningen med source-block fungerar inte.
 #+BEGIN_SRC emacs-lisp :session=links
 (defun get-url (url)
@@ -43,6 +54,9 @@ get-url hämtar innehållet från en url, och ser till att innehåll decodas i u
       (url-retrieve-synchronously url) 
     (decode-coding-string (buffer-string) 'utf-8)))
 #+END_SRC
+
+#+RESULTS:
+: get-url
 
 parse tar en sträng med html och parse domen till en associationslista
 #+BEGIN_SRC emacs-lisp :session=links
@@ -52,6 +66,9 @@ parse tar en sträng med html och parse domen till en associationslista
     (libxml-parse-html-region (point-min) (point-max))))
 #+END_SRC
 
+#+RESULTS:
+: parse
+
 clean-link tar en sträng och tar bort allting i en sträng från '#' och framåt
 #+BEGIN_SRC emacs-lisp :session=links
 (defun clean-link (link)
@@ -59,11 +76,17 @@ clean-link tar en sträng och tar bort allting i en sträng från '#' och framå
   (substring link 0 (string-match "#" link)))
 #+END_SRC
 
+#+RESULTS:
+: clean-link
+
 rm-dups är en liten wrapper kring cl-remove-duplicates. cl biblioteket, som står för "common lisp", ger oss massa fler funktioner. Men ofta är dom generella och det finns olika typer av sätt att jämföra om två 'saker' är lika. Så istället för att skriva ut det hela tiden äre smidigt med en wrapper.
 #+BEGIN_SRC emacs-lisp :session=links
 (defun rm-dups (links)
   (cl-remove-duplicates links :test #'string-equal))
 #+END_SRC
+
+#+RESULTS:
+: rm-dups
 
 parse-links tar den parsade domen, alltså en associationslista och hittar alla länkar, tar deras href-attribut och städar lite
 #+BEGIN_SRC emacs-lisp :session=links
@@ -75,10 +98,16 @@ parse-links tar den parsade domen, alltså en associationslista och hittar alla 
                                                 (dom-by-tag dom 'a))))))
 #+END_SRC
 
+#+RESULTS:
+: parse-links
+
 #+BEGIN_SRC emacs-lisp :session=links
 (defun add-correct-lang-per-link (link)
   (concat link "svensk-tysk"))
 #+END_SRC
+
+#+RESULTS:
+: add-correct-lang-per-link
 
 Här börjar den mer specifika delen för just fraser från http://sv.bab.la/. 
 
@@ -88,31 +117,41 @@ fraser-p är en enkelt predicate function, som kollar om ordet "fraser" finns i 
   (string-match "fraser" l))
 #+END_SRC
 
+#+RESULTS:
+: fraser-p
+
 direct-link-p är specifik till dessa typer av länkar, det antas att dom ser ut på ett visst sätt.
 #+BEGIN_SRC emacs-lisp :session=links
 (defun direct-link-p (l)
   (= 5 (length (split-string l "/"))))
 #+END_SRC
 
+#+RESULTS:
+: direct-link-p
+
 Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/" i namnet. Mitten-delen av pathen är namnet på sektionen.
 #+BEGIN_SRC emacs-lisp :session=links
 (defun direct-links (src)
   (mapcar #'add-correct-lang-per-link 
           (rm-dups (remove-if-not #'direct-link-p 
-                                            (remove-if-not #'fraser-p 
-                                                           (parse-links 
-                                                            (parse src)))))))
-#+END_SRC
-
-#+BEGIN_SRC emacs-lisp :session=links :var src=fetch(path="fraser")
-(defvar links-to-phrases '())
-(setq links-to-phrases (direct-links src))
+                                  (remove-if-not #'fraser-p 
+                                                 (parse-links (parse src)))))))
 #+END_SRC
 
 #+RESULTS:
+: direct-links
+
+#+BEGIN_SRC emacs-lisp :session=links :cache yes
+(defvar links-to-phrases '())
+(setq links-to-phrases (direct-links (get-url (make-url "fraser"))))
+#+END_SRC
+
+#+RESULTS[edd2a9064192eb2b05d91841ee73bd6227aff5dd]:
 | /fraser/ansokan/personligt-brev/svensk-tysk | /fraser/ansokan/cv/svensk-tysk | /fraser/ansokan/referensbrev/svensk-tysk | /fraser/akademiker/innehallsforteckning/svensk-tysk | /fraser/akademiker/inledning/svensk-tysk | /fraser/akademiker/huvuddel/svensk-tysk | /fraser/akademiker/statistik/svensk-tysk | /fraser/akademiker/grafer-bilder-diagram/svensk-tysk | /fraser/akademiker/avslutning/svensk-tysk | /fraser/akademiker/citation/svensk-tysk | /fraser/akademiker/forkortningar/svensk-tysk | /fraser/affarer/brev/svensk-tysk | /fraser/affarer/e-post/svensk-tysk | /fraser/affarer/faktura/svensk-tysk | /fraser/affarer/bestallning/svensk-tysk | /fraser/affarer/moten/svensk-tysk | /fraser/affarer/reservationer/svensk-tysk | /fraser/affarer/forkortningar/svensk-tysk | /fraser/affarer/yrkesbeteckningar/svensk-tysk | /fraser/personligt/brev/svensk-tysk | /fraser/personligt/e-post/svensk-tysk | /fraser/personligt/meddelanden-inbjudningar/svensk-tysk | /fraser/personligt/lyckonskningar/svensk-tysk | /fraser/personligt/sms-webb/svensk-tysk | /fraser/resa/generellt/svensk-tysk | /fraser/resa/dator/svensk-tysk | /fraser/resa/halsa/svensk-tysk | /fraser/resa/shopping/svensk-tysk | /fraser/resa/ata-ute/svensk-tysk | /fraser/resa/logi/svensk-tysk | /fraser/resa/siffror-pengar/svensk-tysk | /fraser/resa/datum-tid/svensk-tysk | /fraser/resa/ta-sig-runt/svensk-tysk | /fraser/resa/florta/svensk-tysk | /fraser/immigration/dokument/svensk-tysk | /fraser/immigration/bank/svensk-tysk | /fraser/immigration/arbete/svensk-tysk | /fraser/immigration/studera/svensk-tysk | /fraser/immigration/bostad/svensk-tysk | /fraser/immigration/stöd-för-funktionshindrade/svensk-tysk | /fraser/immigration/husdjur/svensk-tysk |
 
 
+
+parse-phrases hittar alla fraser i domen.
 #+BEGIN_SRC emacs-lisp :session=links
 (defun parse-phrases (src)
   (flet ((get-suggestion  (n) (dom-texts (dom-by-class n "dict-suggestion")))
@@ -128,22 +167,9 @@ Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/
 #+RESULTS:
 : parse-phrases
 
-
-Using the org-sbe macro to call a source block within elisp.
-
-Exempel på hur parse-phrases kan avändas.
-#+BEGIN_SRC emacs-lisp :session=links
-(seq-take (parse-phrases (parse (org-sbe "fetch" (path "(car links-to-phrases)")))) 2)
-#+END_SRC
-
-
-#+RESULTS:
-| :suggestion | Bäste herrn, | :result | Sehr geehrter Herr, | :explanation | Formellt, manlig mottagare, namnet okänt   |
-| :suggestion | Bästa fru,   | :result | Sehr geehrte Frau,  | :explanation | Formellt, kvinnlig mottagare, namnet okänt |
-
-
+Exempel på hur parse-phrases kan avändas
 #+BEGIN_SRC emacs-lisp :session=links :results code
-(parse-phrases (parse (org-sbe "fetch" (path "(nth 1 links-to-phrases)"))))
+(parse-phrases (parse (get-url (make-url (nth 1 links-to-phrases)))))
 #+END_SRC
 
 #+RESULTS:
@@ -186,20 +212,35 @@ Exempel på hur parse-phrases kan avändas.
  (:suggestion "Jag besitter ett ...-körkort." :result "Führerschein Klasse..." :explanation "Används för att ange att den sökande lagligt har lov att köra bil"))
 #+END_SRC
 
-Nu ska vi hämta ut alla sektioner, med alla sina fraser
-
-Måste ha egen get-url pga funkar inte o köra den via org mode.
-
+ge-tag splitar en URL och antar att den 3:e i listan är det som används som "tag"
 #+BEGIN_SRC emacs-lisp :session=links :results list
 (defun get-tag (link)
   (nth 2 (split-string link "/")))
+#+END_SRC
 
+#+RESULTS:
+: - get-tag
+
+get-phrases från en "link", som är en path till en frase-sida
+#+BEGIN_SRC emacs-lisp :session=links
 (defun get-phrases (link)
   (parse-phrases (parse (get-url (concat "http://sv.bab.la" link)))))
+#+END_SRC
 
-(defun write-to-file (str)
-  (write-region str nil "cards.csv" 'append))
+#+RESULTS:
+: get-phrases
 
+helper funktion för att skriva till cards.csv filen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun write-to-file (filename str)
+  (write-region str nil filename 'append))
+#+END_SRC
+
+#+RESULTS:
+: write-to-file
+
+Tar en frase och gör till en csv-rad
+#+BEGIN_SRC emacs-lisp :session=links
 (defun row->csv (tag phrase)
   "Formattet: sugg,result,tag\n"
   (let ((clean-sugg (replace-regexp-in-string "," ";" (plist-get phrase :suggestion)))
@@ -209,41 +250,109 @@ Måste ha egen get-url pga funkar inte o köra den via org mode.
             clean-result
             ","
             tag)))
+#+END_SRC
 
+#+RESULTS:
+: row->csv
+
+Gör helt enkelt om hela listan med fraser till en lista klar för csv export
+#+BEGIN_SRC emacs-lisp :session=links
 (defun make-csv-rows-of-phrases (tag phrases)
   (mapcar (lambda (x) (row->csv tag x)) phrases))
+#+END_SRC
 
-(defun append-section-to-csv-file (section)
+#+RESULTS:
+: make-csv-rows-of-phrases
+
+Tar en "sektion" av fraser, t.ex. Resa och skriver till filen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-section-to-csv-file (filename section)
   (let* ((tag (plist-get section :tag))
          (phrases (make-csv-rows-of-phrases tag (plist-get section :phrases)))
          (lines (concat (string-join phrases "\n") "\n")))
-    (write-to-file lines)))
+    (write-to-file filename lines)))
+#+END_SRC
 
+#+RESULTS:
+: append-section-to-csv-file
+
+Skapar en p-lista för en "sektion".
+#+BEGIN_SRC emacs-lisp :session=links
 (defun get-section (link)
   (list :tag (get-tag link) :phrases (get-phrases link)))
+#+END_SRC
 
-(defun append-header-to-csv-file ()
+#+RESULTS:
+: get-section
+
+En liten helper för att börja csv filen med en header
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-header-to-csv-file (filename)
   "The header is: back,front,tags"
-  (write-to-file "back,front,tags\n"))
+  (write-to-file filename "back,front,tags\n"))
+#+END_SRC
 
+#+RESULTS:
+: append-header-to-csv-file
+
+Som funktionen heter så appendas alla sektioner till csv filen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-all-links-as-sections-to-single-csv-file (links)
+  (let ((filename "cards.csv"))
+    (progn 
+      (if (file-exists-p filename)
+          (delete-file filename))
+      (append-header-to-csv-file filename)
+      (while links
+        (progn (message "Add: %s to file" (car links))
+               (append-section-to-csv-file filename (get-section (car links)))
+               (setq links (cdr links)))))))
+
+#+END_SRC
+
+#+RESULTS:
+: append-all-links-as-sections-to-single-csv-file
+
+Gör en kopia, tror jag, av links-to-phrases
+#+BEGIN_SRC emacs-lisp :session=links
 (defvar all-section-links '())
 (setq all-section-links links-to-phrases)
+#+END_SRC
 
-(defun append-all-links-as-sections-to-csv-file (links)
-  (if (file-exists-p "cards.csv")
-      (delete-file "cards.csv"))
-  (append-header-to-csv-file)
+#+RESULTS:
+| /fraser/ansokan/personligt-brev/svensk-tysk | /fraser/ansokan/cv/svensk-tysk | /fraser/ansokan/referensbrev/svensk-tysk | /fraser/akademiker/innehallsforteckning/svensk-tysk | /fraser/akademiker/inledning/svensk-tysk | /fraser/akademiker/huvuddel/svensk-tysk | /fraser/akademiker/statistik/svensk-tysk | /fraser/akademiker/grafer-bilder-diagram/svensk-tysk | /fraser/akademiker/avslutning/svensk-tysk | /fraser/akademiker/citation/svensk-tysk | /fraser/akademiker/forkortningar/svensk-tysk | /fraser/affarer/brev/svensk-tysk | /fraser/affarer/e-post/svensk-tysk | /fraser/affarer/faktura/svensk-tysk | /fraser/affarer/bestallning/svensk-tysk | /fraser/affarer/moten/svensk-tysk | /fraser/affarer/reservationer/svensk-tysk | /fraser/affarer/forkortningar/svensk-tysk | /fraser/affarer/yrkesbeteckningar/svensk-tysk | /fraser/personligt/brev/svensk-tysk | /fraser/personligt/e-post/svensk-tysk | /fraser/personligt/meddelanden-inbjudningar/svensk-tysk | /fraser/personligt/lyckonskningar/svensk-tysk | /fraser/personligt/sms-webb/svensk-tysk | /fraser/resa/generellt/svensk-tysk | /fraser/resa/dator/svensk-tysk | /fraser/resa/halsa/svensk-tysk | /fraser/resa/shopping/svensk-tysk | /fraser/resa/ata-ute/svensk-tysk | /fraser/resa/logi/svensk-tysk | /fraser/resa/siffror-pengar/svensk-tysk | /fraser/resa/datum-tid/svensk-tysk | /fraser/resa/ta-sig-runt/svensk-tysk | /fraser/resa/florta/svensk-tysk | /fraser/immigration/dokument/svensk-tysk | /fraser/immigration/bank/svensk-tysk | /fraser/immigration/arbete/svensk-tysk | /fraser/immigration/studera/svensk-tysk | /fraser/immigration/bostad/svensk-tysk | /fraser/immigration/stöd-för-funktionshindrade/svensk-tysk | /fraser/immigration/husdjur/svensk-tysk |
+
+#+BEGIN_SRC emacs-lisp :session=links
+(append-all-links-as-sections-to-single-csv-file all-section-links)
+#+END_SRC
+
+#+RESULTS:
+
+Det funkade lite dåligt att ha alla i samma fil, mest för att många fraser var ointressanta. Kör ny fil för varje istället, så blir det lättare att hålla reda på.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-links-as-sections-to-separate-csv-files (links)
   (while links
-    (progn (message "Add: %s to file" (car links))
-           (append-section-to-csv-file (get-section (car links)))
-           (setq links (cdr links)))))
+    (let* ((section (get-section (car links)))
+           (filename (concat (plist-get section :tag) ".csv")))
+      (progn (message "Add: %s to file" (car links))
+             (if (file-exists-p filename)
+                 (delete-file filename))
+             (append-header-to-csv-file filename)
+             (append-section-to-csv-file filename section)
+             (setq links (cdr links))))))
+#+END_SRC
 
-;(append-all-links-as-sections-to-csv-file all-section-links)
+#+RESULTS:
+: append-links-as-sections-to-separate-csv-files
 
-(append-all-links-as-sections-to-csv-file '("/fraser/resa/generellt/svensk-tysk"))
+#+BEGIN_SRC emacs-lisp :session=links
+(append-links-as-sections-to-separate-csv-files all-section-links)
+#+END_SRC
 
+#+RESULTS:
+
+#+BEGIN_SRC emacs-lisp :session=links :results list :exports both
 (mapcar (lambda (x) x) all-section-links)
-
 #+END_SRC
 
 #+RESULTS:
