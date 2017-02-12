@@ -20,6 +20,11 @@ Kanske suga ner alla ord från http://sv.bab.la/lexikon/svensk-tysk/ ? Fet jävl
 Finns verbböjningar här: http://sv.bab.la/verb/tysk/
 
 Kanske fixa egen tysk-ordlista och synka med denna? http://www.thegermanprofessor.com/top-500-german-words/ för att få en bra lista på dom 500 vanligasta tyska orden
+
+En idé: Ta alla 500 ord från: http://www.thegermanprofessor.com/top-500-german-words/ och sen sök på http://sv.bab.la/lexikon/tysk-svensk/der, sug ner först "översättningar & exempel" och sen resten av "användningsexempel"
+Enda problemet med det är att alla exempel är från EUs hemsida...
+
+Annan sajt med tyska flashcards: https://quizlet.com/10936791/tysk-flash-cards/
   
 * Fras-lista från bab.la
     
@@ -1434,3 +1439,350 @@ Jag vill ge det till henne.
 
     herrtoalett
     Herrentoilette
+
+** Sammanfattade listor med glosor
+*** https://glosor.eu/ovning/tyska-verb.210359.html
+| få               | bekommen            |
+| äta              | essen               |
+| hitta            | finden              |
+| ge               | geben               |
+| vinna            | gewinnen            |
+| läsa             | lesen               |
+| ta               | nehmen              |
+| sova             | schlafen            |
+| skriva           | schreiben           |
+| se               | sehen               |
+| sjunga           | singen              |
+| stå              | stehen              |
+| träffa           | treffen             |
+| dricka           | trinken             |
+| göra             | tun                 |
+| glömma           | vergessen           |
+| förlora          | verlieren           |
+| förstå           | verstehen           |
+| jag har fått     | ich habe bekommen   |
+| jag har ätit     | ich habe gegessen   |
+| jag har hittat   | ich habe gefunden   |
+| jag har gett     | ich habe gegeben    |
+| jag har vunnit   | ich habe gewonnen   |
+| jag har läst     | ich habe gelesen    |
+| jag har tagit    | ich habe genommen   |
+| jag har sovit    | ich habe geschlafen |
+| jag har skrivit  | ich habe geschreben |
+| jag har sett     | ich habe gesehen    |
+| jag har sjungit  | ich habe gesungen   |
+| jag har stått    | ich habe gestanden  |
+| jag har träffat  | ich habe getroffen  |
+| jag har druckit  | ich habe getrunken  |
+| jag har gjort    | ich habe getan      |
+| jag har glömt    | ich habe vergessen  |
+| jag har förlorat | ich habe verloren   |
+| jag har förstått | ich habe verstanden |
+
+*** https://quizlet.com/11559803/tyska-starka-verb-flash-cards/
+börja (presens)
+beginnen / begann / hat begonnen
+bjuda (presens)
+bieten / bot / hat geboten
+binda (presens)
+binden / band / hat gebunden
+be (presens)
+bitten / bat / hat gebeten
+stanna kvar (presens)
+bleiben / blieb / ist geblieben
+bryta (presens)
+brechen / brach / hat gebrochen
+äta (presens)
+essen / aß / hat gegessen
+åka (presens)
+fahren / fuhr / ist gefahren
+falla (presens)
+fallen / fiel / ist gefallen
+fånga (presens)
+fangen / fing / hat gefangen
+finna/hitta (presens)
+finden / fand / hat gefunden
+flyga (presens)
+fliegen / flog / ist geflogen
+fly (presens)
+fliehen / floh / ist geflohen
+flyta (presens)
+fliessen / floss / ist geflossen
+ge (presens)
+geben / gab / hat gegeben
+gå (presens)
+gehen / ging / ist gegangen
+lyckas (presens)
+gelingen / gelang / ist gelungen
+vinna (presens)
+gewinnen / gewann / hat gewonnen
+likna (presens)
+gleichen / glich / hat geglichen
+hålla/stanna (presens)
+halten / hielt / hat gehalten
+hänga (presens)
+hängen / hing / hat gehangen
+hjälpa (presens)
+helfen / half / hat geholfen
+komma (presens)
+kommen / kam / ist gekommen
+ladda (presens)
+laden / lud / hat geladen
+låta (presens)
+lassen / liess / hat gelassen
+springa (presens)
+laufen / lief / ist gelaufen
+låna (presens)
+leihen / lieh / hat geliehen
+läsa (presens)
+lesen / las / hat gelesen
+ligga (presens)
+liegen / lag / hat gelegen
+ljuga (presens)
+lügen / log / hat gelogen
+ta (presens)
+nehmen / nahm / hat genommen
+rida (presens)
+reiten / ritt / ist geritten
+ropa (presens)
+rufen / rief / hat gerufen
+sova (presens)
+schlafen / schlief / hat geschlafen
+slå (presens)
+schlagen / schlug / hat geschlagen
+skriva (presens)
+schreiben / schrieb / hat geschrieben
+simma (presens)
+schwimmen / schwamm / ist geschwommen
+se (presens)
+sehen / sah / hat gesehen
+sjunga (presens)
+singen / sang / hat gesungen
+sitta (presens)
+sitzen / saß / hat gesessen
+tala (presens)
+sprechen / sprach / hat gesprochen
+stå (presens)
+stehen / stand / hat gestanden
+dö (presens)
+sterben / starb / ist gestorben
+träffa (presens)
+treffen / traf / hat getroffen
+dricka (presens)
+trinken / trank / hat getrunken
+glömma (presens)
+vergessen / vergaß / hat vergessen
+förlora (presens)
+verlieren / verlor / hat verloren
+tvätta (presens)
+waschen / wusch / hat gewaschen
+kasta (presens)
+werfen / warf / hat geworfen
+tvinga (presens)
+zwingen / zwang / hat gezwungen
+*** https://quizlet.com/11532128/tyska-datack-v2-flash-cards/
+um
+vid
+ohne
+utan
+gegen
+mot
+für
+för
+dürch
+genom
+aus
+från
+bei
+vid
+nach
+efter
+seit
+sedan
+von
+från
+zu
+till
+mit
+med
+*** https://quizlet.com/11532065/tyska-kon-flash-cards/ 
+dass
+att
+als, wenn
+då, när
+ehe, bevor
+innan, förän
+bis
+tills
+während
+medan
+nachdem
+sedan, efter det att
+sobald
+så snart (som)
+sooft
+så ofta (som)
+solange
+så länge (som)
+weil
+emedan, därför att
+da
+eftersom, då
+wenn
+om
+falls
+om, ifall att
+ob
+om
+obgleich, obwohl
+fastän
+trotzdem
+fastän
+als
+som, såsom
+wie
+som, liksom
+als ob
+som om
+*** https://quizlet.com/16140670/tyska-flash-cards/
+ohrfeigen
+örfila
+heben
+lyfta
+halten
+stanna
+kratzen
+krafsa
+küssen
+kyssa
+beissen
+bita
+schubsen
+trycka
+stossen
+stöta
+schlagen
+slå
+hauen
+klippa
+boxen
+boxa
+treten
+...
+beugen
+böja
+ziehen
+dra
+befingern
+röra med fingrarna
+berühren
+röra
+streicheln
+slå
+drücken
+trycka
+umarmen
+omfamna
+zwicken
+nypa
+*** https://quizlet.com/11559803/tyska-starka-verb-flash-cards/
+börja (presens)
+beginnen / begann / hat begonnen
+bjuda (presens)
+bieten / bot / hat geboten
+binda (presens)
+binden / band / hat gebunden
+be (presens)
+bitten / bat / hat gebeten
+stanna kvar (presens)
+bleiben / blieb / ist geblieben
+bryta (presens)
+brechen / brach / hat gebrochen
+äta (presens)
+essen / aß / hat gegessen
+åka (presens)
+fahren / fuhr / ist gefahren
+falla (presens)
+fallen / fiel / ist gefallen
+fånga (presens)
+fangen / fing / hat gefangen
+finna/hitta (presens)
+finden / fand / hat gefunden
+flyga (presens)
+fliegen / flog / ist geflogen
+fly (presens)
+fliehen / floh / ist geflohen
+flyta (presens)
+fliessen / floss / ist geflossen
+ge (presens)
+geben / gab / hat gegeben
+gå (presens)
+gehen / ging / ist gegangen
+lyckas (presens)
+gelingen / gelang / ist gelungen
+vinna (presens)
+gewinnen / gewann / hat gewonnen
+likna (presens)
+gleichen / glich / hat geglichen
+hålla/stanna (presens)
+halten / hielt / hat gehalten
+hänga (presens)
+hängen / hing / hat gehangen
+hjälpa (presens)
+helfen / half / hat geholfen
+komma (presens)
+kommen / kam / ist gekommen
+ladda (presens)
+laden / lud / hat geladen
+låta (presens)
+lassen / liess / hat gelassen
+springa (presens)
+laufen / lief / ist gelaufen
+låna (presens)
+leihen / lieh / hat geliehen
+läsa (presens)
+lesen / las / hat gelesen
+ligga (presens)
+liegen / lag / hat gelegen
+ljuga (presens)
+lügen / log / hat gelogen
+ta (presens)
+nehmen / nahm / hat genommen
+rida (presens)
+reiten / ritt / ist geritten
+ropa (presens)
+rufen / rief / hat gerufen
+sova (presens)
+schlafen / schlief / hat geschlafen
+slå (presens)
+schlagen / schlug / hat geschlagen
+skriva (presens)
+schreiben / schrieb / hat geschrieben
+simma (presens)
+schwimmen / schwamm / ist geschwommen
+se (presens)
+sehen / sah / hat gesehen
+sjunga (presens)
+singen / sang / hat gesungen
+sitta (presens)
+sitzen / saß / hat gesessen
+tala (presens)
+sprechen / sprach / hat gesprochen
+stå (presens)
+stehen / stand / hat gestanden
+dö (presens)
+sterben / starb / ist gestorben
+träffa (presens)
+treffen / traf / hat getroffen
+dricka (presens)
+trinken / trank / hat getrunken
+glömma (presens)
+vergessen / vergaß / hat vergessen
+förlora (presens)
+verlieren / verlor / hat verloren
+tvätta (presens)
+waschen / wusch / hat gewaschen
+kasta (presens)
+werfen / warf / hat geworfen
+tvinga (presens)
+zwingen / zwang / hat gezwungen
