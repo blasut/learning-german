@@ -13,7 +13,15 @@ Idén med projektet är två:
   - http://www.ord.se/reseparlorer/tysk-parlor/ (JS, men innehållet ligger i DOMen)
   - https://www.swedishnomad.com/sv/tyska-fraser-och-uttryck/
   - https://sv.wiktionary.org/wiki/Kategori:Tyska/Fraser (mer fraser som i ordspråk)
+
+
+Kanske suga ner alla ord från http://sv.bab.la/lexikon/svensk-tysk/ ? Fet jävla ordlista
+
+Finns verbböjningar här: http://sv.bab.la/verb/tysk/
+
+Kanske fixa egen tysk-ordlista och synka med denna? http://www.thegermanprofessor.com/top-500-german-words/ för att få en bra lista på dom 500 vanligasta tyska orden
   
+* Fras-lista från bab.la
     
 Tanken är att få ut en CSV lista som ser ut ungefär såhär:
 #+BEGIN_SRC csv
@@ -401,6 +409,487 @@ TOD: ändra tagen till den "tredje" istället. ha en "tag" och ett "filnamn" ist
 - /fraser/immigration/stöd-för-funktionshindrade/svensk-tysk
 - /fraser/immigration/husdjur/svensk-tysk
 
+Dessa ovanstående fraser är bra, men inte tillräckligt intressanta.
+
+
+* Random
+
+Några fler som är bra för att lära sig grammatik:
+
+The apple is red.
+It is John’s apple.
+I give John the apple.
+We give him the apple.
+He gives it to John.
+She gives it to him.
+I must give it to him.
+I want to give it to her.
+
+äpplet är rött.
+Det är Eriks 'pple.
+Jag ger Erik 'pplet.
+Vi ger honom 'pplet.
+Han ger det till Erik.
+Hon ger det till honom.
+Jag måste ge det till honom.
+Jag vill ge det till henne.
+
+
+* Egna inklistringar
+   
+** Verb
+  
+   Hur verb funkar:
+
+   Nutid (presens) :
+
+   Jag: Ich -e - t.ex ich geh-e
+   Du: Du - st - t.ex. du geh-st
+   Han: Er -t - t.ex er geh-t
+   Den: Es - t - t.ex - es geh-t
+   Hon: sie - t - t.ex. - sie geh-t
+   Vi: Wir - hela verbet - t.ex. wir gehen
+   ni: Ihr - t - t.ex. ihr geh-t
+   Ni: Sie - hela verbet - t.ex. Sie gehen
+   De: sie - hela verbet - t.ex. sie gehen
+
+   Dåtid:
+
+   Dåtid gör man med verbet haben böjt efter person och sedan dåtidsverbet med förleden ge och slutet -t.
+
+   ge-verbrot-t
+
+   Ett exempel skulle kunna vara
+
+   Ich habe ge-hab-t, jag har haft
+
+   Framtid:
+
+   Framtid görs med verbet "werden" - att bli - och verbet som skall bli böjt i grundform som placeras allra sist i en mening
+
+   Ich werde
+   du wirst
+   er wird
+   sie wird
+   es wird
+   wir werden
+   ihr werdet
+   Sie werden
+   sie werden
+
+   Ett exempel:
+
+   Imorgon klockan sex ska jag äta en glass tillsammans med mina vänner framför skolan.
+
+   Ich werde morgen um sechs Uhr vor der Schule mit meinen Freunden einen Eis essen
+
+   Kanske kan skriva ihop lite exempel att träna på från ovanstående?
+
+
+*** 20 vanligaste verben
+    
+    Att vara
+    | Infinitiv | Presens       |
+    | sien      | ich bin       |
+    |           | du bist       |
+    |           | er/sie/es ist |
+    |           | wir sind      |
+    |           | ihr seid      |
+    |           | Sie sind      |
+    |           | sie sind      |
+
+
+    haben
+    att ha
+    ich habe
+    du hast
+    er/sie/es hat
+    wir haben
+    ihr habt
+    Sie haben
+    sie haben
+
+
+    3
+    werden
+    att bli
+    används även för att
+    skapa futurum
+    ich werde
+    du wirst
+    er/sie/es wird
+    wir werden
+    ihr werdet
+    Sie werden
+    sie werden
+    4
+    können
+    att kunna
+    ich kann
+    du kannst
+    er/sie/es kann
+    wir können
+    ihr könnt
+    Sie können
+    sie können
+    5
+    müssen
+    måste göra
+    ich muss
+    du musst
+    er/sie/es muss
+    wir müssen
+    ihr müsst
+    Sie müssen
+    sie münnen
+    6
+    wollen
+    vilja
+    ich will
+    du willst
+    er/sie/es will
+    wir wollen
+    ihr wollt
+    Sie wollen
+    sie wollen
+    7
+    mögen/ möchten
+    tycka om/ skulle vilja
+    ich mag/ möchte
+    du magst/ möchtest
+    er/sie/es mag/ möchtet
+    wir mögen /möchten
+    ihr mögt/ möchtet
+    Sie mögen/ möchten
+    sie mögen/möchten
+    8
+    wissen
+    att veta
+    ich weiß
+    du weißt
+    er/sie/es weißt
+    wir wissen
+    ihr wisst
+    Sie wissen
+    sie wissen
+    9
+    machen
+    att göra
+    ich mache
+    du machst
+    er/sie/es macht
+    wir machen
+    ihr macht
+    Sie machen
+    sie machen
+    10
+    sollen
+    ska, borde göra
+    ich soll
+    du sollst
+    er/sie/es soll
+    wir sollen
+    ihr sollt
+    Sie sollen
+    sie sollen
+
+    11
+    heißen
+    heta
+    ich heiße
+    du heißt
+    er/sie/es heißt
+    wir heißen
+    ihr heißt
+    Sie heißen
+    sie heißen
+    11
+    sagen
+    säga
+    ich sage
+    du sagst
+    er/sie/es sagt
+    wir sagen
+    ihr sagt
+    Sie sagen
+    sie sagen
+    12
+    gehen
+    gå
+    ich gehe
+    du gehst
+    er/sie/es geht
+    wir gehen
+    ihr geht
+    Sie gehen
+    sie gehen
+    13
+    sehen
+    se
+    ich sehe
+    du siehst
+    er/sie/es sieht
+    wir sehen
+    ihr seht
+    Sie sehen
+    sie sehen
+    14
+    geben
+    ge
+    ich gebe
+    du gibst
+    er/sie/es gibt
+    wir geben
+    ihr gebt
+    Sie geben
+    sie geben
+    15
+    kommen
+    komma
+    ich komme
+    du kommst
+    er/sie/es kommt
+    wir kommen
+    ihr kommt
+    Sie kommen
+    sie kommen
+    16
+    lassen
+    låta, lämna
+    ich lasse
+    du lässt
+    er/sie/es lässt
+    wir lassen
+    ihr lasst
+    Sie lassen
+    sie lassen
+    17
+    finden
+    hitta
+    ich finde
+    du findest
+    er/sie/es findet
+    wir finden
+    ihr findet
+    Sie finden
+    sie finden
+    18
+    bleiben
+    stanna kvar
+    ich bleibe
+    du bleibst
+    er/sie/es bleibt
+    wir bleiben
+    ihr bleibt
+    Sie bleiben
+    sie bleiben
+    19
+    nehmen
+    ta
+    ich nehme
+    du nimmst
+    er/sie/es nimmt
+    wir nehmen
+    ihr nehmt
+    Sie nehmen
+    sie nehmen
+    20
+    bringen
+    ta med sig
+    ich bringe
+    du bringst
+    er/sie/es bringt
+    wir bringen
+    ihr bringt
+    Sie bringen
+    sie bringen
+
+
+** So sehe ich aus
+   Ich habe einen/ein/eine ACKUSATIV-en/es/e X an.
+
+   Med verbet har använder man alltid ackusativ och ackusativ påverkar inte bara artikeln (ein/ein/eine) utan även ackusativet (hur någonting är, t.ex. röd)
+
+   Som ett exempel
+
+   Om jag har en blå hatt (der Hut) så säger man
+
+   ‚‚ich habe einen (det är ein-maskulint i ackusativ) blauen (en är maskulinändelsen man lägger till ackusativet) Hut.
+
+   Med neutrum (das/ein) säger man så här
+
+   jag har en vit kanin - ich habe ein weißes Kaninchen
+
+   Med feminin blir det så här
+   jag har en svart katt - ich habe eine schwarze Katze.
+
+
+** Ackusativ och Dativ
+   Ackusativobjekt - det normala objektet,
+
+   t.ex. Anna äter en banan - Anna isst einen Banan
+
+   I ackusativ blir artiklarna som följer
+
+   der: den
+   das: das
+   die: die
+   die: die (plural)
+
+   Man använder alltid ackusativ efter de följande orden:
+
+   durch: genom
+   für: för
+   gegen: mot
+   ohne: utan
+   um: runt om kring, vid, för att
+
+   Ord som dig, mig, honom, henne påverkas även de av ackusativ
+
+   ich - mich
+   du - dich
+   er - ihn
+   sie - sie
+   es - sich
+   wir - uns
+   ihr - euch
+   Sie - Sie
+   sie - sie
+
+
+   Dativobjektet: åt vem görs verbet med ackusativet?
+
+   T.ex. Han gav henne en dromedar: Er gab ihr einen Dromedar.
+
+   I dativ blir artiklarna som följer
+
+   der: dem
+   das: dem
+   die: der
+   die: den + -n i slutet av ordet som står i plural (t.ex. er gab den Männern etwas)
+
+   Man använder alltid dativ efter de följande orden:
+
+   aus: från
+   ausser: utan
+   bei: vid
+   gegenüber: mittemot
+   mit: med
+   nach: efter
+   seit: sedan
+   von: från
+   zu: till
+
+   Ord som dig, mig, honom, henne påverkas även de av dativ
+
+   ich - mir
+   dich - dir
+   er - ihm
+   sie - ihr
+   wir - uns
+   ihr - euch
+   Sie - Ihr
+   sie - ihr 
+   
+** Ordning kommer orden?
+
+   Tyska fungerar som svenska i alla huvudsatser, det vill sägas meningar utan komman som kan stå själva.
+
+   Ett exempel: Jag heter Anna. - Ich heisse Anna
+
+   I bisatser däremot, meningar som inte kan stå själv, som kommer efter att, därför och liknande ord så är tyskan ett SOV-språk, det vill säga subjekt, objekt, verb-språk.
+
+   Vad är ett subjekt - den som gör verbet i en meningen
+   Vad är ett objekt - den som utsätts för verbet av subjektet
+   Vad är ett verb: det som görs i en mening
+
+   Ett expempel: Jag slår Stig, för att han är dum - Ich schlage Stig, weil er blöd ist. 
+   
+** Tyska prepositioner
+   Prepositioner med ackusativ: Den, das, die, die(pl)
+
+   Durch: genom
+   Für: för
+   Gegen: mot
+   Ohne: utan
+   Um: omkring, runtom, "för att"
+
+   Prepositioner med dativ: Dem, dem, der, den +n(pl)
+
+   Aus: Från, av
+   Außer: förutom
+   Bei: vid
+   Gegenüber: mittemot, tvärs över
+   Mit: med
+   Nach: efter, till
+   Seit: sedan
+   Von: från
+   Zu: till
+
+   Prepositioner med BEDA eller RIA: (Befintlighet+dativ eller riktning+ackusativ)
+
+   An: på (mer som i på den dagen, ta på sig)
+   Auf: på (mer som i på den stolen, på den platsen)
+   Hinter: bakom
+   In: i
+   Neben: bredvid
+   Über: över
+   Unter: under
+   Vor: framför
+   Zwischen: emellan
+** Hobbies exempel
+   Hobbys ... Hobbys haben wir alle, aber die unterschieden sich oft zwischen Leute. Was machst du am liebsten wenn du Frei bist?
+   Hobbys ... Intressen har vi alla, men de skiljer sig ofta åt mellan folk. Vad gör du gärna när du är ledig?
+
+   Gör klart följande meningar.
+
+   Ich mag
+   Ich mache gern
+   Ich würde lieber _ (verbet i grundform)
+   Am liebsten ich
+   Ich hasse
+   ich hasse _ mehr als _
+   Am meisten hasse ich _
+
+
+   mögen (ich mag, du magst osv.) = tycka om.
+   hassen (ich hasse, du haßt osv) = hata
+   gern - lieber - am liebsten = gärna - hellre - helst
+   viel - mehr - am meisten = mycket - mer - mest 
+** Beskriva människor
+   | Schwedish        | Deutsch                             |
+   | försiktig        | vorsichtig                          |
+   | smart, slug      | schlau                              |
+   | intelligent      | intelligent, klug                   |
+   | pratsam          | gesprächig (geschwätzig)            |
+   | utåtriktad       | aufgeschlossen, kontaktfreudig      |
+   | cool             | cool                                |
+   | entusiastisk     | begeistert                          |
+   | rolig            | lustig                              |
+   | glad             | glücklich                           |
+   | vänlig           | freundlich                          |
+   | obesvärad        | lässig, unbeschwert                 |
+   | hjälpsam         | hilfsbereit                         |
+   | intressant       | interessant                         |
+   | snäll            | nett                                |
+   | artig            | höflich                             |
+   | ansvarstagande   | verantwortungsbewusst               |
+   | välorganiserad   | Gut organisiert                     |
+   | ordentlig        | ordentlich                          |
+   | skrytsam         | prahlerisch, überheblich            |
+   | tråkig           | langweilig                          |
+   | oaktsam          | achtlos, unvorsichtig, nachlässig   |
+   | sur              | mürrisch, brummig, schlecht gelaunt |
+   | ovänlig          | unfreundlich                        |
+   | högljud          | laut,                               |
+   | irriterande      | nervig, lästig                      |
+   | galen            | verrückt                            |
+   | lat              | faul                                |
+   | nervös           | nervös                              |
+   | ledsen/ olycklig | traurig, unglücklich                |
+   | dum              | blöd                                |
+   | arrogant         | arrogant, eingebildet               |
+   | smutsig          | unordentlich                        |
 
 
 * export
