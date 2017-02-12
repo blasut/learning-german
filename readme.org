@@ -723,7 +723,6 @@ Jag vill ge det till henne.
    Med feminin blir det så här
    jag har en svart katt - ich habe eine schwarze Katze.
 
-
 ** Ackusativ och Dativ
    Ackusativobjekt - det normala objektet,
 
@@ -891,5 +890,3 @@ Jag vill ge det till henne.
    | arrogant         | arrogant, eingebildet               |
    | smutsig          | unordentlich                        |
 
-
-* export
