@@ -570,6 +570,8 @@ Jag vill ge det till henne.
    | Vor      | framför                                      |
    | Zwischen | emellan                                      |
    
+*** Wikipedia
+   https://sv.wikipedia.org/wiki/Tysk_grammatik
 ** Verb
    Hur verb funkar:
 
