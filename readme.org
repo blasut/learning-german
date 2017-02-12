@@ -436,274 +436,9 @@ Jag vill ge det till henne.
 
 
 * Egna inklistringar
-   
-** Verb
-   Hur verb funkar:
 
-   Nutid (presens) :
-
-   Jag: Ich -e - t.ex ich geh-e
-   Du: Du - st - t.ex. du geh-st
-   Han: Er -t - t.ex er geh-t
-   Den: Es - t - t.ex - es geh-t
-   Hon: sie - t - t.ex. - sie geh-t
-   Vi: Wir - hela verbet - t.ex. wir gehen
-   ni: Ihr - t - t.ex. ihr geh-t
-   Ni: Sie - hela verbet - t.ex. Sie gehen
-   De: sie - hela verbet - t.ex. sie gehen
-
-   Dåtid:
-
-   Dåtid gör man med verbet haben böjt efter person och sedan dåtidsverbet med förleden ge och slutet -t.
-
-   ge-verbrot-t
-
-   Ett exempel skulle kunna vara
-
-   Ich habe ge-hab-t, jag har haft
-
-   Framtid:
-
-   Framtid görs med verbet "werden" - att bli - och verbet som skall bli böjt i grundform som placeras allra sist i en mening
-
-   Ich werde
-   du wirst
-   er wird
-   sie wird
-   es wird
-   wir werden
-   ihr werdet
-   Sie werden
-   sie werden
-
-   Ett exempel:
-
-   Imorgon klockan sex ska jag äta en glass tillsammans med mina vänner framför skolan.
-
-   Ich werde morgen um sechs Uhr vor der Schule mit meinen Freunden einen Eis essen
-
-   Kanske kan skriva ihop lite exempel att träna på från ovanstående?
-
-
-*** 20 vanligaste verben
-    
-    Att vara
-    | Infinitiv | Presens       |
-    | sien      | ich bin       |
-    |           | du bist       |
-    |           | er/sie/es ist |
-    |           | wir sind      |
-    |           | ihr seid      |
-    |           | Sie sind      |
-    |           | sie sind      |
-
-
-    haben
-    att ha
-    ich habe
-    du hast
-    er/sie/es hat
-    wir haben
-    ihr habt
-    Sie haben
-    sie haben
-
-
-    3
-    werden
-    att bli
-    används även för att
-    skapa futurum
-    ich werde
-    du wirst
-    er/sie/es wird
-    wir werden
-    ihr werdet
-    Sie werden
-    sie werden
-    4
-    können
-    att kunna
-    ich kann
-    du kannst
-    er/sie/es kann
-    wir können
-    ihr könnt
-    Sie können
-    sie können
-    5
-    müssen
-    måste göra
-    ich muss
-    du musst
-    er/sie/es muss
-    wir müssen
-    ihr müsst
-    Sie müssen
-    sie münnen
-    6
-    wollen
-    vilja
-    ich will
-    du willst
-    er/sie/es will
-    wir wollen
-    ihr wollt
-    Sie wollen
-    sie wollen
-    7
-    mögen/ möchten
-    tycka om/ skulle vilja
-    ich mag/ möchte
-    du magst/ möchtest
-    er/sie/es mag/ möchtet
-    wir mögen /möchten
-    ihr mögt/ möchtet
-    Sie mögen/ möchten
-    sie mögen/möchten
-    8
-    wissen
-    att veta
-    ich weiß
-    du weißt
-    er/sie/es weißt
-    wir wissen
-    ihr wisst
-    Sie wissen
-    sie wissen
-    9
-    machen
-    att göra
-    ich mache
-    du machst
-    er/sie/es macht
-    wir machen
-    ihr macht
-    Sie machen
-    sie machen
-    10
-    sollen
-    ska, borde göra
-    ich soll
-    du sollst
-    er/sie/es soll
-    wir sollen
-    ihr sollt
-    Sie sollen
-    sie sollen
-
-    11
-    heißen
-    heta
-    ich heiße
-    du heißt
-    er/sie/es heißt
-    wir heißen
-    ihr heißt
-    Sie heißen
-    sie heißen
-    11
-    sagen
-    säga
-    ich sage
-    du sagst
-    er/sie/es sagt
-    wir sagen
-    ihr sagt
-    Sie sagen
-    sie sagen
-    12
-    gehen
-    gå
-    ich gehe
-    du gehst
-    er/sie/es geht
-    wir gehen
-    ihr geht
-    Sie gehen
-    sie gehen
-    13
-    sehen
-    se
-    ich sehe
-    du siehst
-    er/sie/es sieht
-    wir sehen
-    ihr seht
-    Sie sehen
-    sie sehen
-    14
-    geben
-    ge
-    ich gebe
-    du gibst
-    er/sie/es gibt
-    wir geben
-    ihr gebt
-    Sie geben
-    sie geben
-    15
-    kommen
-    komma
-    ich komme
-    du kommst
-    er/sie/es kommt
-    wir kommen
-    ihr kommt
-    Sie kommen
-    sie kommen
-    16
-    lassen
-    låta, lämna
-    ich lasse
-    du lässt
-    er/sie/es lässt
-    wir lassen
-    ihr lasst
-    Sie lassen
-    sie lassen
-    17
-    finden
-    hitta
-    ich finde
-    du findest
-    er/sie/es findet
-    wir finden
-    ihr findet
-    Sie finden
-    sie finden
-    18
-    bleiben
-    stanna kvar
-    ich bleibe
-    du bleibst
-    er/sie/es bleibt
-    wir bleiben
-    ihr bleibt
-    Sie bleiben
-    sie bleiben
-    19
-    nehmen
-    ta
-    ich nehme
-    du nimmst
-    er/sie/es nimmt
-    wir nehmen
-    ihr nehmt
-    Sie nehmen
-    sie nehmen
-    20
-    bringen
-    ta med sig
-    ich bringe
-    du bringst
-    er/sie/es bringt
-    wir bringen
-    ihr bringt
-    Sie bringen
-    sie bringen
-
-** So sehe ich aus
+** Grammatik
+*** So sehe ich aus
    Ich habe einen/ein/eine ACKUSATIV-en/es/e X an.
 
    Med verbet har använder man alltid ackusativ och ackusativ påverkar inte bara artikeln (ein/ein/eine) utan även ackusativet (hur någonting är, t.ex. röd)
@@ -721,7 +456,7 @@ Jag vill ge det till henne.
    Med feminin blir det så här
    jag har en svart katt - ich habe eine schwarze Katze.
 
-** Ackusativ och Dativ
+*** Ackusativ och Dativ
    Ackusativobjekt - det normala objektet,
 
    t.ex. Anna äter en banan - Anna isst einen Banan
@@ -788,7 +523,7 @@ Jag vill ge det till henne.
    Sie - Ihr
    sie - ihr 
    
-** Ordning kommer orden?
+*** Ordning kommer orden?
 
    Tyska fungerar som svenska i alla huvudsatser, det vill sägas meningar utan komman som kan stå själva.
 
@@ -802,7 +537,7 @@ Jag vill ge det till henne.
 
    Ett expempel: Jag slår Stig, för att han är dum - Ich schlage Stig, weil er blöd ist. 
    
-** Tyska prepositioner
+*** Tyska prepositioner
    Prepositioner med ackusativ: Den, das, die, die(pl)
 
    Durch: genom
@@ -834,6 +569,278 @@ Jag vill ge det till henne.
    Unter: under
    Vor: framför
    Zwischen: emellan
+   
+** Verb
+   Hur verb funkar:
+
+   Nutid (presens) :
+
+   Jag: Ich -e - t.ex ich geh-e
+   Du: Du - st - t.ex. du geh-st
+   Han: Er -t - t.ex er geh-t
+   Den: Es - t - t.ex - es geh-t
+   Hon: sie - t - t.ex. - sie geh-t
+   Vi: Wir - hela verbet - t.ex. wir gehen
+   ni: Ihr - t - t.ex. ihr geh-t
+   Ni: Sie - hela verbet - t.ex. Sie gehen
+   De: sie - hela verbet - t.ex. sie gehen
+
+   Dåtid:
+
+   Dåtid gör man med verbet haben böjt efter person och sedan dåtidsverbet med förleden ge och slutet -t.
+
+   ge-verbrot-t
+
+   Ett exempel skulle kunna vara
+
+   Ich habe ge-hab-t, jag har haft
+
+   Framtid:
+
+   Framtid görs med verbet "werden" - att bli - och verbet som skall bli böjt i grundform som placeras allra sist i en mening
+
+   Ich werde
+   du wirst
+   er wird
+   sie wird
+   es wird
+   wir werden
+   ihr werdet
+   Sie werden
+   sie werden
+
+   Ett exempel:
+
+   Imorgon klockan sex ska jag äta en glass tillsammans med mina vänner framför skolan.
+
+   Ich werde morgen um sechs Uhr vor der Schule mit meinen Freunden einen Eis essen
+
+   Kanske kan skriva ihop lite exempel att träna på från ovanstående?
+
+
+*** 20 vanligaste verben
+    
+    Att vara
+    | Infinitiv | Presens       |
+    | sien      | ich bin       |
+    |           | du bist       |
+    |           | er/sie/es ist |
+    |           | wir sind      |
+    |           | ihr seid      |
+    |           | Sie sind      |
+    |           | sie sind      |
+
+
+    att ha
+    | Infinitiv | Presens       |
+    | haben     |               |
+    |           | ich habe      |
+    |           | du hast       |
+    |           | er/sie/es hat |
+    |           | wir haben     |
+    |           | ihr habt      |
+    |           | Sie haben     |
+    |           | sie haben     |
+
+
+    att bli
+    | Infinitiv | Presens        |
+    | werden    |                |
+    |           | ich werde      |
+    |           | du wirst       |
+    |           | er/sie/es wird |
+    |           | wir werden     |
+    |           | ihr werdet     |
+    |           | Sie werden     |
+    |           | sie werden     |
+
+    
+    att kunna
+    | Infinitiv | Presens        |
+    | können    |                |
+    |           | ich kann       |
+    |           | du kannst      |
+    |           | er/sie/es kann |
+    |           | wir können     |
+    |           | ihr könnt      |
+    |           | Sie können     |
+    |           | sie können     |
+
+    måste göra
+    | Infinitiv | Presens        |
+    | müssen    |                |
+    |           | ich muss       |
+    |           | du musst       |
+    |           | er/sie/es muss |
+    |           | wir müssen     |
+    |           | ihr müsst      |
+    |           | Sie müssen     |
+    |           | sie münnen     |
+
+    vilja
+    | Infinitiv | Presens        |
+    | wollen    |                |
+    |           | ich will       |
+    |           | du willst      |
+    |           | er/sie/es will |
+    |           | wir wollen     |
+    |           | ihr wollt      |
+    |           | Sie wollen     |
+    |           | sie wollen     |
+
+    tycka om/ skulle vilja
+    | Infinitiv      | Presens                |
+    | mögen/ möchten |                        |
+    |                | ich mag/ möchte        |
+    |                | du magst/ möchtest     |
+    |                | er/sie/es mag/ möchtet |
+    |                | wir mögen /möchten     |
+    |                | ihr mögt/ möchtet      |
+    |                | Sie mögen/ möchten     |
+    |                | sie mögen/möchten      |
+
+    att veta
+    | Infinitiv | Presens         |
+    | wissen    |                 |
+    |           | ich weiß        |
+    |           | du weißt        |
+    |           | er/sie/es weißt |
+    |           | wir wissen      |
+    |           | ihr wisst       |
+    |           | Sie wissen      |
+    |           | sie wissen      |
+
+    att göra
+    | machen |                 |
+    |        | ich mache       |
+    |        | du machst       |
+    |        | er/sie/es macht |
+    |        | wir machen      |
+    |        | ihr macht       |
+    |        | Sie machen      |
+    |        | sie machen      |
+
+    ska, borde göra
+    | sollen |                |
+    |        | ich soll       |
+    |        | du sollst      |
+    |        | er/sie/es soll |
+    |        | wir sollen     |
+    |        | ihr sollt      |
+    |        | Sie sollen     |
+    |        | sie sollen     |
+
+    11
+    heta
+    | heißen |                 |
+    |        | ich heiße       |
+    |        | du heißt        |
+    |        | er/sie/es heißt |
+    |        | wir heißen      |
+    |        | ihr heißt       |
+    |        | Sie heißen      |
+    |        | sie heißen      |
+
+    säga
+    | sagen |                |
+    |       | ich sage       |
+    |       | du sagst       |
+    |       | er/sie/es sagt |
+    |       | wir sagen      |
+    |       | ihr sagt       |
+    |       | Sie sagen      |
+    |       | sie sagen      |
+
+    gå
+    | gehen |                |
+    |       | ich gehe       |
+    |       | du gehst       |
+    |       | er/sie/es geht |
+    |       | wir gehen      |
+    |       | ihr geht       |
+    |       | Sie gehen      |
+    |       | sie gehen      |
+
+    se
+    | sehen |                 |
+    |       | ich sehe        |
+    |       | du siehst       |
+    |       | er/sie/es sieht |
+    |       | wir sehen       |
+    |       | ihr seht        |
+    |       | Sie sehen       |
+    |       | sie sehen       |
+
+    ge
+    | geben |                |
+    |       | ich gebe       |
+    |       | du gibst       |
+    |       | er/sie/es gibt |
+    |       | wir geben      |
+    |       | ihr gebt       |
+    |       | Sie geben      |
+    |       | sie geben      |
+
+    komma
+    | kommen |                 |
+    |        | ich komme       |
+    |        | du kommst       |
+    |        | er/sie/es kommt |
+    |        | wir kommen      |
+    |        | ihr kommt       |
+    |        | Sie kommen      |
+    |        | sie kommen      |
+
+    låta, lämna
+    | lassen |                 |
+    |        | ich lasse       |
+    |        | du lässt        |
+    |        | er/sie/es lässt |
+    |        | wir lassen      |
+    |        | ihr lasst       |
+    |        | Sie lassen      |
+    |        | sie lassen      |
+
+    hitta
+    | finden |                  |
+    |        | ich finde        |
+    |        | du findest       |
+    |        | er/sie/es findet |
+    |        | wir finden       |
+    |        | ihr findet       |
+    |        | Sie finden       |
+    |        | sie finden       |
+
+    stanna kvar
+    | bleiben |                  |
+    |         | ich bleibe       |
+    |         | du bleibst       |
+    |         | er/sie/es bleibt |
+    |         | wir bleiben      |
+    |         | ihr bleibt       |
+    |         | Sie bleiben      |
+    |         | sie bleiben      |
+    
+    ta
+    | nehmen |                 |
+    |        | ich nehme       |
+    |        | du nimmst       |
+    |        | er/sie/es nimmt |
+    |        | wir nehmen      |
+    |        | ihr nehmt       |
+    |        | Sie nehmen      |
+    |        | sie nehmen      |
+
+    ta med sig
+    | bringen |                  |
+    |         | ich bringe       |
+    |         | du bringst       |
+    |         | er/sie/es bringt |
+    |         | wir bringen      |
+    |         | ihr bringt       |
+    |         | Sie bringen      |
+    |         | sie bringen      |
+
 ** Hobbies exempel
    Hobbys ... Hobbys haben wir alle, aber die unterschieden sich oft zwischen Leute. Was machst du am liebsten wenn du Frei bist?
    Hobbys ... Intressen har vi alla, men de skiljer sig ofta åt mellan folk. Vad gör du gärna när du är ledig?
@@ -888,3 +895,540 @@ Jag vill ge det till henne.
    | arrogant         | arrogant, eingebildet               |
    | smutsig          | unordentlich                        |
 
+   
+** Olika fraser
+*** ord.se
+**** Hälsningsfraser m.m.
+    Adjö! 
+    Auf Wiedersehen!
+
+    Får jag presentera... 
+    Darf ich Ihnen... vorstellen? 
+    Darf ich bekannt machen...?
+
+    God afton! 
+    Guten Abend!
+
+    God dag! 
+    Guten Tag!
+
+    God middag! 
+    Guten Tag!
+
+    God morgon! 
+    Guten Morgen!
+
+    God natt! 
+    Gute Nacht!
+
+    Hej! 
+    Hallo!
+
+    Hej då! 
+    Tschüs!, Tschüss!
+
+    Hör av er! 
+    Lassen Sie von sich hören!
+
+    Kör försiktigt! 
+    Fahren Sie vorsichtig!
+
+    Lycka till! 
+    Viel Glück!
+
+    Trevlig resa! 
+    Gute Reise!
+
+    Trevligt att träffas! 
+    Es war nett, Sie kennenzulernen!
+
+    På återseende! 
+    Auf Wiedersehen!
+
+    Vad heter Ni? Jag heter... 
+    Wie ist Ihr Name? Ich heiße...
+
+    Vi ses i morgon (nästa vecka)! 
+    Bis morgen (nächste Woche)!
+
+    Välkomna (Välkommen)! 
+    Herzlich willkommen!
+
+**** Klockan
+
+    Hur mycket är klockan? 
+    Wie spät ist es?
+
+    Vi ses klockan två. 
+    Wir treffen uns um zwei Uhr.
+
+    Klockan är... 
+    Es ist...
+
+    två 
+    zwei
+
+    fem över två
+    fünf nach zwei
+
+    kvart över två 
+    Viertel nach zwei
+
+    tjugo över två 
+    zwanzig nach zwei
+
+    fem i halv tre 
+    fünf vor halb drei
+
+    halv tre 
+    halb drei
+
+    fem över halv tre 
+    fünf nach halb drei
+
+    tjugo i tre 
+    zwanzig vor drei
+
+    kvart i tre 
+    Viertel vor drei
+
+    tio i tre 
+    zehn vor drei
+**** På resa
+
+    Var ligger turistbyrån? 
+    Wo ist das Verkehrsbüro?
+
+    Var ligger svenska ambassaden (konsulatet)? 
+    Wo liegt die schwedische Botschaft (das schwedische Konsulat)?
+
+    Hur lång tid tar resan? 
+    Wie lange dauert die Fahrt?
+
+    Hur dags är vi i...? 
+    Wann sind wir in...?
+
+    Kan jag få en tidtabell? 
+    Ich hätte gern einen Fahrplan.
+
+    Jag skulle vilja avbeställa den här biljetten. 
+    Ich möchte diese Karte zurückgeben.
+
+    När går bussen (båten, flyget, tåget) till...?
+    Wann geht der Bus (das Schiff, der Flug, der Zug) nach ...
+**** Räkneord
+
+    0 
+    Null
+
+    1 
+    eins
+
+    2 
+    zwei
+
+    3 
+    drei
+
+    4 
+    vier
+
+    5 
+    fünf
+
+    6 
+    sechs
+
+    7 
+    sieben
+
+    8 
+    acht
+
+    9 
+    neun
+
+    10 
+    zehn
+
+    11 
+    elf
+
+    12 
+    zwölf
+
+    13 
+    dreizehn
+
+    14 
+    vierzehn
+
+    15 
+    fünfzehn
+
+    16 
+    sechzehn
+
+    17 
+    siebzehn
+
+    18 
+    achtzehn
+
+    19 
+    neunzehn
+
+    20 
+    zwanzig
+
+    21 
+    einundzwanzig
+
+    22 
+    zweiundzwanzig
+
+    30 
+    dreißig
+
+    31 
+    einunddreißig
+
+    40 
+    vierzig
+
+    50 
+    fünfzig
+
+    60 
+    sechzig
+
+    70 
+    siebzig
+
+    80 
+    achtzig
+
+    90 
+    neunzig
+
+    100 
+    einhundert hundert
+
+    101 
+    einhunderteins hunderteins
+
+    200 
+    zweihundert
+
+    1000 
+    eintausend tausend
+
+    1001 
+    eintausendeins tausendeins
+
+    1100 
+    eintausendeinhundert, tausendeinhundert, elfhundert
+
+    2000 
+    zweitausend
+
+    1 000 000 
+    eine Million
+
+    2 000 000 
+    zwei Millionen
+
+    1 000 000 000 
+    eine Milliarde
+**** Språk och nationalitet
+
+    Varifrån är Ni? 
+    Woher kommen Sie?
+
+    Jag är från Sverige. 
+    Ich komme aus Schweden.
+
+    Jag är svensk (svenska). 
+    Ich bin Schwede (Schwedin).
+
+    Talar Ni tyska? 
+    Sprechen Sie Deutsch?
+
+    Jag pratar inte så bra tyska, men jag förstår lite. 
+    Ich spreche nicht so gut Deutsch, aber ich verstehe ein bisschen.
+
+    Jag förstår inte vad Ni säger. 
+    Ich habe nicht verstanden, was Sie gesagt haben.
+
+    Finns det någon här som talar tyska? 
+    Spricht hier jemand Deutsch?
+
+    Jag talar inte tyska. 
+    Ich spreche kein Deutsch.
+
+    Jag talar bara lite tyska. 
+    Ich spreche nur ein bisschen Deutsch.
+
+    Jag talar inte tyska så bra. 
+    Ich spreche nicht so gut Deutsch.
+
+    Kan Ni tala lite långsammare? 
+    Sprechen Sie bitte etwas langsamer!
+
+    Var snäll och säg om det! 
+    Könnten Sie das bitte wiederholen?
+
+    Vad betyder det här? 
+    Was bedeutet das?
+
+    Vad heter det på tyska?
+    Wie heißt das auf Deutsch?
+
+    Hur stavas det? 
+    Wie schreibt man das?
+
+    Kan Ni bokstavera det? 
+    Könnten Sie das bitte buchstabieren?
+
+    Vad sa Ni? 
+    Wie bitte? 
+    Was haben Sie gesagt?
+
+    Kan Ni översätta det här till tyska? 
+    Könnten Sie das bitte ins Deutsche übersetzen?
+**** Vanliga ord och fraser
+    När man ber om något tilläggs: bitte
+
+    Det finns... 
+    Es gibt...
+
+    Det gör ingenting! 
+    Das macht nichts!
+
+    Ett ögonblick. 
+    Einen Augenblick, bitte.
+
+    Får jag komma in? 
+    Darf ich hereinkommen?
+
+    Förlåt! 
+    Entschuldigung!
+
+    Förlåt, jag hörde inte? 
+    Wie bitte?
+
+    Förlåt, kan jag få komma förbi? 
+    Entschuldigung, darf ich mal vorbei?
+
+    Förlåt, var ligger...? 
+    Entschuldigung, wo liegt...?
+
+    Gärna. 
+    Sehr gern.
+
+    Hjälp! 
+    Hilfe!
+
+    Hjälp mig att... 
+    Könnten Sie mir bitte helfen, zu...
+
+    Hur? 
+    Wie?
+
+    Hur dags? 
+    Wann?
+
+    Hur mycket? 
+    Wie viel?
+
+    Hur mycket kostar det? 
+    Wie viel kostet das?
+
+    Hur mår Ni? 
+    Wie geht’s?
+
+    Hur sa? 
+    Wie bitte?
+
+    Hur är det? 
+    Was ist?
+
+    Ingen orsak! 
+    Gern geschehen!
+
+    Inte alls. 
+    Ganz und gar nicht!
+
+    Ja tack. 
+    Ja bitte.
+
+    Jag behöver... 
+    Ich brauche...
+
+    Jag fryser. 
+    Mich friert.
+
+    Jag förstår. 
+    Ich verstehe.
+
+    Jag förstår inte. 
+    Ich habe das nicht verstanden.
+
+    Jag är hungrig (törstig). 
+    Ich habe Hunger (Durst).
+
+    Jag är trött. 
+    Ich bin müde.
+
+    Jag skulle vilja ha... 
+    Ich möchte...
+
+    Javisst. 
+    Ja, natürlich.
+
+    Kan jag få... 
+    Geben Sie mir bitte...
+
+    Kan Ni säga mig...? 
+    Könnten Sie mir bitte sagen, wo...?
+
+    Kan Ni visa mig...? 
+    Können Sie mir bitte... zeigen?
+
+    Kom in! 
+    Herein!
+
+    Lite. 
+    Ein bisschen.
+
+    Med nöje. 
+    Mit Vergnügen.
+
+    Nej. 
+    Nein.
+
+    Nej tack. 
+    Nein danke!
+
+    När? 
+    Wann?
+
+    Skål! 
+    Prost!
+
+    Smaklig måltid! 
+    Guten Appetit!
+
+    Stör jag? 
+    Störe ich?
+
+    Tack. 
+    Danke!
+
+    Tack, detsamma! 
+    Danke gleichfalls!
+
+    Tack för hjälpen! 
+    Vielen Dank für Ihre Hilfe!
+
+    Tack så mycket! 
+    Vielen Dank!
+
+    Tusen tack! 
+    Tausend Dank! 
+    Herzlichen Dank!
+
+    Tyvärr! 
+    Leider!
+
+    Ursäkta! 
+    Entschuldigung!
+
+    Vad sa Ni? 
+    Wie bitte? 
+    Was haben Sie gesagt?
+
+    Var? 
+    Wo?
+
+    Var finns (ligger)...? 
+    Wo ist (liegt)...?
+
+    Var ligger närmaste post (bank)? 
+    Wo ist die nächste Post (Bank)?
+
+    Var så god när man överräcker något: Bitte!
+
+    då man bjuder: Bitte sehr!
+
+    vid artig uppmaning: Bitte!
+
+    vid tillåtelse: Aber gern! Varför? Warum?
+**** Vid gränsen
+
+    Kan jag få se ert pass? 
+    Ihren Pass bitte!
+
+    Hur länge har Ni tänkt stanna? 
+    Wie lange wollen Sie hierbleiben?
+
+    Vill Ni vara snäll och fylla i den här blanketten. 
+    Füllen Sie bitte diesen Vordruck aus!
+
+    Har Ni något att förtulla? 
+    Haben Sie etwas zu verzollen?
+
+    Jag har inget att förtulla. 
+    Ich habe nichts zu verzollen.
+
+    Var snäll och öppna den här väskan. 
+    Öffnen Sie bitte diesen Koffer!
+
+    Alltsammans är saker för eget bruk. 
+    Das ist alles nur für den persönlichen Gebrauch.
+
+    Har Ni cigaretter eller sprit? 
+    Haben Sie Zigaretten oder Alkohol bei sich?
+
+    Var finns växelkontoret? 
+    Wo ist hier die Wechselstube?
+
+**** Övriga uttryck (skyltar o.d.)
+    höger – vänster 
+    rechts – links
+
+    till höger – till vänster 
+    nach rechts – nach links
+
+    damer – herrar 
+    Damen – Herren
+
+    ingång – utgång 
+    Eingang – Ausgang
+
+    kallt – varmt 
+    kalt – warm
+
+    ledigt – upptaget 
+    frei – besetzt
+
+    rökning förbjuden 
+    Rauchen verboten
+
+    rökning tillåten 
+    Raucher erlaubt
+
+    stängt – öppet 
+    geschlossen – geöffnet
+
+    toalett 
+    Toilette
+
+    damtoalett 
+    Damentoilette
+
+    handikapptoalett 
+    Behindertentoilette
+
+    herrtoalett
+    Herrentoilette
