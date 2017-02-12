@@ -861,6 +861,7 @@ Jag vill ge det till henne.
    viel - mehr - am meisten = mycket - mer - mest 
 ** Beskriva människor
    | Schwedish        | Deutsch                             |
+   |------------------+-------------------------------------|
    | försiktig        | vorsichtig                          |
    | smart, slug      | schlau                              |
    | intelligent      | intelligent, klug                   |
