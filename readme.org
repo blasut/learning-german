@@ -438,7 +438,6 @@ Jag vill ge det till henne.
 * Egna inklistringar
    
 ** Verb
-  
    Hur verb funkar:
 
    Nutid (presens) :
@@ -703,7 +702,6 @@ Jag vill ge det till henne.
     ihr bringt
     Sie bringen
     sie bringen
-
 
 ** So sehe ich aus
    Ich habe einen/ein/eine ACKUSATIV-en/es/e X an.
