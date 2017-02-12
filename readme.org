@@ -540,35 +540,35 @@ Jag vill ge det till henne.
 *** Tyska prepositioner
    Prepositioner med ackusativ: Den, das, die, die(pl)
 
-   Durch: genom
-   Für: för
-   Gegen: mot
-   Ohne: utan
-   Um: omkring, runtom, "för att"
+   | Durch | genom                      |
+   | Für   | för                        |
+   | Gegen | mot                        |
+   | Ohne  | utan                       |
+   | Um    | omkring, runtom, "för att" |
 
    Prepositioner med dativ: Dem, dem, der, den +n(pl)
 
-   Aus: Från, av
-   Außer: förutom
-   Bei: vid
-   Gegenüber: mittemot, tvärs över
-   Mit: med
-   Nach: efter, till
-   Seit: sedan
-   Von: från
-   Zu: till
+   | Aus       | Från, av             |
+   | Außer     | förutom              |
+   | Bei       | vid                  |
+   | Gegenüber | mittemot, tvärs över |
+   | Mit       | med                  |
+   | Nach      | efter, till          |
+   | Seit      | sedan                |
+   | Von       | från                 |
+   | Zu        | till                 |
 
    Prepositioner med BEDA eller RIA: (Befintlighet+dativ eller riktning+ackusativ)
 
-   An: på (mer som i på den dagen, ta på sig)
-   Auf: på (mer som i på den stolen, på den platsen)
-   Hinter: bakom
-   In: i
-   Neben: bredvid
-   Über: över
-   Unter: under
-   Vor: framför
-   Zwischen: emellan
+   | An       | på (mer som i på den dagen, ta på sig)       |
+   | Auf      | på (mer som i på den stolen, på den platsen) |
+   | Hinter   | bakom                                        |
+   | In       | i                                            |
+   | Neben    | bredvid                                      |
+   | Über     | över                                         |
+   | Unter    | under                                        |
+   | Vor      | framför                                      |
+   | Zwischen | emellan                                      |
    
 ** Verb
    Hur verb funkar:
