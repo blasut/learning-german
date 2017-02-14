@@ -642,13 +642,13 @@ Jag vill ge det till henne.
     
     | Svenska       | Tyska          |
     |---------------+----------------|
-    | jag är trött  | Ich bin müde   |
-    | du är trött   | Du bist müde   |
-    | hon är trött  | Sie ist müde   |
-    | han är trött  | Er ist müde    |
-    | den är trött  | Es ist müde    |
-    | vi är trötta  | Wir sind müde  |
-    | ni är trötta  | Ihr seid müde  |
+    | jag är trött  | ich bin müde   |
+    | du är trött   | du bist müde   |
+    | hon är trött  | sie ist müde   |
+    | han är trött  | er ist müde    |
+    | den är trött  | es ist müde    |
+    | vi är trötta  | wir sind müde  |
+    | ni är trötta  | ihr seid müde  |
     | Ni är trött   | Sie sind müde  |
     | dom är trötta | sie sind müden |
 
@@ -1618,7 +1618,7 @@ Jag vill ge det till henne.
     | tvinga (presens)        | zwingen / zwang / hat gezwungen       |
     
 ** En stor blandning av olika ord, fraser och uttryck
-   Denna lista används för att peta in ord jag inte kan eller hittat.
+   Denna lista används för att peta in ord jag av nån anledning vill spara.
 
     | Svenska             | Tyska                 |
     |---------------------+-----------------------|
