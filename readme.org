@@ -440,10 +440,11 @@ Jag måste ge det till honom.
 Jag vill ge det till henne.
 
 
-* Egna inklistringar
-
-** Grammatik
-*** So sehe ich aus
+* Grammatik
+  - Grundläggande grammatik: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292180
+  - Grammatik flashcards: https://www.freeingblue.com/flashcards/print_preview.cgi?cardsetID=214781
+  - Mer grammatik flashcards: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292181
+** So sehe ich aus
    Ich habe einen/ein/eine ACKUSATIV-en/es/e X an.
 
    Med verbet har använder man alltid ackusativ och ackusativ påverkar inte bara artikeln (ein/ein/eine) utan även ackusativet (hur någonting är, t.ex. röd)
@@ -461,7 +462,7 @@ Jag vill ge det till henne.
    Med feminin blir det så här
    jag har en svart katt - ich habe eine schwarze Katze.
 
-*** Ackusativ och Dativ
+** Ackusativ och Dativ
    Ackusativobjekt - det normala objektet,
 
    t.ex. Anna äter en banan - Anna isst einen Banan
@@ -528,7 +529,7 @@ Jag vill ge det till henne.
    Sie - Ihr
    sie - ihr 
    
-*** Ordning kommer orden?
+** Ordning kommer orden?
 
    Tyska fungerar som svenska i alla huvudsatser, det vill sägas meningar utan komman som kan stå själva.
 
@@ -542,7 +543,7 @@ Jag vill ge det till henne.
 
    Ett expempel: Jag slår Stig, för att han är dum - Ich schlage Stig, weil er blöd ist. 
    
-*** Tyska prepositioner
+** Tyska prepositioner
    Prepositioner med ackusativ: Den, das, die, die(pl)
 
    | Durch | genom                      |
@@ -575,59 +576,61 @@ Jag vill ge det till henne.
    | Vor      | framför                                      |
    | Zwischen | emellan                                      |
    
-*** Wikipedia
+** Wikipedia
    https://sv.wikipedia.org/wiki/Tysk_grammatik
 ** Verb
-   Hur verb funkar:
+   - modala hjälpverb: https://freezingblue.com/flashcards/print_preview.cgi?cardsetID=292182
+   - starka verb: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292183
+   - adverb https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292233
+*** Hur verb funkar
+    Hur verb funkar:
 
-   Nutid (presens) :
+    Nutid (presens) :
 
-   Jag: Ich -e - t.ex ich geh-e
-   Du: Du - st - t.ex. du geh-st
-   Han: Er -t - t.ex er geh-t
-   Den: Es - t - t.ex - es geh-t
-   Hon: sie - t - t.ex. - sie geh-t
-   Vi: Wir - hela verbet - t.ex. wir gehen
-   ni: Ihr - t - t.ex. ihr geh-t
-   Ni: Sie - hela verbet - t.ex. Sie gehen
-   De: sie - hela verbet - t.ex. sie gehen
+    Jag: Ich -e - t.ex ich geh-e
+    Du: Du - st - t.ex. du geh-st
+    Han: Er -t - t.ex er geh-t
+    Den: Es - t - t.ex - es geh-t
+    Hon: sie - t - t.ex. - sie geh-t
+    Vi: Wir - hela verbet - t.ex. wir gehen
+    ni: Ihr - t - t.ex. ihr geh-t
+    Ni: Sie - hela verbet - t.ex. Sie gehen
+    De: sie - hela verbet - t.ex. sie gehen
 
-   Dåtid:
+    Dåtid:
 
-   Dåtid gör man med verbet haben böjt efter person och sedan dåtidsverbet med förleden ge och slutet -t.
+    Dåtid gör man med verbet haben böjt efter person och sedan dåtidsverbet med förleden ge och slutet -t.
 
-   ge-verbrot-t
+    ge-verbrot-t
 
-   Ett exempel skulle kunna vara
+    Ett exempel skulle kunna vara
 
-   Ich habe ge-hab-t, jag har haft
+    Ich habe ge-hab-t, jag har haft
 
-   Framtid:
+    Framtid:
 
-   Framtid görs med verbet "werden" - att bli - och verbet som skall bli böjt i grundform som placeras allra sist i en mening
+    Framtid görs med verbet "werden" - att bli - och verbet som skall bli böjt i grundform som placeras allra sist i en mening
 
-   Ich werde
-   du wirst
-   er wird
-   sie wird
-   es wird
-   wir werden
-   ihr werdet
-   Sie werden
-   sie werden
+    Ich werde
+    du wirst
+    er wird
+    sie wird
+    es wird
+    wir werden
+    ihr werdet
+    Sie werden
+    sie werden
 
-   Ett exempel:
+    Ett exempel:
 
-   Imorgon klockan sex ska jag äta en glass tillsammans med mina vänner framför skolan.
+    Imorgon klockan sex ska jag äta en glass tillsammans med mina vänner framför skolan.
 
-   Ich werde morgen um sechs Uhr vor der Schule mit meinen Freunden einen Eis essen
+    Ich werde morgen um sechs Uhr vor der Schule mit meinen Freunden einen Eis essen
 
-   Kanske kan skriva ihop lite exempel att träna på från ovanstående?
-
+    Kanske kan skriva ihop lite exempel att träna på från ovanstående?
 
 *** 20 vanligaste verben
-    
-    Att vara
+**** Att vara
     | Infinitiv | Presens       |
     | sien      | ich bin       |
     |           | du bist       |
@@ -636,9 +639,20 @@ Jag vill ge det till henne.
     |           | ihr seid      |
     |           | Sie sind      |
     |           | sie sind      |
+    
+    | Svenska       | Tyska          |
+    |---------------+----------------|
+    | jag är trött  | Ich bin müde   |
+    | du är trött   | Du bist müde   |
+    | hon är trött  | Sie ist müde   |
+    | han är trött  | Er ist müde    |
+    | den är trött  | Es ist müde    |
+    | vi är trötta  | Wir sind müde  |
+    | ni är trötta  | Ihr seid müde  |
+    | Ni är trött   | Sie sind müde  |
+    | dom är trötta | sie sind müden |
 
-
-    att ha
+**** Att ha
     | Infinitiv | Presens       |
     | haben     |               |
     |           | ich habe      |
@@ -649,8 +663,7 @@ Jag vill ge det till henne.
     |           | Sie haben     |
     |           | sie haben     |
 
-
-    att bli
+**** att bli
     | Infinitiv | Presens        |
     | werden    |                |
     |           | ich werde      |
@@ -661,8 +674,7 @@ Jag vill ge det till henne.
     |           | Sie werden     |
     |           | sie werden     |
 
-    
-    att kunna
+**** att kunna
     | Infinitiv | Presens        |
     | können    |                |
     |           | ich kann       |
@@ -673,7 +685,7 @@ Jag vill ge det till henne.
     |           | Sie können     |
     |           | sie können     |
 
-    måste göra
+**** måste göra
     | Infinitiv | Presens        |
     | müssen    |                |
     |           | ich muss       |
@@ -684,7 +696,7 @@ Jag vill ge det till henne.
     |           | Sie müssen     |
     |           | sie münnen     |
 
-    vilja
+**** vilja
     | Infinitiv | Presens        |
     | wollen    |                |
     |           | ich will       |
@@ -695,18 +707,29 @@ Jag vill ge det till henne.
     |           | Sie wollen     |
     |           | sie wollen     |
 
-    tycka om/ skulle vilja
-    | Infinitiv      | Presens                |
-    | mögen/ möchten |                        |
-    |                | ich mag/ möchte        |
-    |                | du magst/ möchtest     |
-    |                | er/sie/es mag/ möchtet |
-    |                | wir mögen /möchten     |
-    |                | ihr mögt/ möchtet      |
-    |                | Sie mögen/ möchten     |
-    |                | sie mögen/möchten      |
+**** tycka om
+    | Infinitiv | Presens       |
+    | mögen     |               |
+    |           | ich mag       |
+    |           | du magst      |
+    |           | er/sie/es mag |
+    |           | wir mögen     |
+    |           | ihr mögt      |
+    |           | Sie mögen     |
+    |           | sie mögen     |
 
-    att veta
+**** skulle vilja
+    | Infinitiv | Presens           |
+    | möchten   |                   |
+    |           | ich möchte        |
+    |           | du  möchtest      |
+    |           | er/sie/es möchtet |
+    |           | wir möchten       |
+    |           | ihr möchtet       |
+    |           | Sie möchten       |
+    |           | sie möchten       |
+
+**** att veta
     | Infinitiv | Presens         |
     | wissen    |                 |
     |           | ich weiß        |
@@ -717,7 +740,7 @@ Jag vill ge det till henne.
     |           | Sie wissen      |
     |           | sie wissen      |
 
-    att göra
+**** att göra
     | machen |                 |
     |        | ich mache       |
     |        | du machst       |
@@ -727,7 +750,7 @@ Jag vill ge det till henne.
     |        | Sie machen      |
     |        | sie machen      |
 
-    ska, borde göra
+**** ska, borde göra
     | sollen |                |
     |        | ich soll       |
     |        | du sollst      |
@@ -737,7 +760,7 @@ Jag vill ge det till henne.
     |        | Sie sollen     |
     |        | sie sollen     |
 
-    heta
+**** heta
     | heißen |                 |
     |        | ich heiße       |
     |        | du heißt        |
@@ -747,7 +770,7 @@ Jag vill ge det till henne.
     |        | Sie heißen      |
     |        | sie heißen      |
 
-    säga
+**** säga
     | sagen |                |
     |       | ich sage       |
     |       | du sagst       |
@@ -757,7 +780,7 @@ Jag vill ge det till henne.
     |       | Sie sagen      |
     |       | sie sagen      |
 
-    gå
+**** gå
     | gehen |                |
     |       | ich gehe       |
     |       | du gehst       |
@@ -767,7 +790,7 @@ Jag vill ge det till henne.
     |       | Sie gehen      |
     |       | sie gehen      |
 
-    se
+**** se
     | sehen |                 |
     |       | ich sehe        |
     |       | du siehst       |
@@ -777,7 +800,7 @@ Jag vill ge det till henne.
     |       | Sie sehen       |
     |       | sie sehen       |
 
-    ge
+**** ge
     | geben |                |
     |       | ich gebe       |
     |       | du gibst       |
@@ -787,7 +810,7 @@ Jag vill ge det till henne.
     |       | Sie geben      |
     |       | sie geben      |
 
-    komma
+**** komma
     | kommen |                 |
     |        | ich komme       |
     |        | du kommst       |
@@ -797,7 +820,7 @@ Jag vill ge det till henne.
     |        | Sie kommen      |
     |        | sie kommen      |
 
-    låta, lämna
+**** låta, lämna
     | lassen |                 |
     |        | ich lasse       |
     |        | du lässt        |
@@ -807,7 +830,7 @@ Jag vill ge det till henne.
     |        | Sie lassen      |
     |        | sie lassen      |
 
-    hitta
+**** hitta
     | finden |                  |
     |        | ich finde        |
     |        | du findest       |
@@ -817,7 +840,7 @@ Jag vill ge det till henne.
     |        | Sie finden       |
     |        | sie finden       |
 
-    stanna kvar
+**** stanna kvar
     | bleiben |                  |
     |         | ich bleibe       |
     |         | du bleibst       |
@@ -827,7 +850,7 @@ Jag vill ge det till henne.
     |         | Sie bleiben      |
     |         | sie bleiben      |
     
-    ta
+**** ta
     | nehmen |                 |
     |        | ich nehme       |
     |        | du nimmst       |
@@ -837,7 +860,7 @@ Jag vill ge det till henne.
     |        | Sie nehmen      |
     |        | sie nehmen      |
 
-    ta med sig
+**** ta med sig
     | bringen |                  |
     |         | ich bringe       |
     |         | du bringst       |
@@ -847,6 +870,8 @@ Jag vill ge det till henne.
     |         | Sie bringen      |
     |         | sie bringen      |
 
+
+* Fraser
 ** Hobbies exempel
    Hobbys ... Hobbys haben wir alle, aber die unterschieden sich oft zwischen Leute. Was machst du am liebsten wenn du Frei bist?
    Hobbys ... Intressen har vi alla, men de skiljer sig ofta åt mellan folk. Vad gör du gärna när du är ledig?
@@ -902,7 +927,6 @@ Jag vill ge det till henne.
    | arrogant         | arrogant, eingebildet               |
    | smutsig          | unordentlich                        |
 
-   
 ** Olika fraser
 *** ord.se
 **** Hälsningsfraser m.m.
@@ -965,6 +989,9 @@ Jag vill ge det till henne.
 
     Hur mycket är klockan? 
     Wie spät ist es?
+    
+    Vad är klockan?
+    Wie viel uhr ist es?
 
     Vi ses klockan två. 
     Wir treffen uns um zwei Uhr.
@@ -1440,203 +1467,218 @@ Jag vill ge det till henne.
     herrtoalett
     Herrentoilette
 
-** Sammanfattade listor med glosor
+*** fluentu
+    - http://www.fluentu.com/german/blog/german-conversation-practice/
+    - http://www.fluentu.com/german/blog/german-dative/
+    - http://www.fluentu.com/german/blog/german-nominative-accusative-pronouns-cases-articles/ 
+    - http://www.fluentu.com/german/blog/learn-german-word-order/
+    - http://www.fluentu.com/german/blog/common-useful-german-travel-phrases-vocabulary-words/
+    - http://www.fluentu.com/german/blog/german-adjective-endings-practice/
+
+*** andra
+    - http://german.about.com/od/vocabulary/fl/German-Verbs-Examples-Regular-and-Irregular-Verbs.htm
+    
+
+* Glosor
+
+  - Lång lista på glosor: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=275685
+  - Glosor https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=275451
+
+** lista med glosor, mest verb och hjälpord
    Följande länkar har använts:
 - https://glosor.eu/ovning/tyska-verb.210359.html
 - https://quizlet.com/11559803/tyska-starka-verb-flash-cards/
 - https://quizlet.com/11532128/tyska-datack-v2-flash-cards/
-- https://quizlet.com/11559803/tyska-starka-verb-flash-cards/
 - https://quizlet.com/16140670/tyska-flash-cards/
 - https://quizlet.com/11532065/tyska-kon-flash-cards/ 
 
-    | Svenska                | Tyska                                 |
-    |------------------------+---------------------------------------|
-    | få                     | bekommen                              |
-    | äta                    | essen                                 |
-    | hitta                  | finden                                |
-    | ge                     | geben                                 |
-    | vinna                  | gewinnen                              |
-    | läsa                   | lesen                                 |
-    | ta                     | nehmen                                |
-    | sova                   | schlafen                              |
-    | skriva                 | schreiben                             |
-    | se                     | sehen                                 |
-    | sjunga                 | singen                                |
-    | stå                    | stehen                                |
-    | träffa                 | treffen                               |
-    | dricka                 | trinken                               |
-    | göra                   | tun                                   |
-    | glömma                 | vergessen                             |
-    | förlora                | verlieren                             |
-    | förstå                 | verstehen                             |
-    | jag har fått           | ich habe bekommen                     |
-    | jag har ätit           | ich habe gegessen                     |
-    | jag har hittat         | ich habe gefunden                     |
-    | jag har gett           | ich habe gegeben                      |
-    | jag har vunnit         | ich habe gewonnen                     |
-    | jag har läst           | ich habe gelesen                      |
-    | jag har tagit          | ich habe genommen                     |
-    | jag har sovit          | ich habe geschlafen                   |
-    | jag har skrivit        | ich habe geschreben                   |
-    | jag har sett           | ich habe gesehen                      |
-    | jag har sjungit        | ich habe gesungen                     |
-    | jag har stått          | ich habe gestanden                    |
-    | jag har träffat        | ich habe getroffen                    |
-    | jag har druckit        | ich habe getrunken                    |
-    | jag har gjort          | ich habe getan                        |
-    | jag har glömt          | ich habe vergessen                    |
-    | jag har förlorat       | ich habe verloren                     |
-    | jag har förstått       | ich habe verstanden                   |
-    | börja (presens)        | beginnen / begann / hat begonnen      |
-    | bjuda (presens)        | bieten / bot / hat geboten            |
-    | binda (presens)        | binden / band / hat gebunden          |
-    | be (presens)           | bitten / bat / hat gebeten            |
-    | stanna kvar (presens)  | bleiben / blieb / ist geblieben       |
-    | bryta (presens)        | brechen / brach / hat gebrochen       |
-    | äta (presens)          | essen / aß / hat gegessen             |
-    | åka (presens)          | fahren / fuhr / ist gefahren          |
-    | falla (presens)        | fallen / fiel / ist gefallen          |
-    | fånga (presens)        | fangen / fing / hat gefangen          |
-    | finna/hitta (presens)  | finden / fand / hat gefunden          |
-    | flyga (presens)        | fliegen / flog / ist geflogen         |
-    | fly (presens)          | fliehen / floh / ist geflohen         |
-    | flyta (presens)        | fliessen / floss / ist geflossen      |
-    | ge (presens)           | geben / gab / hat gegeben             |
-    | gå (presens)           | gehen / ging / ist gegangen           |
-    | lyckas (presens)       | gelingen / gelang / ist gelungen      |
-    | vinna (presens)        | gewinnen / gewann / hat gewonnen      |
-    | likna (presens)        | gleichen / glich / hat geglichen      |
-    | hålla/stanna (presens) | halten / hielt / hat gehalten         |
-    | hänga (presens)        | hängen / hing / hat gehangen          |
-    | hjälpa (presens)       | helfen / half / hat geholfen          |
-    | komma (presens)        | kommen / kam / ist gekommen           |
-    | ladda (presens)        | laden / lud / hat geladen             |
-    | låta (presens)         | lassen / liess / hat gelassen         |
-    | springa (presens)      | laufen / lief / ist gelaufen          |
-    | låna (presens)         | leihen / lieh / hat geliehen          |
-    | läsa (presens)         | lesen / las / hat gelesen             |
-    | ligga (presens)        | liegen / lag / hat gelegen            |
-    | ljuga (presens)        | lügen / log / hat gelogen             |
-    | ta (presens)           | nehmen / nahm / hat genommen          |
-    | rida (presens)         | reiten / ritt / ist geritten          |
-    | ropa (presens)         | rufen / rief / hat gerufen            |
-    | sova (presens)         | schlafen / schlief / hat geschlafen   |
-    | slå (presens)          | schlagen / schlug / hat geschlagen    |
-    | skriva (presens)       | schreiben / schrieb / hat geschrieben |
-    | simma (presens)        | schwimmen / schwamm / ist geschwommen |
-    | se (presens)           | sehen / sah / hat gesehen             |
-    | sjunga (presens)       | singen / sang / hat gesungen          |
-    | sitta (presens)        | sitzen / saß / hat gesessen           |
-    | tala (presens)         | sprechen / sprach / hat gesprochen    |
-    | stå (presens)          | stehen / stand / hat gestanden        |
-    | dö (presens)           | sterben / starb / ist gestorben       |
-    | träffa (presens)       | treffen / traf / hat getroffen        |
-    | dricka (presens)       | trinken / trank / hat getrunken       |
-    | glömma (presens)       | vergessen / vergaß / hat vergessen    |
-    | förlora (presens)      | verlieren / verlor / hat verloren     |
-    | tvätta (presens)       | waschen / wusch / hat gewaschen       |
-    | kasta (presens)        | werfen / warf / hat geworfen          |
-    | tvinga (presens)       | zwingen / zwang / hat gezwungen       |
-    | börja (presens)        | beginnen / begann / hat begonnen      |
-    | bjuda (presens)        | bieten / bot / hat geboten            |
-    | binda (presens)        | binden / band / hat gebunden          |
-    | be (presens)           | bitten / bat / hat gebeten            |
-    | stanna kvar (presens)  | bleiben / blieb / ist geblieben       |
-    | bryta (presens)        | brechen / brach / hat gebrochen       |
-    | äta (presens)          | essen / aß / hat gegessen             |
-    | åka (presens)          | fahren / fuhr / ist gefahren          |
-    | falla (presens)        | fallen / fiel / ist gefallen          |
-    | fånga (presens)        | fangen / fing / hat gefangen          |
-    | finna/hitta (presens)  | finden / fand / hat gefunden          |
-    | flyga (presens)        | fliegen / flog / ist geflogen         |
-    | fly (presens)          | fliehen / floh / ist geflohen         |
-    | flyta (presens)        | fliessen / floss / ist geflossen      |
-    | ge (presens)           | geben / gab / hat gegeben             |
-    | gå (presens)           | gehen / ging / ist gegangen           |
-    | lyckas (presens)       | gelingen / gelang / ist gelungen      |
-    | vinna (presens)        | gewinnen / gewann / hat gewonnen      |
-    | likna (presens)        | gleichen / glich / hat geglichen      |
-    | hålla/stanna (presens) | halten / hielt / hat gehalten         |
-    | hänga (presens)        | hängen / hing / hat gehangen          |
-    | hjälpa (presens)       | helfen / half / hat geholfen          |
-    | komma (presens)        | kommen / kam / ist gekommen           |
-    | ladda (presens)        | laden / lud / hat geladen             |
-    | låta (presens)         | lassen / liess / hat gelassen         |
-    | springa (presens)      | laufen / lief / ist gelaufen          |
-    | låna (presens)         | leihen / lieh / hat geliehen          |
-    | läsa (presens)         | lesen / las / hat gelesen             |
-    | ligga (presens)        | liegen / lag / hat gelegen            |
-    | ljuga (presens)        | lügen / log / hat gelogen             |
-    | ta (presens)           | nehmen / nahm / hat genommen          |
-    | rida (presens)         | reiten / ritt / ist geritten          |
-    | ropa (presens)         | rufen / rief / hat gerufen            |
-    | sova (presens)         | schlafen / schlief / hat geschlafen   |
-    | slå (presens)          | schlagen / schlug / hat geschlagen    |
-    | skriva (presens)       | schreiben / schrieb / hat geschrieben |
-    | simma (presens)        | schwimmen / schwamm / ist geschwommen |
-    | se (presens)           | sehen / sah / hat gesehen             |
-    | sjunga (presens)       | singen / sang / hat gesungen          |
-    | sitta (presens)        | sitzen / saß / hat gesessen           |
-    | tala (presens)         | sprechen / sprach / hat gesprochen    |
-    | stå (presens)          | stehen / stand / hat gestanden        |
-    | dö (presens)           | sterben / starb / ist gestorben       |
-    | träffa (presens)       | treffen / traf / hat getroffen        |
-    | dricka (presens)       | trinken / trank / hat getrunken       |
-    | glömma (presens)       | vergessen / vergaß / hat vergessen    |
-    | förlora (presens)      | verlieren / verlor / hat verloren     |
-    | tvätta (presens)       | waschen / wusch / hat gewaschen       |
-    | kasta (presens)        | werfen / warf / hat geworfen          |
-    | tvinga (presens)       | zwingen / zwang / hat gezwungen       |
-    | vid                    | um                                    |
-    | utan                   | ohne                                  |
-    | mot                    | gegen                                 |
-    | för                    | für                                   |
-    | genom                  | dürch                                 |
-    | från                   | aus                                   |
-    | vid                    | bei                                   |
-    | efter                  | nach                                  |
-    | sedan                  | seit                                  |
-    | från                   | von                                   |
-    | till                   | zu                                    |
-    | med                    | mit                                   |
-    | att                    | dass                                  |
-    | då, när                | als, wenn                             |
-    | innan, förän           | ehe, bevor                            |
-    | tills                  | bis                                   |
-    | medan                  | während                               |
-    | sedan, efter det att   | nachdem                               |
-    | så snart (som)         | sobald                                |
-    | så ofta (som)          | sooft                                 |
-    | så länge (som)         | solange                               |
-    | emedan, därför att     | weil                                  |
-    | eftersom, då           | da                                    |
-    | om                     | wenn                                  |
-    | om, ifall att          | falls                                 |
-    | om                     | ob                                    |
-    | fastän                 | obgleich, obwohl                      |
-    | fastän                 | trotzdem                              |
-    | som, såsom             | als                                   |
-    | som, liksom            | wie                                   |
-    | som om                 | als ob                                |
-    | örfila                 | ohrfeigen                             |
-    | lyfta                  | heben                                 |
-    | stanna                 | halten                                |
-    | krafsa                 | kratzen                               |
-    | kyssa                  | küssen                                |
-    | bita                   | beissen                               |
-    | trycka                 | schubsen                              |
-    | stöta                  | stossen                               |
-    | slå                    | schlagen                              |
-    | klippa                 | hauen                                 |
-    | boxa                   | boxen                                 |
-    | böja                   | beugen                                |
-    | dra                    | ziehen                                |
-    | röra med fingrarna     | befingern                             |
-    | röra                   | berühren                              |
-    | slå                    | streicheln                            |
-    | trycka                 | drücken                               |
-    | omfamna                | umarmen                               |
-    | nypa                   | zwicken                               |
+*** Blandat
+    | Svenska                 | Tyska                                 |
+    |-------------------------+---------------------------------------|
+    | få                      | bekommen                              |
+    | äta                     | essen                                 |
+    | hitta                   | finden                                |
+    | ge                      | geben                                 |
+    | vinna                   | gewinnen                              |
+    | läsa                    | lesen                                 |
+    | ta                      | nehmen                                |
+    | sova                    | schlafen                              |
+    | skriva                  | schreiben                             |
+    | se                      | sehen                                 |
+    | sjunga                  | singen                                |
+    | stå                     | stehen                                |
+    | träffa                  | treffen                               |
+    | dricka                  | trinken                               |
+    | göra                    | tun                                   |
+    | glömma                  | vergessen                             |
+    | förlora                 | verlieren                             |
+    | förstå                  | verstehen                             |
+    | jag har fått            | ich habe bekommen                     |
+    | jag har ätit            | ich habe gegessen                     |
+    | jag har hittat          | ich habe gefunden                     |
+    | jag har gett            | ich habe gegeben                      |
+    | jag har vunnit          | ich habe gewonnen                     |
+    | jag har läst            | ich habe gelesen                      |
+    | jag har tagit           | ich habe genommen                     |
+    | jag har sovit           | ich habe geschlafen                   |
+    | jag har skrivit         | ich habe geschreben                   |
+    | jag har sett            | ich habe gesehen                      |
+    | jag har sjungit         | ich habe gesungen                     |
+    | jag har stått           | ich habe gestanden                    |
+    | jag har träffat         | ich habe getroffen                    |
+    | jag har druckit         | ich habe getrunken                    |
+    | jag har gjort           | ich habe getan                        |
+    | jag har glömt           | ich habe vergessen                    |
+    | jag har förlorat        | ich habe verloren                     |
+    | jag har förstått        | ich habe verstanden                   |
+    | vid                     | um                                    |
+    | utan                    | ohne                                  |
+    | mot                     | gegen                                 |
+    | för                     | für                                   |
+    | genom                   | dürch                                 |
+    | från                    | aus                                   |
+    | för                     | bei                                   |
+    | efter                   | nach                                  |
+    | sedan                   | seit                                  |
+    | från                    | von                                   |
+    | till                    | zu                                    |
+    | med                     | mit                                   |
+    | att                     | dass                                  |
+    | då, när                 | als, wenn                             |
+    | innan, förän            | ehe, bevor                            |
+    | tills                   | bis                                   |
+    | medan                   | während                               |
+    | sedan, efter det att    | nachdem                               |
+    | så snart (som)          | so bald                               |
+    | så ofta (som)           | so oft                                |
+    | så länge (som)          | so lange                              |
+    | emedan, därför att      | weil                                  |
+    | eftersom, då            | da                                    |
+    | om                      | wenn                                  |
+    | om, ifall att           | falls                                 |
+    | om                      | ob                                    |
+    | fastän                  | obgleich, obwohl                      |
+    | fastän                  | trotzdem                              |
+    | som, såsom              | als                                   |
+    | som, liksom             | wie                                   |
+    | som om                  | als ob                                |
+    
+*** 50 starka verb 
+    | Svenska                 | Tyska                                 |
+    |-------------------------+---------------------------------------|
+    | börja/börjar/har börjat | beginnen / begann / hat begonnen      |
+    | bjuda (presens)         | bieten / bot / hat geboten            |
+    | binda (presens)         | binden / band / hat gebunden          |
+    | be (presens)            | bitten / bat / hat gebeten            |
+    | stanna kvar (presens)   | bleiben / blieb / ist geblieben       |
+    | bryta (presens)         | brechen / brach / hat gebrochen       |
+    | äta (presens)           | essen / aß / hat gegessen             |
+    | åka (presens)           | fahren / fuhr / ist gefahren          |
+    | falla (presens)         | fallen / fiel / ist gefallen          |
+    | fånga (presens)         | fangen / fing / hat gefangen          |
+    | finna/hitta (presens)   | finden / fand / hat gefunden          |
+    | flyga (presens)         | fliegen / flog / ist geflogen         |
+    | fly (presens)           | fliehen / floh / ist geflohen         |
+    | flyta (presens)         | fliessen / floss / ist geflossen      |
+    | ge (presens)            | geben / gab / hat gegeben             |
+    | gå (presens)            | gehen / ging / ist gegangen           |
+    | lyckas (presens)        | gelingen / gelang / ist gelungen      |
+    | vinna (presens)         | gewinnen / gewann / hat gewonnen      |
+    | likna (presens)         | gleichen / glich / hat geglichen      |
+    | hålla/stanna (presens)  | halten / hielt / hat gehalten         |
+    | hänga (presens)         | hängen / hing / hat gehangen          |
+    | hjälpa (presens)        | helfen / half / hat geholfen          |
+    | komma (presens)         | kommen / kam / ist gekommen           |
+    | ladda (presens)         | laden / lud / hat geladen             |
+    | låta (presens)          | lassen / liess / hat gelassen         |
+    | springa (presens)       | laufen / lief / ist gelaufen          |
+    | låna (presens)          | leihen / lieh / hat geliehen          |
+    | läsa (presens)          | lesen / las / hat gelesen             |
+    | ligga (presens)         | liegen / lag / hat gelegen            |
+    | ljuga (presens)         | lügen / log / hat gelogen             |
+    | ta (presens)            | nehmen / nahm / hat genommen          |
+    | rida (presens)          | reiten / ritt / ist geritten          |
+    | ropa (presens)          | rufen / rief / hat gerufen            |
+    | sova (presens)          | schlafen / schlief / hat geschlafen   |
+    | slå (presens)           | schlagen / schlug / hat geschlagen    |
+    | skriva (presens)        | schreiben / schrieb / hat geschrieben |
+    | simma (presens)         | schwimmen / schwamm / ist geschwommen |
+    | se (presens)            | sehen / sah / hat gesehen             |
+    | sjunga (presens)        | singen / sang / hat gesungen          |
+    | sitta (presens)         | sitzen / saß / hat gesessen           |
+    | tala (presens)          | sprechen / sprach / hat gesprochen    |
+    | stå (presens)           | stehen / stand / hat gestanden        |
+    | dö (presens)            | sterben / starb / ist gestorben       |
+    | träffa (presens)        | treffen / traf / hat getroffen        |
+    | dricka (presens)        | trinken / trank / hat getrunken       |
+    | glömma (presens)        | vergessen / vergaß / hat vergessen    |
+    | förlora (presens)       | verlieren / verlor / hat verloren     |
+    | tvätta (presens)        | waschen / wusch / hat gewaschen       |
+    | kasta (presens)         | werfen / warf / hat geworfen          |
+    | tvinga (presens)        | zwingen / zwang / hat gezwungen       |
+    
+** En stor blandning av olika ord, fraser och uttryck
+   Denna lista används för att peta in ord jag inte kan eller hittat.
+
+    | Svenska             | Tyska                 |
+    |---------------------+-----------------------|
+    | tangentbordet       | die Tastatur          |
+    | sommaren            | der Sommer            |
+    | stranden            | der Strand            |
+    | handduken           | das Handtuch          |
+    | Jag gillar katter   | Ich mag Katzen        |
+    | Förlåt(?)           | Es tut mir leid       |
+    | allt                | zunehmend             |
+    | befolkning          | die Bevölkerung       |
+    | tortyrmetoder       | die Foltermethoden    |
+    | påminde             | erinnerten            |
+    | rapporten           | Der Bericht           |
+    | att räkna           | zählen                |
+    | antogs              | verasbschiedet        |
+    | samlades            | versammelten sich     |
+    | belägen             | gelegenen             |
+    | medan               | während               |
+    | att förtala         | diffamieren           |
+    | att avsluta         | aufkündigen           |
+    | igen/förnya         | erneut                |
+    | pappershög          | der Papierbögen       |
+    | minst               | mindestens            |
+    | att kasta           | werfen                |
+    | kastet              | das Werfen            |
+    | att kräva           | fordern               |
+    | kravet              | Das Fordern           |
+    | styrelse/panel      | Das Gremium           |
+    | före/innan          | zuvor                 |
+    | än tidigare         | als zuvor             |
+    | att skjuta          | abfeuern              |
+    | att avfyra en kanon | eine Kanone abfeuern  |
+    | siffran             | die Zahl              |
+    | där                 | dabei                 |
+    | är                  | seien                 |
+    | låt oss inse        | seien wir doch erlich |
+    | nyckeln             | die Schlüssel         |
+    | just/just nu        | gerade                |
+    | snart               | bald                  |
+    | strax               | gleich                |
+    | genast              | sofort                |
+    | sedan               | danach                |
+    | igår                | gestern               |
+    | i går               | vorgestern            |
+    | i morgon            | morgen                |
+    | i övermorgon        | übermorgen            |
+    | aldrig              | nie, niemals          |
+    | sällan              | selten                |
+    | då och då           | ab und zu             |
+    | ibland              | manchmal              |
+    | för det mesta       | meistens              |
+    | ofta                | oft                   |
+    | alltid              | immer                 |
+    | dagligen            | täglich               |
+    | från och med idag   | ab heute              |
+    | i morse             | heute Morgen          |
+    | i morgon bitti      | morgen früh           |
+    |                     |                       |
+   
     
     
 
