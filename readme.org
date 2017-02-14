@@ -1677,7 +1677,10 @@ Jag vill ge det till henne.
     | från och med idag   | ab heute              |
     | i morse             | heute Morgen          |
     | i morgon bitti      | morgen früh           |
-    |                     |                       |
+    | hörförståelse       | Hörverstehen          |
+    | nyheten             | Die Nachricht         |
+    | nyheterna           | Nachrichten           |
+    | hålet i tanden      | Das zahnloch          |
    
     
     
