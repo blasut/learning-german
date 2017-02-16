@@ -293,26 +293,60 @@ Eva gillade den nya fina bilen.
    typ: modalverb
 
 *** Meningar:
+    Er kann gut fahren
+    Han kör bra
+
+    Er konnte sie nicht leiden
+    Han orkade inte med henne
+
+    Er hatte sie nicht leiden können
+    Han hade inte orkat med henne
+    
+    Er kann Deutsch
+    Han kan tyska
 
 
 *** Presens används för att beskriva saker som händer eller är nu
-    | svenska: | tyska:    |
-    |----------+-----------|
-    | jag kan  | ich kann  |
-    | du kan   | du kannst |
-    | han kan  | er kann   |
-    | hon kan  | sie kann  |
-    | det kan  | es kann   |
+    | svenska: | tyska:     |
+    |----------+------------|
+    | jag kan  | ich kann   |
+    | du kan   | du kannst  |
+    | han kan  | er kann    |
+    | hon kan  | sie kann   |
+    | det kan  | es kann    |
+    | vi kan   | wir können |
+    | ni kan   | ihr könnt  |
+    | dom kan  | sie können |
+    | Ni kan   | Sie können |
 
 *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
+    | svenska:  | tyska:      |
+    |-----------+-------------|
+    | jag kunde | ich konnte  |
+    | du kunde  | du konntest |
+    | han kunde | er konnte   |
+    | hon kunde | sie konnte  |
+    | det kunde | es konnte   |
+    | vi kunde  | wir konnten |
+    | ni kunde  | ihr konntet |
+    | dom kunde | sie konnten |
+    | Ni kunde  | Sie konnten |
 
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
+    | svenska:       | tyska:            |
+    |----------------+-------------------|
+    | jag har kunnat | ich habe gekonnt  |
+    | du har kunnat  | du has gekonnt    |
+    | han har kunnat | er has gekonnt    |
+    | hon har kunnat | sie has gekonnt   |
+    | det har kunnat | es has gekonnt    |
+    | vi har kunnat  | wir haben gekonnt |
+    | ni har kunnat  | ihr habt gekonnt  |
+    | dom har kunnat | sie haben gekonnt |
+    | Ni har kunnat  | sie haben gekonnt |
+    In the present perfect or past perfect tense with another verb, the double infinitive construction is used, as in the following examples:
 
+    wir haben schwimmen können = we were able to swim 
+    ich hatte schwimmen können = I had been able to swim
     
 
