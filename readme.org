@@ -83,7 +83,9 @@ Eva gillade den nya fina bilen.
     # Tyska - VERBET
 
     # *** Meningar:
-
+    #  | svenska: | tyska: |
+    #  |----------+--------|
+    #  |          |        |
 
 
     # *** Presens används för att beskriva saker som händer eller är nu
@@ -144,6 +146,9 @@ Eva gillade den nya fina bilen.
     #    typ: modalverb
     # 
     # *** Meningar:
+    #    | svenska: | tyska: |
+    #    |----------+--------|
+    #    |          |        |
     # 
     # 
     # *** Presens används för att beskriva saker som händer eller är nu
@@ -167,20 +172,13 @@ Eva gillade den nya fina bilen.
 
 *** meningar
 
-   Ich werde sein sehr gut auf Deutsch
-   Jag kommer att vara mycket bra på tyska
-
-   Ich werde sein sehr gut Deutsch sprechen nach sechs Monaten
-   Jag kommer att vara mycket bra på tyska efter sex månader
-
-   Ich werde sein sprechen sehr gut Deutsch nach sechs Monaten von lernen
-   Jag kommer att vara mycket bra på tyska efter sex månader av träning
-
-   Ich bin ganz schlecht auf deutsch
-   Jag är väldigt dålig på tyska 
-
-   Sie ist super bei Party
-   Hon är grym på att festa
+    | svenska                                                              | tyska                                                                  |
+    |----------------------------------------------------------------------+------------------------------------------------------------------------|
+    | Jag kommer att vara mycket bra på tyska                              | Ich werde sein sehr gut auf Deutsch                                    |
+    | Jag kommer att vara mycket bra på tyska efter sex månader            | Ich werde sein sehr gut Deutsch sprechen nach sechs Monaten            |
+    | Jag kommer att vara mycket bra på tyska efter sex månader av träning | Ich werde sein sprechen sehr gut Deutsch nach sechs Monaten von lernen |
+    | Jag är väldigt dålig på tyska                                        | Ich bin ganz schlecht auf deutsch                                      |
+    | Hon är grym på att festa                                             | Sie ist super bei Party                                                |
 
 
 *** Presens:
@@ -209,7 +207,7 @@ Eva gillade den nya fina bilen.
     | Ni var   | Sie waren |
 
 *** Perfekt:
-    | svenska       | tyska    |
+    | svenska       | tyska            |
     | jag har varit | ich bin gewesen  |
     | du har varit  | du bist gewesen  |
     | han har varit | er ist gewesen   |
@@ -293,17 +291,13 @@ Eva gillade den nya fina bilen.
    typ: modalverb
 
 *** Meningar:
-    Er kann gut fahren
-    Han kör bra
 
-    Er konnte sie nicht leiden
-    Han orkade inte med henne
-
-    Er hatte sie nicht leiden können
-    Han hade inte orkat med henne
-    
-    Er kann Deutsch
-    Han kan tyska
+    | svenska                       | tyska                            |
+    |-------------------------------+----------------------------------|
+    | Han kör bra                   | Er kann gut fahren               |
+    | Han orkade inte med henne     | Er konnte sie nicht leiden       |
+    | Han hade inte orkat med henne | Er hatte sie nicht leiden können |
+    | Han kan tyska                 | Er kann Deutsch                  |
 
 
 *** Presens används för att beskriva saker som händer eller är nu
@@ -350,3 +344,4 @@ Eva gillade den nya fina bilen.
     ich hatte schwimmen können = I had been able to swim
     
 
+    
