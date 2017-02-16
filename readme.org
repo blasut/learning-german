@@ -150,13 +150,6 @@ Eva gillade den nya fina bilen.
     #    | svenska: | tyska: |
     #    |----------+--------|
     #    |          |        |
-    #    svenska: 					tyska:
-    #    jag kan					ich kann
-    #    du kan					du kannst
-    #    han kan					er kann
-    #    hon kan					sie kann
-    #    det kan					es kann
-    #    vi kan
     # 
     # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
     #    | svenska: | tyska: |
@@ -303,16 +296,13 @@ Eva gillade den nya fina bilen.
 
 
 *** Presens används för att beskriva saker som händer eller är nu
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
-   svenska: 					tyska:
-   jag kan					ich kann
-   du kan					du kannst
-   han kan					er kann
-   hon kan					sie kann
-   det kan					es kann
-   vi kan
+    | svenska: | tyska:    |
+    |----------+-----------|
+    | jag kan  | ich kann  |
+    | du kan   | du kannst |
+    | han kan  | er kann   |
+    | hon kan  | sie kann  |
+    | det kan  | es kann   |
 
 *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
     | svenska: | tyska: |
