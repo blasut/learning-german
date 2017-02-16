@@ -166,6 +166,49 @@ Eva gillade den nya fina bilen.
     #    |----------+--------|
     #    |          |        |
 
+* Fraser
+  Tanken är att dom flesta fraser ska kategoriseras under ett verb
+  
+  Detta är en slaskhink
+  
+  Viktigast är dock att allting hamnar i Ankiapp för repitition
+
+** Osorterat
+     | svenska:             | tyska:                   |
+     |----------------------+--------------------------|
+     | Vi äter fiskarna     | Wir essen die Fische     |
+     | Vi äter jordgubbar   | Wir essen Erdbeeren      |
+     | Jag har katter       | Ich habe Katzen          |
+     | Jag har katter hemma | Ich habe Katzen zu hause |
+     | Köttet är dåligt     | Das Fleisch ist schlecht |
+     | Nej, du är grym      | Nein, du bist toll       |
+     | Hon är dålig         | Sie ist schlecht         |
+     | Dom är svaga         | Sie sind schwach         |
+     | Du är högljudd       | Du bist laut             |
+     | Du är tyst           | Du bist leise            |
+     | Det är tyst          | Es ist leise             |
+     | Vi är lugna          | Wir sind ruhig           |
+     | Din mamma är liten   | Deine mutter ist klein   |
+     | Mannen är ledsen     | Der Mann ist traurig     |
+     | Det är roligt        | Es ist lustig            |
+     | Jag är klar          | Ich bin fertig           |
+     | Är maten dyr?        | Ist das Essen teuer?     |
+     | Det är långt         | Es ist weit              |
+     | Du är gammal         | Du bist alt              |
+     | Hon är gammal        | Sie ist alt              |
+     | Djuret är tungt      | Das Tier ist schwer      |
+     | Är grönsakerna rena? | Ist das Gemüse sauber?   |
+     | Är vattnet djupt?    | Ist das Wasser tief?     |
+     |                      |                          |
+
+     
+* Adjektiv
+
+  - einfach
+  - gross
+  - klein
+  - gesund
+
 * Verb
 ** sein
    Typ: irregular
@@ -342,6 +385,8 @@ Eva gillade den nya fina bilen.
 
     wir haben schwimmen können = we were able to swim 
     ich hatte schwimmen können = I had been able to swim
+    
+
     
 
     
