@@ -1,0 +1,1695 @@
+* Emacs Lisp Literate Programming Example
+
+Idén med projektet är två: 
+
+- Dels bygga upp en ordentlig fras/ordlista för svenska till tyska
+- Dels att lära mig elisp och org-mode bättre
+  
+- Länkar att låna från, i ordning av troligtvis mest nytta:
+
+  - https://sv.speaklanguages.com/tyska/fraser/
+  - https://sv.speaklanguages.com/tyska/ordlista/
+  - http://www.engoi.com/sv/de/index.html
+  - http://www.ord.se/reseparlorer/tysk-parlor/ (JS, men innehållet ligger i DOMen)
+  - https://www.swedishnomad.com/sv/tyska-fraser-och-uttryck/
+  - https://sv.wiktionary.org/wiki/Kategori:Tyska/Fraser (mer fraser som i ordspråk)
+
+
+Kanske suga ner alla ord från http://sv.bab.la/lexikon/svensk-tysk/ ? Fet jävla ordlista
+
+Finns verbböjningar här: http://sv.bab.la/verb/tysk/
+
+Kanske fixa egen tysk-ordlista och synka med denna? http://www.thegermanprofessor.com/top-500-german-words/ för att få en bra lista på dom 500 vanligasta tyska orden
+
+En idé: Ta alla 500 ord från: http://www.thegermanprofessor.com/top-500-german-words/ och sen sök på http://sv.bab.la/lexikon/tysk-svensk/der, sug ner först "översättningar & exempel" och sen resten av "användningsexempel"
+Enda problemet med det är att alla exempel är från EUs hemsida...
+
+Annan sajt med tyska flashcards: https://quizlet.com/10936791/tysk-flash-cards/
+  
+* Fras-lista från bab.la
+    
+Tanken är att få ut en CSV lista som ser ut ungefär såhär:
+#+BEGIN_SRC csv
+back,front,tags(comma separated list of tags for each card)
+från,von,word
+har,habe,word
+#+END_SRC
+Ordlistan laddas in ett ett verktyg som heter "Ankiapp", vilket är ett verktyg för att lära sig nya saker med hjälp av deras lösning för att koncentrera på det som är viktigast att repetera. 
+
+Vi börjar experimentet med att definera ett "source block", som kan avändas av andra "source blocks" för att göra requests. 
+#+NAME: fetch
+#+BEGIN_SRC restclient :var path="" :exports none
+GET http://sv.bab.la/:path
+#+END_SRC
+
+Börjar med att ladda in dom bibliotek som behövs. 
+#+BEGIN_SRC emacs-lisp :session=links
+(require 'cl)
+(require 'xml)
+(require 'dom)
+#+END_SRC
+
+#+RESULTS:
+: dom
+
+#+BEGIN_SRC emacs-lisp :session=links
+(defun make-url (path) 
+  (concat "http://sv.bab.la/" path))
+#+END_SRC
+
+#+RESULTS:
+: make-url
+
+get-url hämtar innehållet från en url, och ser till att innehåll decodas i utf-8. Denna funktion behövs senare för att den ovanstående lösningen med source-block fungerar inte.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun get-url (url)
+  (with-current-buffer 
+      (url-retrieve-synchronously url) 
+    (decode-coding-string (buffer-string) 'utf-8)))
+#+END_SRC
+
+#+RESULTS:
+: get-url
+
+parse tar en sträng med html och parse domen till en associationslista
+#+BEGIN_SRC emacs-lisp :session=links
+(defun parse (src)
+  (with-temp-buffer
+    (insert src)
+    (libxml-parse-html-region (point-min) (point-max))))
+#+END_SRC
+
+#+RESULTS:
+: parse
+
+clean-link tar en sträng och tar bort allting i en sträng från '#' och framåt
+#+BEGIN_SRC emacs-lisp :session=links
+(defun clean-link (link)
+  "Removes # and everything after it in strings. twitter.com#lol -> twitter.com"
+  (substring link 0 (string-match "#" link)))
+#+END_SRC
+
+#+RESULTS:
+: clean-link
+
+rm-dups är en liten wrapper kring cl-remove-duplicates. cl biblioteket, som står för "common lisp", ger oss massa fler funktioner. Men ofta är dom generella och det finns olika typer av sätt att jämföra om två 'saker' är lika. Så istället för att skriva ut det hela tiden äre smidigt med en wrapper.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun rm-dups (links)
+  (cl-remove-duplicates links :test #'string-equal))
+#+END_SRC
+
+#+RESULTS:
+: rm-dups
+
+parse-links tar den parsade domen, alltså en associationslista och hittar alla länkar, tar deras href-attribut och städar lite
+#+BEGIN_SRC emacs-lisp :session=links
+(defun parse-links (dom) 
+  (rm-dups (mapcar #'clean-link (remove-if-not #'stringp 
+                                               (mapcar 
+                                                (lambda (tag) 
+                                                  (dom-attr tag 'href)) 
+                                                (dom-by-tag dom 'a))))))
+#+END_SRC
+
+#+RESULTS:
+: parse-links
+
+#+BEGIN_SRC emacs-lisp :session=links
+(defun add-correct-lang-per-link (link)
+  (concat link "svensk-tysk"))
+#+END_SRC
+
+#+RESULTS:
+: add-correct-lang-per-link
+
+Här börjar den mer specifika delen för just fraser från http://sv.bab.la/. 
+
+fraser-p är en enkelt predicate function, som kollar om ordet "fraser" finns i den specifierade strängen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun fraser-p (l) 
+  (string-match "fraser" l))
+#+END_SRC
+
+#+RESULTS:
+: fraser-p
+
+direct-link-p är specifik till dessa typer av länkar, det antas att dom ser ut på ett visst sätt.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun direct-link-p (l)
+  (= 5 (length (split-string l "/"))))
+#+END_SRC
+
+#+RESULTS:
+: direct-link-p
+
+Parsa alla länkar som går direkt till en sida med fraser. Dessa har då 4st "/" i namnet. Mitten-delen av pathen är namnet på sektionen.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun direct-links (src)
+  (mapcar #'add-correct-lang-per-link 
+          (rm-dups (remove-if-not #'direct-link-p 
+                                  (remove-if-not #'fraser-p 
+                                                 (parse-links (parse src)))))))
+#+END_SRC
+
+#+RESULTS:
+: direct-links
+
+#+BEGIN_SRC emacs-lisp :session=links :cache yes
+(defvar links-to-phrases '())
+(setq links-to-phrases (direct-links (get-url (make-url "fraser"))))
+#+END_SRC
+
+#+RESULTS[edd2a9064192eb2b05d91841ee73bd6227aff5dd]:
+| /fraser/ansokan/personligt-brev/svensk-tysk | /fraser/ansokan/cv/svensk-tysk | /fraser/ansokan/referensbrev/svensk-tysk | /fraser/akademiker/innehallsforteckning/svensk-tysk | /fraser/akademiker/inledning/svensk-tysk | /fraser/akademiker/huvuddel/svensk-tysk | /fraser/akademiker/statistik/svensk-tysk | /fraser/akademiker/grafer-bilder-diagram/svensk-tysk | /fraser/akademiker/avslutning/svensk-tysk | /fraser/akademiker/citation/svensk-tysk | /fraser/akademiker/forkortningar/svensk-tysk | /fraser/affarer/brev/svensk-tysk | /fraser/affarer/e-post/svensk-tysk | /fraser/affarer/faktura/svensk-tysk | /fraser/affarer/bestallning/svensk-tysk | /fraser/affarer/moten/svensk-tysk | /fraser/affarer/reservationer/svensk-tysk | /fraser/affarer/forkortningar/svensk-tysk | /fraser/affarer/yrkesbeteckningar/svensk-tysk | /fraser/personligt/brev/svensk-tysk | /fraser/personligt/e-post/svensk-tysk | /fraser/personligt/meddelanden-inbjudningar/svensk-tysk | /fraser/personligt/lyckonskningar/svensk-tysk | /fraser/personligt/sms-webb/svensk-tysk | /fraser/resa/generellt/svensk-tysk | /fraser/resa/dator/svensk-tysk | /fraser/resa/halsa/svensk-tysk | /fraser/resa/shopping/svensk-tysk | /fraser/resa/ata-ute/svensk-tysk | /fraser/resa/logi/svensk-tysk | /fraser/resa/siffror-pengar/svensk-tysk | /fraser/resa/datum-tid/svensk-tysk | /fraser/resa/ta-sig-runt/svensk-tysk | /fraser/resa/florta/svensk-tysk | /fraser/immigration/dokument/svensk-tysk | /fraser/immigration/bank/svensk-tysk | /fraser/immigration/arbete/svensk-tysk | /fraser/immigration/studera/svensk-tysk | /fraser/immigration/bostad/svensk-tysk | /fraser/immigration/stöd-för-funktionshindrade/svensk-tysk | /fraser/immigration/husdjur/svensk-tysk |
+
+
+
+parse-phrases hittar alla fraser i domen.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun parse-phrases (src)
+  (flet ((get-suggestion  (n) (dom-texts (dom-by-class n "dict-suggestion")))
+         (get-result      (n) (dom-texts (dom-by-class n "dict-result")))
+         (get-explanation (n) (dom-texts (dom-by-class n "dict-explanation"))))
+    (mapcar (lambda (entry) 
+              (list :suggestion (get-suggestion entry) 
+                    :result (get-result entry) 
+                    :explanation (get-explanation entry))) 
+            (dom-by-class src "dict-entry"))))
+#+END_SRC
+
+#+RESULTS:
+: parse-phrases
+
+Exempel på hur parse-phrases kan avändas
+#+BEGIN_SRC emacs-lisp :session=links :results code
+(parse-phrases (parse (get-url (make-url (nth 1 links-to-phrases)))))
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC emacs-lisp
+((:suggestion "Förnamn" :result "Vorname" :explanation "Den sökandes tilltalsnamn")
+ (:suggestion "Efternamn" :result "Nachname" :explanation "Den sökandes familje- eller släktnamn")
+ (:suggestion "Födelsetid" :result "Geburtsdatum" :explanation "Den sökandes födelsedatum och -år")
+ (:suggestion "Födelseort" :result "Geburtsort" :explanation "Namnet på stället där den sökande föddes")
+ (:suggestion "Nationalitet" :result "Staatsangehörigkeit" :explanation "Land där den sökande är medborgare i")
+ (:suggestion "Civilstånd" :result "Familienstand" :explanation "Den sökandes nuvarande relationsstatus")
+ (:suggestion "Ogift" :result "ledig" :explanation "Inte gift (men kan ha ett förhållande)")
+ (:suggestion "Gift" :result "verheiratet" :explanation "Har en man eller en hustru")
+ (:suggestion "Änkling/Änka" :result "verwitwet" :explanation "Ensamstående på grund av makens/makans död")
+ (:suggestion "adressen" :result "Adresse" :explanation "Uppgifter om var den sökande för tillfället bor")
+ (:suggestion "Telefon" :result "Telefon" :explanation "Telefonnumret på vilket den sökande nås")
+ (:suggestion "E-post" :result "Email" :explanation "Den sökandes aktuella e-postadress")
+ (:suggestion "Hemsida" :result "Website" :explanation "Adressen till den sökandens personliga hemsida eller företagswebbplats")
+ (:suggestion "1991 - 1995 / Seattle University / Seattle, WA    Tradenom" :result "1991 - 1995 / Universität Seattle / Seattle, WA  Bachelorstudiengang Betriebswirtschaftslehre" :explanation "Standard format för att lista din utbildning (USA)")
+ (:suggestion "Grundskola" :result "Grundschule" :explanation "Den lägsta nivån av skola som ger formell undervisning för barn mellan sex och elva år (USA )")
+ (:suggestion "Grundskola (mellanstadiet)" :result "Mittelstufenschule" :explanation "Skola mellan grundskolan och gymnasiet för barn mellan elva och fjorton år (USA )")
+ (:suggestion "Gymnasiet" :result "Oberstufenschule" :explanation "Skola efter mellanstadiet för barn i åldrarna fjorton till arton år (USA)")
+ (:suggestion "Högskola/Universitet" :result "Hochschule" :explanation "Namn för examen på högskolenivå (USA)")
+ (:suggestion "Dagis" :result "Vorschule" :explanation "Svenska barnomsorgen innan skolgång")
+ (:suggestion "Förskola" :result "Grundschule" :explanation "Svensk skolning för barn i åldrarna fyra till sex år")
+ (:suggestion "Grundskola" :result "weiterführende Schule" :explanation "Svensk utbildning för ungdomar i åldrarna sex till femton år")
+ (:suggestion "Gymnasiet" :result "Oberstufenkolleg" :explanation "Svensk utbildning för ungdomar i åldrarna sexton till nitton år")
+ (:suggestion "Skola för elever i sixth form" :result "Universität" :explanation "Brittisk utbildning för ungdomar i åldrarna sexton till arton år. Har som syfte att förbättra betyg för att söka vidare.")
+ (:suggestion "Universitet" :result "" :explanation "Brittisk motsvarighet till svenskt universitet/högskola")
+ (:suggestion "1998- / Jackson Skor AB / Spokane, WA    Chef    Ansvarsområde:" :result "1998 - heute / Jackson Shoes Inc. / Spokane, WA  Manager  Verantwortlichkeiten:" :explanation "Ett exempel på det vanligaste sättet att lista sin yrkesbakgrund")
+ (:suggestion "Arbetslivserfarenhet inom/från ..." :result "Arbeitserfahrung bei..." :explanation "Används för att ange ett jobb som du haft för att få insikt eller kunskap inom ett visst arbetsområde")
+ (:suggestion "Praktikplats hos ..." :result "Praktikum bei..." :explanation "Används för att ange tillfälligt arbete som du haft för att få insikt eller kunskap inom ett visst arbetsområde. Termen används ofta för arbete som utförts utomlands under en viss period")
+ (:suggestion "Volontärarbete i ..." :result "Ehrenamtliche Tätigkeit bei..." :explanation "Används för att ange oavlönat arbete, vanligtvis utfört för att hjälpa utsatta")
+ (:suggestion "God förståelse i ...; både skriftligen och muntligen" :result "Gute ...-Kenntnisse in Wort und Schrift" :explanation "Används för att ange att den sökande har en realativt god kompetensnivå i ett språk")
+ (:suggestion "Skriver och talar ... flytande" :result "... fließend in Wort und Schrift" :explanation "Används för att ange att den sökande talar ett visst språk flytande")
+ (:suggestion "Datakunnig" :result "gute Computer-Kenntnisse" :explanation "Används för att indikera att den sökande kan använda alla grundläggande datafunktioner")
+ (:suggestion "Utmärkt kommunikationsförmåga / förhandlingsteknik / presentationsteknik." :result "Hervorragende(s) kommunikative Fähigkeiten / Verhandlungsgeschick / Präsentationsfähigkeiten" :explanation "Används för att ange att den sökande är bra på att kommunicera / förhandla / presentera")
+ (:suggestion "Avancerade kunskaper i Microsoft Office Suite / HTML-programmering." :result "Fortgeschrittene Kenntnisse in Microsoft Office / HTML-Programmierung" :explanation "Används för att ange att den sökande har god kunskap i användningen av alla Microsoft Office-program samt av HMTL-kod")
+ (:suggestion "Erfarenhet av Microsoft Word / Excel / Access / PowerPoint." :result "Microsoft Word-, Excel-, Access-, Powerpoint-Kenntnisse" :explanation "Används för att ange att den sökande har erfarenhet av ordbehandlings-, kalkyl-, databas- och presentationsprogram")
+ (:suggestion "Erfarenhet av CAD / CAM." :result "Kenntnisse in CAD / CAM" :explanation "Används för att ange att den sökande kan använda design programvara")
+ (:suggestion "Jag besitter ett ...-körkort." :result "Führerschein Klasse..." :explanation "Används för att ange att den sökande lagligt har lov att köra bil"))
+#+END_SRC
+
+ge-tag splitar en URL och antar att den 3:e i listan är det som används som "tag"
+#+BEGIN_SRC emacs-lisp :session=links :results list
+(defun get-tag (link)
+  (nth 2 (split-string link "/")))
+#+END_SRC
+
+#+RESULTS:
+: - get-tag
+
+get-phrases från en "link", som är en path till en frase-sida
+#+BEGIN_SRC emacs-lisp :session=links
+(defun get-phrases (link)
+  (parse-phrases (parse (get-url (concat "http://sv.bab.la" link)))))
+#+END_SRC
+
+#+RESULTS:
+: get-phrases
+
+helper funktion för att skriva till cards.csv filen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun write-to-file (filename str)
+  (write-region str nil filename 'append))
+#+END_SRC
+
+#+RESULTS:
+: write-to-file
+
+Tar en frase och gör till en csv-rad
+#+BEGIN_SRC emacs-lisp :session=links
+(defun row->csv (tag phrase)
+  "Formattet: sugg,result,tag\n"
+  (let ((clean-sugg (replace-regexp-in-string "," ";" (plist-get phrase :suggestion)))
+        (clean-result (replace-regexp-in-string "," ";" (plist-get phrase :result))))
+    (concat clean-sugg
+            ","
+            clean-result
+            ","
+            tag)))
+#+END_SRC
+
+#+RESULTS:
+: row->csv
+
+Gör helt enkelt om hela listan med fraser till en lista klar för csv export
+#+BEGIN_SRC emacs-lisp :session=links
+(defun make-csv-rows-of-phrases (tag phrases)
+  (mapcar (lambda (x) (row->csv tag x)) phrases))
+#+END_SRC
+
+#+RESULTS:
+: make-csv-rows-of-phrases
+
+Tar en "sektion" av fraser, t.ex. Resa och skriver till filen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-section-to-csv-file (filename section)
+  (let* ((tag (plist-get section :tag))
+         (phrases (make-csv-rows-of-phrases tag (plist-get section :phrases)))
+         (lines (concat (string-join phrases "\n") "\n")))
+    (write-to-file filename lines)))
+#+END_SRC
+
+#+RESULTS:
+: append-section-to-csv-file
+
+Skapar en p-lista för en "sektion".
+#+BEGIN_SRC emacs-lisp :session=links
+(defun get-section (link)
+  (list :tag (get-tag link) :phrases (get-phrases link)))
+#+END_SRC
+
+#+RESULTS:
+: get-section
+
+En liten helper för att börja csv filen med en header
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-header-to-csv-file (filename)
+  "The header is: back,front,tags"
+  (write-to-file filename "back,front,tags\n"))
+#+END_SRC
+
+#+RESULTS:
+: append-header-to-csv-file
+
+Som funktionen heter så appendas alla sektioner till csv filen
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-all-links-as-sections-to-single-csv-file (links)
+  (let ((filename "cards.csv"))
+    (progn 
+      (if (file-exists-p filename)
+          (delete-file filename))
+      (append-header-to-csv-file filename)
+      (while links
+        (progn (message "Add: %s to file" (car links))
+               (append-section-to-csv-file filename (get-section (car links)))
+               (setq links (cdr links)))))))
+
+#+END_SRC
+
+#+RESULTS:
+: append-all-links-as-sections-to-single-csv-file
+
+Gör en kopia, tror jag, av links-to-phrases
+#+BEGIN_SRC emacs-lisp :session=links
+(defvar all-section-links '())
+(setq all-section-links links-to-phrases)
+#+END_SRC
+
+#+RESULTS:
+| /fraser/ansokan/personligt-brev/svensk-tysk | /fraser/ansokan/cv/svensk-tysk | /fraser/ansokan/referensbrev/svensk-tysk | /fraser/akademiker/innehallsforteckning/svensk-tysk | /fraser/akademiker/inledning/svensk-tysk | /fraser/akademiker/huvuddel/svensk-tysk | /fraser/akademiker/statistik/svensk-tysk | /fraser/akademiker/grafer-bilder-diagram/svensk-tysk | /fraser/akademiker/avslutning/svensk-tysk | /fraser/akademiker/citation/svensk-tysk | /fraser/akademiker/forkortningar/svensk-tysk | /fraser/affarer/brev/svensk-tysk | /fraser/affarer/e-post/svensk-tysk | /fraser/affarer/faktura/svensk-tysk | /fraser/affarer/bestallning/svensk-tysk | /fraser/affarer/moten/svensk-tysk | /fraser/affarer/reservationer/svensk-tysk | /fraser/affarer/forkortningar/svensk-tysk | /fraser/affarer/yrkesbeteckningar/svensk-tysk | /fraser/personligt/brev/svensk-tysk | /fraser/personligt/e-post/svensk-tysk | /fraser/personligt/meddelanden-inbjudningar/svensk-tysk | /fraser/personligt/lyckonskningar/svensk-tysk | /fraser/personligt/sms-webb/svensk-tysk | /fraser/resa/generellt/svensk-tysk | /fraser/resa/dator/svensk-tysk | /fraser/resa/halsa/svensk-tysk | /fraser/resa/shopping/svensk-tysk | /fraser/resa/ata-ute/svensk-tysk | /fraser/resa/logi/svensk-tysk | /fraser/resa/siffror-pengar/svensk-tysk | /fraser/resa/datum-tid/svensk-tysk | /fraser/resa/ta-sig-runt/svensk-tysk | /fraser/resa/florta/svensk-tysk | /fraser/immigration/dokument/svensk-tysk | /fraser/immigration/bank/svensk-tysk | /fraser/immigration/arbete/svensk-tysk | /fraser/immigration/studera/svensk-tysk | /fraser/immigration/bostad/svensk-tysk | /fraser/immigration/stöd-för-funktionshindrade/svensk-tysk | /fraser/immigration/husdjur/svensk-tysk |
+
+#+BEGIN_SRC emacs-lisp :session=links
+(append-all-links-as-sections-to-single-csv-file all-section-links)
+#+END_SRC
+
+#+RESULTS:
+
+Det funkade lite dåligt att ha alla i samma fil, mest för att många fraser var ointressanta. Kör ny fil för varje istället, så blir det lättare att hålla reda på.
+#+BEGIN_SRC emacs-lisp :session=links
+(defun append-links-as-sections-to-separate-csv-files (links)
+  (let* ((files (rm-dups (mapcar (lambda (l) (plist-get (get-section l) :tag)) links))))
+    (progn 
+      (mapcar (lambda (f) (append-header-to-csv-file (concat f ".csv"))) files)
+      (while links
+        (let* ((section (get-section (car links)))
+               (filename (concat (plist-get section :tag) ".csv")))
+          (progn (message "Add: %s to file" (car links))
+                 (append-section-to-csv-file filename section)
+                 (setq links (cdr links))))))))
+#+END_SRC
+
+#+RESULTS:
+: append-links-as-sections-to-separate-csv-files
+
+TOD: ändra tagen till den "tredje" istället. ha en "tag" och ett "filnamn" istället
+
+#+BEGIN_SRC emacs-lisp :session=links
+(append-links-as-sections-to-separate-csv-files all-section-links)
+#+END_SRC
+
+#+RESULTS:
+
+
+#+BEGIN_SRC emacs-lisp :session=links :results list :exports both
+(mapcar (lambda (x) x) all-section-links)
+#+END_SRC
+
+#+RESULTS:
+- /fraser/ansokan/personligt-brev/svensk-tysk
+- /fraser/ansokan/cv/svensk-tysk
+- /fraser/ansokan/referensbrev/svensk-tysk
+- /fraser/akademiker/innehallsforteckning/svensk-tysk
+- /fraser/akademiker/inledning/svensk-tysk
+- /fraser/akademiker/huvuddel/svensk-tysk
+- /fraser/akademiker/statistik/svensk-tysk
+- /fraser/akademiker/grafer-bilder-diagram/svensk-tysk
+- /fraser/akademiker/avslutning/svensk-tysk
+- /fraser/akademiker/citation/svensk-tysk
+- /fraser/akademiker/forkortningar/svensk-tysk
+- /fraser/affarer/brev/svensk-tysk
+- /fraser/affarer/e-post/svensk-tysk
+- /fraser/affarer/faktura/svensk-tysk
+- /fraser/affarer/bestallning/svensk-tysk
+- /fraser/affarer/moten/svensk-tysk
+- /fraser/affarer/reservationer/svensk-tysk
+- /fraser/affarer/forkortningar/svensk-tysk
+- /fraser/affarer/yrkesbeteckningar/svensk-tysk
+- /fraser/personligt/brev/svensk-tysk
+- /fraser/personligt/e-post/svensk-tysk
+- /fraser/personligt/meddelanden-inbjudningar/svensk-tysk
+- /fraser/personligt/lyckonskningar/svensk-tysk
+- /fraser/personligt/sms-webb/svensk-tysk
+- /fraser/resa/generellt/svensk-tysk
+- /fraser/resa/dator/svensk-tysk
+- /fraser/resa/halsa/svensk-tysk
+- /fraser/resa/shopping/svensk-tysk
+- /fraser/resa/ata-ute/svensk-tysk
+- /fraser/resa/logi/svensk-tysk
+- /fraser/resa/siffror-pengar/svensk-tysk
+- /fraser/resa/datum-tid/svensk-tysk
+- /fraser/resa/ta-sig-runt/svensk-tysk
+- /fraser/resa/florta/svensk-tysk
+- /fraser/immigration/dokument/svensk-tysk
+- /fraser/immigration/bank/svensk-tysk
+- /fraser/immigration/arbete/svensk-tysk
+- /fraser/immigration/studera/svensk-tysk
+- /fraser/immigration/bostad/svensk-tysk
+- /fraser/immigration/stöd-för-funktionshindrade/svensk-tysk
+- /fraser/immigration/husdjur/svensk-tysk
+
+Dessa ovanstående fraser är bra, men inte tillräckligt intressanta.
+
+
+* Random
+
+Några fler som är bra för att lära sig grammatik:
+
+The apple is red.
+It is John’s apple.
+I give John the apple.
+We give him the apple.
+He gives it to John.
+She gives it to him.
+I must give it to him.
+I want to give it to her.
+
+äpplet är rött.
+Det är Eriks 'pple.
+Jag ger Erik 'pplet.
+Vi ger honom 'pplet.
+Han ger det till Erik.
+Hon ger det till honom.
+Jag måste ge det till honom.
+Jag vill ge det till henne.
+
+
+* Grammatik
+  - Grundläggande grammatik: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292180
+  - Grammatik flashcards: https://www.freeingblue.com/flashcards/print_preview.cgi?cardsetID=214781
+  - Mer grammatik flashcards: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292181
+** So sehe ich aus
+   Ich habe einen/ein/eine ACKUSATIV-en/es/e X an.
+
+   Med verbet har använder man alltid ackusativ och ackusativ påverkar inte bara artikeln (ein/ein/eine) utan även ackusativet (hur någonting är, t.ex. röd)
+
+   Som ett exempel
+
+   Om jag har en blå hatt (der Hut) så säger man
+
+   ‚‚ich habe einen (det är ein-maskulint i ackusativ) blauen (en är maskulinändelsen man lägger till ackusativet) Hut.
+
+   Med neutrum (das/ein) säger man så här
+
+   jag har en vit kanin - ich habe ein weißes Kaninchen
+
+   Med feminin blir det så här
+   jag har en svart katt - ich habe eine schwarze Katze.
+
+** Ackusativ och Dativ
+   Ackusativobjekt - det normala objektet,
+
+   t.ex. Anna äter en banan - Anna isst einen Banan
+
+   I ackusativ blir artiklarna som följer
+
+   der: den
+   das: das
+   die: die
+   die: die (plural)
+
+   Man använder alltid ackusativ efter de följande orden:
+
+   durch: genom
+   für: för
+   gegen: mot
+   ohne: utan
+   um: runt om kring, vid, för att
+
+   Ord som dig, mig, honom, henne påverkas även de av ackusativ
+
+   ich - mich
+   du - dich
+   er - ihn
+   sie - sie
+   es - sich
+   wir - uns
+   ihr - euch
+   Sie - Sie
+   sie - sie
+
+
+   Dativobjektet: åt vem görs verbet med ackusativet?
+
+   T.ex. Han gav henne en dromedar: Er gab ihr einen Dromedar.
+
+   I dativ blir artiklarna som följer
+
+   der: dem
+   das: dem
+   die: der
+   die: den + -n i slutet av ordet som står i plural (t.ex. er gab den Männern etwas)
+
+   Man använder alltid dativ efter de följande orden:
+
+   aus: från
+   ausser: utan
+   bei: vid
+   gegenüber: mittemot
+   mit: med
+   nach: efter
+   seit: sedan
+   von: från
+   zu: till
+
+   Ord som dig, mig, honom, henne påverkas även de av dativ
+
+   ich - mir
+   dich - dir
+   er - ihm
+   sie - ihr
+   wir - uns
+   ihr - euch
+   Sie - Ihr
+   sie - ihr 
+   
+** Ordning kommer orden?
+
+   Tyska fungerar som svenska i alla huvudsatser, det vill sägas meningar utan komman som kan stå själva.
+
+   Ett exempel: Jag heter Anna. - Ich heisse Anna
+
+   I bisatser däremot, meningar som inte kan stå själv, som kommer efter att, därför och liknande ord så är tyskan ett SOV-språk, det vill säga subjekt, objekt, verb-språk.
+
+   Vad är ett subjekt - den som gör verbet i en meningen
+   Vad är ett objekt - den som utsätts för verbet av subjektet
+   Vad är ett verb: det som görs i en mening
+
+   Ett expempel: Jag slår Stig, för att han är dum - Ich schlage Stig, weil er blöd ist. 
+   
+** Tyska prepositioner
+   Prepositioner med ackusativ: Den, das, die, die(pl)
+
+   | Durch | genom                      |
+   | Für   | för                        |
+   | Gegen | mot                        |
+   | Ohne  | utan                       |
+   | Um    | omkring, runtom, "för att" |
+
+   Prepositioner med dativ: Dem, dem, der, den +n(pl)
+
+   | Aus       | Från, av             |
+   | Außer     | förutom              |
+   | Bei       | vid                  |
+   | Gegenüber | mittemot, tvärs över |
+   | Mit       | med                  |
+   | Nach      | efter, till          |
+   | Seit      | sedan                |
+   | Von       | från                 |
+   | Zu        | till                 |
+
+   Prepositioner med BEDA eller RIA: (Befintlighet+dativ eller riktning+ackusativ)
+
+   | An       | på (mer som i på den dagen, ta på sig)       |
+   | Auf      | på (mer som i på den stolen, på den platsen) |
+   | Hinter   | bakom                                        |
+   | In       | i                                            |
+   | Neben    | bredvid                                      |
+   | Über     | över                                         |
+   | Unter    | under                                        |
+   | Vor      | framför                                      |
+   | Zwischen | emellan                                      |
+   
+** Wikipedia
+   https://sv.wikipedia.org/wiki/Tysk_grammatik
+** Verb
+   - modala hjälpverb: https://freezingblue.com/flashcards/print_preview.cgi?cardsetID=292182
+   - starka verb: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292183
+   - adverb https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=292233
+*** Hur verb funkar
+    Hur verb funkar:
+
+    Nutid (presens) :
+
+    Jag: Ich -e - t.ex ich geh-e
+    Du: Du - st - t.ex. du geh-st
+    Han: Er -t - t.ex er geh-t
+    Den: Es - t - t.ex - es geh-t
+    Hon: sie - t - t.ex. - sie geh-t
+    Vi: Wir - hela verbet - t.ex. wir gehen
+    ni: Ihr - t - t.ex. ihr geh-t
+    Ni: Sie - hela verbet - t.ex. Sie gehen
+    De: sie - hela verbet - t.ex. sie gehen
+
+    Dåtid:
+
+    Dåtid gör man med verbet haben böjt efter person och sedan dåtidsverbet med förleden ge och slutet -t.
+
+    ge-verbrot-t
+
+    Ett exempel skulle kunna vara
+
+    Ich habe ge-hab-t, jag har haft
+
+    Framtid:
+
+    Framtid görs med verbet "werden" - att bli - och verbet som skall bli böjt i grundform som placeras allra sist i en mening
+
+    Ich werde
+    du wirst
+    er wird
+    sie wird
+    es wird
+    wir werden
+    ihr werdet
+    Sie werden
+    sie werden
+
+    Ett exempel:
+
+    Imorgon klockan sex ska jag äta en glass tillsammans med mina vänner framför skolan.
+
+    Ich werde morgen um sechs Uhr vor der Schule mit meinen Freunden einen Eis essen
+
+    Kanske kan skriva ihop lite exempel att träna på från ovanstående?
+
+*** 20 vanligaste verben
+**** Att vara
+    | Infinitiv | Presens       |
+    | sien      | ich bin       |
+    |           | du bist       |
+    |           | er/sie/es ist |
+    |           | wir sind      |
+    |           | ihr seid      |
+    |           | Sie sind      |
+    |           | sie sind      |
+    
+    | Svenska       | Tyska          |
+    |---------------+----------------|
+    | jag är trött  | ich bin müde   |
+    | du är trött   | du bist müde   |
+    | hon är trött  | sie ist müde   |
+    | han är trött  | er ist müde    |
+    | den är trött  | es ist müde    |
+    | vi är trötta  | wir sind müde  |
+    | ni är trötta  | ihr seid müde  |
+    | Ni är trött   | Sie sind müde  |
+    | dom är trötta | sie sind müden |
+
+**** Att ha
+    | Infinitiv | Presens       |
+    | haben     |               |
+    |           | ich habe      |
+    |           | du hast       |
+    |           | er/sie/es hat |
+    |           | wir haben     |
+    |           | ihr habt      |
+    |           | Sie haben     |
+    |           | sie haben     |
+
+**** att bli
+    | Infinitiv | Presens        |
+    | werden    |                |
+    |           | ich werde      |
+    |           | du wirst       |
+    |           | er/sie/es wird |
+    |           | wir werden     |
+    |           | ihr werdet     |
+    |           | Sie werden     |
+    |           | sie werden     |
+
+**** att kunna
+    | Infinitiv | Presens        |
+    | können    |                |
+    |           | ich kann       |
+    |           | du kannst      |
+    |           | er/sie/es kann |
+    |           | wir können     |
+    |           | ihr könnt      |
+    |           | Sie können     |
+    |           | sie können     |
+
+**** måste göra
+    | Infinitiv | Presens        |
+    | müssen    |                |
+    |           | ich muss       |
+    |           | du musst       |
+    |           | er/sie/es muss |
+    |           | wir müssen     |
+    |           | ihr müsst      |
+    |           | Sie müssen     |
+    |           | sie münnen     |
+
+**** vilja
+    | Infinitiv | Presens        |
+    | wollen    |                |
+    |           | ich will       |
+    |           | du willst      |
+    |           | er/sie/es will |
+    |           | wir wollen     |
+    |           | ihr wollt      |
+    |           | Sie wollen     |
+    |           | sie wollen     |
+
+**** tycka om
+    | Infinitiv | Presens       |
+    | mögen     |               |
+    |           | ich mag       |
+    |           | du magst      |
+    |           | er/sie/es mag |
+    |           | wir mögen     |
+    |           | ihr mögt      |
+    |           | Sie mögen     |
+    |           | sie mögen     |
+
+**** skulle vilja
+    | Infinitiv | Presens           |
+    | möchten   |                   |
+    |           | ich möchte        |
+    |           | du  möchtest      |
+    |           | er/sie/es möchtet |
+    |           | wir möchten       |
+    |           | ihr möchtet       |
+    |           | Sie möchten       |
+    |           | sie möchten       |
+
+**** att veta
+    | Infinitiv | Presens         |
+    | wissen    |                 |
+    |           | ich weiß        |
+    |           | du weißt        |
+    |           | er/sie/es weißt |
+    |           | wir wissen      |
+    |           | ihr wisst       |
+    |           | Sie wissen      |
+    |           | sie wissen      |
+
+**** att göra
+    | machen |                 |
+    |        | ich mache       |
+    |        | du machst       |
+    |        | er/sie/es macht |
+    |        | wir machen      |
+    |        | ihr macht       |
+    |        | Sie machen      |
+    |        | sie machen      |
+
+**** ska, borde göra
+    | sollen |                |
+    |        | ich soll       |
+    |        | du sollst      |
+    |        | er/sie/es soll |
+    |        | wir sollen     |
+    |        | ihr sollt      |
+    |        | Sie sollen     |
+    |        | sie sollen     |
+
+**** heta
+    | heißen |                 |
+    |        | ich heiße       |
+    |        | du heißt        |
+    |        | er/sie/es heißt |
+    |        | wir heißen      |
+    |        | ihr heißt       |
+    |        | Sie heißen      |
+    |        | sie heißen      |
+
+**** säga
+    | sagen |                |
+    |       | ich sage       |
+    |       | du sagst       |
+    |       | er/sie/es sagt |
+    |       | wir sagen      |
+    |       | ihr sagt       |
+    |       | Sie sagen      |
+    |       | sie sagen      |
+
+**** gå
+    | gehen |                |
+    |       | ich gehe       |
+    |       | du gehst       |
+    |       | er/sie/es geht |
+    |       | wir gehen      |
+    |       | ihr geht       |
+    |       | Sie gehen      |
+    |       | sie gehen      |
+
+**** se
+    | sehen |                 |
+    |       | ich sehe        |
+    |       | du siehst       |
+    |       | er/sie/es sieht |
+    |       | wir sehen       |
+    |       | ihr seht        |
+    |       | Sie sehen       |
+    |       | sie sehen       |
+
+**** ge
+    | geben |                |
+    |       | ich gebe       |
+    |       | du gibst       |
+    |       | er/sie/es gibt |
+    |       | wir geben      |
+    |       | ihr gebt       |
+    |       | Sie geben      |
+    |       | sie geben      |
+
+**** komma
+    | kommen |                 |
+    |        | ich komme       |
+    |        | du kommst       |
+    |        | er/sie/es kommt |
+    |        | wir kommen      |
+    |        | ihr kommt       |
+    |        | Sie kommen      |
+    |        | sie kommen      |
+
+**** låta, lämna
+    | lassen |                 |
+    |        | ich lasse       |
+    |        | du lässt        |
+    |        | er/sie/es lässt |
+    |        | wir lassen      |
+    |        | ihr lasst       |
+    |        | Sie lassen      |
+    |        | sie lassen      |
+
+**** hitta
+    | finden |                  |
+    |        | ich finde        |
+    |        | du findest       |
+    |        | er/sie/es findet |
+    |        | wir finden       |
+    |        | ihr findet       |
+    |        | Sie finden       |
+    |        | sie finden       |
+
+**** stanna kvar
+    | bleiben |                  |
+    |         | ich bleibe       |
+    |         | du bleibst       |
+    |         | er/sie/es bleibt |
+    |         | wir bleiben      |
+    |         | ihr bleibt       |
+    |         | Sie bleiben      |
+    |         | sie bleiben      |
+    
+**** ta
+    | nehmen |                 |
+    |        | ich nehme       |
+    |        | du nimmst       |
+    |        | er/sie/es nimmt |
+    |        | wir nehmen      |
+    |        | ihr nehmt       |
+    |        | Sie nehmen      |
+    |        | sie nehmen      |
+
+**** ta med sig
+    | bringen |                  |
+    |         | ich bringe       |
+    |         | du bringst       |
+    |         | er/sie/es bringt |
+    |         | wir bringen      |
+    |         | ihr bringt       |
+    |         | Sie bringen      |
+    |         | sie bringen      |
+
+
+* Fraser
+** Hobbies exempel
+   Hobbys ... Hobbys haben wir alle, aber die unterschieden sich oft zwischen Leute. Was machst du am liebsten wenn du Frei bist?
+   Hobbys ... Intressen har vi alla, men de skiljer sig ofta åt mellan folk. Vad gör du gärna när du är ledig?
+
+   Gör klart följande meningar.
+
+   Ich mag
+   Ich mache gern
+   Ich würde lieber _ (verbet i grundform)
+   Am liebsten ich
+   Ich hasse
+   ich hasse _ mehr als _
+   Am meisten hasse ich _
+
+
+   mögen (ich mag, du magst osv.) = tycka om.
+   hassen (ich hasse, du haßt osv) = hata
+   gern - lieber - am liebsten = gärna - hellre - helst
+   viel - mehr - am meisten = mycket - mer - mest 
+** Beskriva människor
+   | Schwedish        | Deutsch                             |
+   |------------------+-------------------------------------|
+   | försiktig        | vorsichtig                          |
+   | smart, slug      | schlau                              |
+   | intelligent      | intelligent, klug                   |
+   | pratsam          | gesprächig (geschwätzig)            |
+   | utåtriktad       | aufgeschlossen, kontaktfreudig      |
+   | cool             | cool                                |
+   | entusiastisk     | begeistert                          |
+   | rolig            | lustig                              |
+   | glad             | glücklich                           |
+   | vänlig           | freundlich                          |
+   | obesvärad        | lässig, unbeschwert                 |
+   | hjälpsam         | hilfsbereit                         |
+   | intressant       | interessant                         |
+   | snäll            | nett                                |
+   | artig            | höflich                             |
+   | ansvarstagande   | verantwortungsbewusst               |
+   | välorganiserad   | Gut organisiert                     |
+   | ordentlig        | ordentlich                          |
+   | skrytsam         | prahlerisch, überheblich            |
+   | tråkig           | langweilig                          |
+   | oaktsam          | achtlos, unvorsichtig, nachlässig   |
+   | sur              | mürrisch, brummig, schlecht gelaunt |
+   | ovänlig          | unfreundlich                        |
+   | högljud          | laut,                               |
+   | irriterande      | nervig, lästig                      |
+   | galen            | verrückt                            |
+   | lat              | faul                                |
+   | nervös           | nervös                              |
+   | ledsen/ olycklig | traurig, unglücklich                |
+   | dum              | blöd                                |
+   | arrogant         | arrogant, eingebildet               |
+   | smutsig          | unordentlich                        |
+
+** Olika fraser
+*** ord.se
+**** Hälsningsfraser m.m.
+    Adjö! 
+    Auf Wiedersehen!
+
+    Får jag presentera... 
+    Darf ich Ihnen... vorstellen? 
+    Darf ich bekannt machen...?
+
+    God afton! 
+    Guten Abend!
+
+    God dag! 
+    Guten Tag!
+
+    God middag! 
+    Guten Tag!
+
+    God morgon! 
+    Guten Morgen!
+
+    God natt! 
+    Gute Nacht!
+
+    Hej! 
+    Hallo!
+
+    Hej då! 
+    Tschüs!, Tschüss!
+
+    Hör av er! 
+    Lassen Sie von sich hören!
+
+    Kör försiktigt! 
+    Fahren Sie vorsichtig!
+
+    Lycka till! 
+    Viel Glück!
+
+    Trevlig resa! 
+    Gute Reise!
+
+    Trevligt att träffas! 
+    Es war nett, Sie kennenzulernen!
+
+    På återseende! 
+    Auf Wiedersehen!
+
+    Vad heter Ni? Jag heter... 
+    Wie ist Ihr Name? Ich heiße...
+
+    Vi ses i morgon (nästa vecka)! 
+    Bis morgen (nächste Woche)!
+
+    Välkomna (Välkommen)! 
+    Herzlich willkommen!
+
+**** Klockan
+
+    Hur mycket är klockan? 
+    Wie spät ist es?
+    
+    Vad är klockan?
+    Wie viel uhr ist es?
+
+    Vi ses klockan två. 
+    Wir treffen uns um zwei Uhr.
+
+    Klockan är... 
+    Es ist...
+
+    två 
+    zwei
+
+    fem över två
+    fünf nach zwei
+
+    kvart över två 
+    Viertel nach zwei
+
+    tjugo över två 
+    zwanzig nach zwei
+
+    fem i halv tre 
+    fünf vor halb drei
+
+    halv tre 
+    halb drei
+
+    fem över halv tre 
+    fünf nach halb drei
+
+    tjugo i tre 
+    zwanzig vor drei
+
+    kvart i tre 
+    Viertel vor drei
+
+    tio i tre 
+    zehn vor drei
+**** På resa
+
+    Var ligger turistbyrån? 
+    Wo ist das Verkehrsbüro?
+
+    Var ligger svenska ambassaden (konsulatet)? 
+    Wo liegt die schwedische Botschaft (das schwedische Konsulat)?
+
+    Hur lång tid tar resan? 
+    Wie lange dauert die Fahrt?
+
+    Hur dags är vi i...? 
+    Wann sind wir in...?
+
+    Kan jag få en tidtabell? 
+    Ich hätte gern einen Fahrplan.
+
+    Jag skulle vilja avbeställa den här biljetten. 
+    Ich möchte diese Karte zurückgeben.
+
+    När går bussen (båten, flyget, tåget) till...?
+    Wann geht der Bus (das Schiff, der Flug, der Zug) nach ...
+**** Räkneord
+
+    0 
+    Null
+
+    1 
+    eins
+
+    2 
+    zwei
+
+    3 
+    drei
+
+    4 
+    vier
+
+    5 
+    fünf
+
+    6 
+    sechs
+
+    7 
+    sieben
+
+    8 
+    acht
+
+    9 
+    neun
+
+    10 
+    zehn
+
+    11 
+    elf
+
+    12 
+    zwölf
+
+    13 
+    dreizehn
+
+    14 
+    vierzehn
+
+    15 
+    fünfzehn
+
+    16 
+    sechzehn
+
+    17 
+    siebzehn
+
+    18 
+    achtzehn
+
+    19 
+    neunzehn
+
+    20 
+    zwanzig
+
+    21 
+    einundzwanzig
+
+    22 
+    zweiundzwanzig
+
+    30 
+    dreißig
+
+    31 
+    einunddreißig
+
+    40 
+    vierzig
+
+    50 
+    fünfzig
+
+    60 
+    sechzig
+
+    70 
+    siebzig
+
+    80 
+    achtzig
+
+    90 
+    neunzig
+
+    100 
+    einhundert hundert
+
+    101 
+    einhunderteins hunderteins
+
+    200 
+    zweihundert
+
+    1000 
+    eintausend tausend
+
+    1001 
+    eintausendeins tausendeins
+
+    1100 
+    eintausendeinhundert, tausendeinhundert, elfhundert
+
+    2000 
+    zweitausend
+
+    1 000 000 
+    eine Million
+
+    2 000 000 
+    zwei Millionen
+
+    1 000 000 000 
+    eine Milliarde
+**** Språk och nationalitet
+
+    Varifrån är Ni? 
+    Woher kommen Sie?
+
+    Jag är från Sverige. 
+    Ich komme aus Schweden.
+
+    Jag är svensk (svenska). 
+    Ich bin Schwede (Schwedin).
+
+    Talar Ni tyska? 
+    Sprechen Sie Deutsch?
+
+    Jag pratar inte så bra tyska, men jag förstår lite. 
+    Ich spreche nicht so gut Deutsch, aber ich verstehe ein bisschen.
+
+    Jag förstår inte vad Ni säger. 
+    Ich habe nicht verstanden, was Sie gesagt haben.
+
+    Finns det någon här som talar tyska? 
+    Spricht hier jemand Deutsch?
+
+    Jag talar inte tyska. 
+    Ich spreche kein Deutsch.
+
+    Jag talar bara lite tyska. 
+    Ich spreche nur ein bisschen Deutsch.
+
+    Jag talar inte tyska så bra. 
+    Ich spreche nicht so gut Deutsch.
+
+    Kan Ni tala lite långsammare? 
+    Sprechen Sie bitte etwas langsamer!
+
+    Var snäll och säg om det! 
+    Könnten Sie das bitte wiederholen?
+
+    Vad betyder det här? 
+    Was bedeutet das?
+
+    Vad heter det på tyska?
+    Wie heißt das auf Deutsch?
+
+    Hur stavas det? 
+    Wie schreibt man das?
+
+    Kan Ni bokstavera det? 
+    Könnten Sie das bitte buchstabieren?
+
+    Vad sa Ni? 
+    Wie bitte? 
+    Was haben Sie gesagt?
+
+    Kan Ni översätta det här till tyska? 
+    Könnten Sie das bitte ins Deutsche übersetzen?
+**** Vanliga ord och fraser
+    När man ber om något tilläggs: bitte
+
+    Det finns... 
+    Es gibt...
+
+    Det gör ingenting! 
+    Das macht nichts!
+
+    Ett ögonblick. 
+    Einen Augenblick, bitte.
+
+    Får jag komma in? 
+    Darf ich hereinkommen?
+
+    Förlåt! 
+    Entschuldigung!
+
+    Förlåt, jag hörde inte? 
+    Wie bitte?
+
+    Förlåt, kan jag få komma förbi? 
+    Entschuldigung, darf ich mal vorbei?
+
+    Förlåt, var ligger...? 
+    Entschuldigung, wo liegt...?
+
+    Gärna. 
+    Sehr gern.
+
+    Hjälp! 
+    Hilfe!
+
+    Hjälp mig att... 
+    Könnten Sie mir bitte helfen, zu...
+
+    Hur? 
+    Wie?
+
+    Hur dags? 
+    Wann?
+
+    Hur mycket? 
+    Wie viel?
+
+    Hur mycket kostar det? 
+    Wie viel kostet das?
+
+    Hur mår Ni? 
+    Wie geht’s?
+
+    Hur sa? 
+    Wie bitte?
+
+    Hur är det? 
+    Was ist?
+
+    Ingen orsak! 
+    Gern geschehen!
+
+    Inte alls. 
+    Ganz und gar nicht!
+
+    Ja tack. 
+    Ja bitte.
+
+    Jag behöver... 
+    Ich brauche...
+
+    Jag fryser. 
+    Mich friert.
+
+    Jag förstår. 
+    Ich verstehe.
+
+    Jag förstår inte. 
+    Ich habe das nicht verstanden.
+
+    Jag är hungrig (törstig). 
+    Ich habe Hunger (Durst).
+
+    Jag är trött. 
+    Ich bin müde.
+
+    Jag skulle vilja ha... 
+    Ich möchte...
+
+    Javisst. 
+    Ja, natürlich.
+
+    Kan jag få... 
+    Geben Sie mir bitte...
+
+    Kan Ni säga mig...? 
+    Könnten Sie mir bitte sagen, wo...?
+
+    Kan Ni visa mig...? 
+    Können Sie mir bitte... zeigen?
+
+    Kom in! 
+    Herein!
+
+    Lite. 
+    Ein bisschen.
+
+    Med nöje. 
+    Mit Vergnügen.
+
+    Nej. 
+    Nein.
+
+    Nej tack. 
+    Nein danke!
+
+    När? 
+    Wann?
+
+    Skål! 
+    Prost!
+
+    Smaklig måltid! 
+    Guten Appetit!
+
+    Stör jag? 
+    Störe ich?
+
+    Tack. 
+    Danke!
+
+    Tack, detsamma! 
+    Danke gleichfalls!
+
+    Tack för hjälpen! 
+    Vielen Dank für Ihre Hilfe!
+
+    Tack så mycket! 
+    Vielen Dank!
+
+    Tusen tack! 
+    Tausend Dank! 
+    Herzlichen Dank!
+
+    Tyvärr! 
+    Leider!
+
+    Ursäkta! 
+    Entschuldigung!
+
+    Vad sa Ni? 
+    Wie bitte? 
+    Was haben Sie gesagt?
+
+    Var? 
+    Wo?
+
+    Var finns (ligger)...? 
+    Wo ist (liegt)...?
+
+    Var ligger närmaste post (bank)? 
+    Wo ist die nächste Post (Bank)?
+
+    Var så god när man överräcker något: Bitte!
+
+    då man bjuder: Bitte sehr!
+
+    vid artig uppmaning: Bitte!
+
+    vid tillåtelse: Aber gern! Varför? Warum?
+**** Vid gränsen
+
+    Kan jag få se ert pass? 
+    Ihren Pass bitte!
+
+    Hur länge har Ni tänkt stanna? 
+    Wie lange wollen Sie hierbleiben?
+
+    Vill Ni vara snäll och fylla i den här blanketten. 
+    Füllen Sie bitte diesen Vordruck aus!
+
+    Har Ni något att förtulla? 
+    Haben Sie etwas zu verzollen?
+
+    Jag har inget att förtulla. 
+    Ich habe nichts zu verzollen.
+
+    Var snäll och öppna den här väskan. 
+    Öffnen Sie bitte diesen Koffer!
+
+    Alltsammans är saker för eget bruk. 
+    Das ist alles nur für den persönlichen Gebrauch.
+
+    Har Ni cigaretter eller sprit? 
+    Haben Sie Zigaretten oder Alkohol bei sich?
+
+    Var finns växelkontoret? 
+    Wo ist hier die Wechselstube?
+
+**** Övriga uttryck (skyltar o.d.)
+    höger – vänster 
+    rechts – links
+
+    till höger – till vänster 
+    nach rechts – nach links
+
+    damer – herrar 
+    Damen – Herren
+
+    ingång – utgång 
+    Eingang – Ausgang
+
+    kallt – varmt 
+    kalt – warm
+
+    ledigt – upptaget 
+    frei – besetzt
+
+    rökning förbjuden 
+    Rauchen verboten
+
+    rökning tillåten 
+    Raucher erlaubt
+
+    stängt – öppet 
+    geschlossen – geöffnet
+
+    toalett 
+    Toilette
+
+    damtoalett 
+    Damentoilette
+
+    handikapptoalett 
+    Behindertentoilette
+
+    herrtoalett
+    Herrentoilette
+
+*** fluentu
+    - http://www.fluentu.com/german/blog/german-conversation-practice/
+    - http://www.fluentu.com/german/blog/german-dative/
+    - http://www.fluentu.com/german/blog/german-nominative-accusative-pronouns-cases-articles/ 
+    - http://www.fluentu.com/german/blog/learn-german-word-order/
+    - http://www.fluentu.com/german/blog/common-useful-german-travel-phrases-vocabulary-words/
+    - http://www.fluentu.com/german/blog/german-adjective-endings-practice/
+
+*** andra
+    - http://german.about.com/od/vocabulary/fl/German-Verbs-Examples-Regular-and-Irregular-Verbs.htm
+    
+
+* Glosor
+
+  - Lång lista på glosor: https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=275685
+  - Glosor https://www.freezingblue.com/flashcards/print_preview.cgi?cardsetID=275451
+
+** lista med glosor, mest verb och hjälpord
+   Följande länkar har använts:
+- https://glosor.eu/ovning/tyska-verb.210359.html
+- https://quizlet.com/11559803/tyska-starka-verb-flash-cards/
+- https://quizlet.com/11532128/tyska-datack-v2-flash-cards/
+- https://quizlet.com/16140670/tyska-flash-cards/
+- https://quizlet.com/11532065/tyska-kon-flash-cards/ 
+
+*** Blandat
+    | Svenska                 | Tyska                                 |
+    |-------------------------+---------------------------------------|
+    | få                      | bekommen                              |
+    | äta                     | essen                                 |
+    | hitta                   | finden                                |
+    | ge                      | geben                                 |
+    | vinna                   | gewinnen                              |
+    | läsa                    | lesen                                 |
+    | ta                      | nehmen                                |
+    | sova                    | schlafen                              |
+    | skriva                  | schreiben                             |
+    | se                      | sehen                                 |
+    | sjunga                  | singen                                |
+    | stå                     | stehen                                |
+    | träffa                  | treffen                               |
+    | dricka                  | trinken                               |
+    | göra                    | tun                                   |
+    | glömma                  | vergessen                             |
+    | förlora                 | verlieren                             |
+    | förstå                  | verstehen                             |
+    | jag har fått            | ich habe bekommen                     |
+    | jag har ätit            | ich habe gegessen                     |
+    | jag har hittat          | ich habe gefunden                     |
+    | jag har gett            | ich habe gegeben                      |
+    | jag har vunnit          | ich habe gewonnen                     |
+    | jag har läst            | ich habe gelesen                      |
+    | jag har tagit           | ich habe genommen                     |
+    | jag har sovit           | ich habe geschlafen                   |
+    | jag har skrivit         | ich habe geschreben                   |
+    | jag har sett            | ich habe gesehen                      |
+    | jag har sjungit         | ich habe gesungen                     |
+    | jag har stått           | ich habe gestanden                    |
+    | jag har träffat         | ich habe getroffen                    |
+    | jag har druckit         | ich habe getrunken                    |
+    | jag har gjort           | ich habe getan                        |
+    | jag har glömt           | ich habe vergessen                    |
+    | jag har förlorat        | ich habe verloren                     |
+    | jag har förstått        | ich habe verstanden                   |
+    | vid                     | um                                    |
+    | utan                    | ohne                                  |
+    | mot                     | gegen                                 |
+    | för                     | für                                   |
+    | genom                   | dürch                                 |
+    | från                    | aus                                   |
+    | för                     | bei                                   |
+    | efter                   | nach                                  |
+    | sedan                   | seit                                  |
+    | från                    | von                                   |
+    | till                    | zu                                    |
+    | med                     | mit                                   |
+    | att                     | dass                                  |
+    | då, när                 | als, wenn                             |
+    | innan, förän            | ehe, bevor                            |
+    | tills                   | bis                                   |
+    | medan                   | während                               |
+    | sedan, efter det att    | nachdem                               |
+    | så snart (som)          | so bald                               |
+    | så ofta (som)           | so oft                                |
+    | så länge (som)          | so lange                              |
+    | emedan, därför att      | weil                                  |
+    | eftersom, då            | da                                    |
+    | om                      | wenn                                  |
+    | om, ifall att           | falls                                 |
+    | om                      | ob                                    |
+    | fastän                  | obgleich, obwohl                      |
+    | fastän                  | trotzdem                              |
+    | som, såsom              | als                                   |
+    | som, liksom             | wie                                   |
+    | som om                  | als ob                                |
+    
+*** 50 starka verb 
+    | Svenska                 | Tyska                                 |
+    |-------------------------+---------------------------------------|
+    | börja/börjar/har börjat | beginnen / begann / hat begonnen      |
+    | bjuda (presens)         | bieten / bot / hat geboten            |
+    | binda (presens)         | binden / band / hat gebunden          |
+    | be (presens)            | bitten / bat / hat gebeten            |
+    | stanna kvar (presens)   | bleiben / blieb / ist geblieben       |
+    | bryta (presens)         | brechen / brach / hat gebrochen       |
+    | äta (presens)           | essen / aß / hat gegessen             |
+    | åka (presens)           | fahren / fuhr / ist gefahren          |
+    | falla (presens)         | fallen / fiel / ist gefallen          |
+    | fånga (presens)         | fangen / fing / hat gefangen          |
+    | finna/hitta (presens)   | finden / fand / hat gefunden          |
+    | flyga (presens)         | fliegen / flog / ist geflogen         |
+    | fly (presens)           | fliehen / floh / ist geflohen         |
+    | flyta (presens)         | fliessen / floss / ist geflossen      |
+    | ge (presens)            | geben / gab / hat gegeben             |
+    | gå (presens)            | gehen / ging / ist gegangen           |
+    | lyckas (presens)        | gelingen / gelang / ist gelungen      |
+    | vinna (presens)         | gewinnen / gewann / hat gewonnen      |
+    | likna (presens)         | gleichen / glich / hat geglichen      |
+    | hålla/stanna (presens)  | halten / hielt / hat gehalten         |
+    | hänga (presens)         | hängen / hing / hat gehangen          |
+    | hjälpa (presens)        | helfen / half / hat geholfen          |
+    | komma (presens)         | kommen / kam / ist gekommen           |
+    | ladda (presens)         | laden / lud / hat geladen             |
+    | låta (presens)          | lassen / liess / hat gelassen         |
+    | springa (presens)       | laufen / lief / ist gelaufen          |
+    | låna (presens)          | leihen / lieh / hat geliehen          |
+    | läsa (presens)          | lesen / las / hat gelesen             |
+    | ligga (presens)         | liegen / lag / hat gelegen            |
+    | ljuga (presens)         | lügen / log / hat gelogen             |
+    | ta (presens)            | nehmen / nahm / hat genommen          |
+    | rida (presens)          | reiten / ritt / ist geritten          |
+    | ropa (presens)          | rufen / rief / hat gerufen            |
+    | sova (presens)          | schlafen / schlief / hat geschlafen   |
+    | slå (presens)           | schlagen / schlug / hat geschlagen    |
+    | skriva (presens)        | schreiben / schrieb / hat geschrieben |
+    | simma (presens)         | schwimmen / schwamm / ist geschwommen |
+    | se (presens)            | sehen / sah / hat gesehen             |
+    | sjunga (presens)        | singen / sang / hat gesungen          |
+    | sitta (presens)         | sitzen / saß / hat gesessen           |
+    | tala (presens)          | sprechen / sprach / hat gesprochen    |
+    | stå (presens)           | stehen / stand / hat gestanden        |
+    | dö (presens)            | sterben / starb / ist gestorben       |
+    | träffa (presens)        | treffen / traf / hat getroffen        |
+    | dricka (presens)        | trinken / trank / hat getrunken       |
+    | glömma (presens)        | vergessen / vergaß / hat vergessen    |
+    | förlora (presens)       | verlieren / verlor / hat verloren     |
+    | tvätta (presens)        | waschen / wusch / hat gewaschen       |
+    | kasta (presens)         | werfen / warf / hat geworfen          |
+    | tvinga (presens)        | zwingen / zwang / hat gezwungen       |
+    
+** En stor blandning av olika ord, fraser och uttryck
+   Denna lista används för att peta in ord jag av nån anledning vill spara.
+   
+   Denna och dom ovanstående finns i "master" i ankiapp. 
+
+   först lägga till här, sedan ankiapp.
+
+    | Svenska             | Tyska                 |
+    |---------------------+-----------------------|
+    | tangentbordet       | die Tastatur          |
+    | sommaren            | der Sommer            |
+    | stranden            | der Strand            |
+    | handduken           | das Handtuch          |
+    | Jag gillar katter   | Ich mag Katzen        |
+    | Förlåt(?)           | Es tut mir leid       |
+    | allt                | zunehmend             |
+    | befolkning          | die Bevölkerung       |
+    | tortyrmetoder       | die Foltermethoden    |
+    | påminde             | erinnerten            |
+    | rapporten           | Der Bericht           |
+    | att räkna           | zählen                |
+    | antogs              | verasbschiedet        |
+    | samlades            | versammelten sich     |
+    | belägen             | gelegenen             |
+    | medan               | während               |
+    | att förtala         | diffamieren           |
+    | att avsluta         | aufkündigen           |
+    | igen/förnya         | erneut                |
+    | pappershög          | der Papierbögen       |
+    | minst               | mindestens            |
+    | att kasta           | werfen                |
+    | kastet              | das Werfen            |
+    | att kräva           | fordern               |
+    | kravet              | Das Fordern           |
+    | styrelse/panel      | Das Gremium           |
+    | före/innan          | zuvor                 |
+    | än tidigare         | als zuvor             |
+    | att skjuta          | abfeuern              |
+    | att avfyra en kanon | eine Kanone abfeuern  |
+    | siffran             | die Zahl              |
+    | där                 | dabei                 |
+    | är                  | seien                 |
+    | låt oss inse        | seien wir doch erlich |
+    | nyckeln             | die Schlüssel         |
+    | just/just nu        | gerade                |
+    | snart               | bald                  |
+    | strax               | gleich                |
+    | genast              | sofort                |
+    | sedan               | danach                |
+    | igår                | gestern               |
+    | i går               | vorgestern            |
+    | i morgon            | morgen                |
+    | i övermorgon        | übermorgen            |
+    | aldrig              | nie, niemals          |
+    | sällan              | selten                |
+    | då och då           | ab und zu             |
+    | ibland              | manchmal              |
+    | för det mesta       | meistens              |
+    | ofta                | oft                   |
+    | alltid              | immer                 |
+    | dagligen            | täglich               |
+    | från och med idag   | ab heute              |
+    | i morse             | heute Morgen          |
+    | i morgon bitti      | morgen früh           |
+    | hörförståelse       | Hörverstehen          |
+    | nyheten             | Die Nachricht         |
+    | nyheterna           | Nachrichten           |
+    | hålet i tanden      | Das zahnloch          |
+    | ses snart           | bis bald              |
+    | flugan              | die Fliege            |
+    | chokladen           | die Schokolade        |
+    | pojken              | der Junge             |
+    | Stimmt's so         | Behåll växeln         |
+   
+    
+    
