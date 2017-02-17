@@ -78,6 +78,35 @@ Eva gillade den nya fina bilen.
 
 
 * Grammatik
+
+  You will often hear that the genitive is “dying out” in German, or being “replaced by the dative,” but what does this mean exactly? 
+  It means that many Germans – especially younger people, mainly when speaking – avoid the genitive case by using the preposition von, which is like avoiding it in English by using of:
+
+  der Hund meines Bruders
+  my brother's dog 	
+  GEN 	
+
+  der Hund von meinem Bruder
+  the dog of my brother
+  DAT
+  
+  svenska:
+
+  der Hund meines Bruders
+  min brors hund
+
+  der Hund von meinem Bruder
+  min brors hund
+  
+  der Hund von meiner
+  hunden min
+
+  mein Hund
+  min hund
+  
+  Finns det fler övnignar här? 
+
+  die Freundin von mir
           
 ** Personliga promonen:
 
