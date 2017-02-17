@@ -152,9 +152,7 @@ Be careful: although most of the German tenses and moods look very much like the
 | Dative (indirect object)   | mir           | dir           | ihm           | ihr   | ihm           | uns          | euch          | ihnen        | Ihnen                        |
 | Genitive                   | meiner (mein) | deiner (dein) | seiner (sein) | ihrer | seiner (sein) | unser        | euer          | ihrer        | Ihrer                        |
 
-
-
-** Mallar
+* Mallar
 *** Mall för verb
     # ** Mall för verb
     # typ: TYP-AV-VERB
@@ -173,7 +171,7 @@ Be careful: although most of the German tenses and moods look very much like the
     #  |          |        |
 
 
-    # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, eventuellt undvika fylla?.
+    # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
     #  | svenska: | tyska: |
     #  |----------+--------|
     #  |          |        |
@@ -282,7 +280,6 @@ Be careful: although most of the German tenses and moods look very much like the
      | Är vattnet djupt?    | Ist das Wasser tief?     |
      |                      |                          |
 
-     
 * Adjektiv
 
   - einfach
@@ -300,6 +297,41 @@ Be careful: although most of the German tenses and moods look very much like the
   
   svinbra resurs för verb
   http://germanforenglishspeakers.com/verbs/present-and-simple-past/
+  
+  Ska en använda imperfekt eller perfekt? Verkar som "perfekt" i tal 
+
+  http://germanforenglishspeakers.com/verbs/perfect-vs-preterite/
+  
+  In English we use the preterite about 90% of the time, and we tend to reserve the perfect for situations where a past action has ongoing implications or relevance in the present. For example, consider "have you seen the Godfather movies?" (perfect – if you haven’t, you still could) versus "did you see the circus while it was in town?" (preterite – it’s too late to see it now).
+
+  In German, this distinction no longer really exists. There is a single concept of the past (die Vergangenheit) and the Präteritum and Perfekt tenses are interchangeable in expressing it. In practice, Germans use the Perfekt for about 90% of speech; they only use the Präteritum in speech for the auxiliary and modal verbs and a few very common strong or mixed verbs. Overusing the Präteritum in speech will make you sound like a snob or a robot, depending on the context.
+
+  Here are the rules you should follow in spoken German:
+
+  1. Always use the preterite for sein:
+  Ich war glücklich.
+  I was happy. 	Es war schönes Wetter auf der Insel.
+  The weather on the island was nice.
+  Warst du zu Hause?
+  Were you home? 	Wir waren noch nie in Griechenland.
+  We've never been to Greece.
+
+  2. Always use the preterite for modal verbs:
+  Ich konnte es nicht sehen.
+  I couldn't see it. 	Das solltest du schon gestern machen.
+  You were supposed to do that yesterday.
+  Durfte er nicht mitkommen?
+  Wasn't he allowed to come along? 	Wir wollten aber nicht.
+  But we didn't want to.
+
+  3. Use the perfect tense for everything else:
+  Ich bin ihm am Sonntag begegnet.
+  I met him on Sunday. 	Was hast du ihm gesagt?
+  What did you say to him?
+  Es ist vor langer Zeit gemacht worden.
+  It was done a long time ago.
+  Meine Vorfahren haben Deutschland vor 150 Jahren verlassen.
+  My ancestors left Germany 150 years ago.
 
 
 ** sein
@@ -329,18 +361,7 @@ Be careful: although most of the German tenses and moods look very much like the
    | dom är   | sie sind |
    | Ni är    | Sie sind |
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, ev undvika?
-    | svenska: | tyska:    |
-    | jag var  | ich war   |
-    | du var   | du warst  |
-    | han var  | er war    |
-    | hon var  | sie war   |
-    | det var  | es war    |
-    | vi var   | wir waren |
-    | ni var   | ihr wart  |
-    | dom var  | sie waren |
-    | Ni var   | Sie waren |
-
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Används alltid för sein i talad tyska
 *** Perfekt:
     | svenska       | tyska            |
     | jag har varit | ich bin gewesen  |
@@ -448,19 +469,7 @@ Be careful: although most of the German tenses and moods look very much like the
     | dom kan  | sie können |
     | Ni kan   | Sie können |
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, ev undvika?
-    | svenska:  | tyska:      |
-    |-----------+-------------|
-    | jag kunde | ich konnte  |
-    | du kunde  | du konntest |
-    | han kunde | er konnte   |
-    | hon kunde | sie konnte  |
-    | det kunde | es konnte   |
-    | vi kunde  | wir konnten |
-    | ni kunde  | ihr konntet |
-    | dom kunde | sie konnten |
-    | Ni kunde  | Sie konnten |
-
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     | svenska:       | tyska:            |
     |----------------+-------------------|
@@ -477,8 +486,6 @@ Be careful: although most of the German tenses and moods look very much like the
 
     wir haben schwimmen können = we were able to swim 
     ich hatte schwimmen können = I had been able to swim
-    
-
     
 
     
@@ -501,10 +508,7 @@ Be careful: although most of the German tenses and moods look very much like the
     |          |        |
 
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, ev undvika?
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. 
 
 
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
