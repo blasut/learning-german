@@ -110,13 +110,14 @@ Eva gillade den nya fina bilen.
   
 
 https://en.wikipedia.org/wiki/German_pronouns AWESOME
+
 http://germanforenglishspeakers.com/pronouns/interrogative-pronouns/
 http://germanforenglishspeakers.com/pronouns/relative-pronouns/
 http://germanforenglishspeakers.com/nouns/case/
 http://germanforenglishspeakers.com/nouns/some-rules-of-noun-formation/
 http://germanforenglishspeakers.com/verbs/perfect-tenses/
 http://germanforenglishspeakers.com/verbs/perfect-vs-preterite/
-
+http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 
   
@@ -360,8 +361,19 @@ Be careful: although most of the German tenses and moods look very much like the
    | ni är    | ihr seid |
    | dom är   | sie sind |
    | Ni är    | Sie sind |
+   
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. 
+    | svenska: | tyska:    |
+    | jag var  | ich war   |
+    | du var   | du warst  |
+    | han var  | er war    |
+    | hon var  | sie war   |
+    | det var  | es war    |
+    | vi var   | wir waren |
+    | ni var   | ihr wart  |
+    | dom var  | sie waren |
+    | Ni var   | Sie waren |
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Används alltid för sein i talad tyska
 *** Perfekt:
     | svenska       | tyska            |
     | jag har varit | ich bin gewesen  |
@@ -470,6 +482,18 @@ Be careful: although most of the German tenses and moods look very much like the
     | Ni kan   | Sie können |
 
 *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
+    | svenska:  | tyska:      |
+    |-----------+-------------|
+    | jag kunde | ich konnte  |
+    | du kunde  | du konntest |
+    | han kunde | er konnte   |
+    | hon kunde | sie konnte  |
+    | det kunde | es konnte   |
+    | vi kunde  | wir konnten |
+    | ni kunde  | ihr konntet |
+    | dom kunde | sie konnten |
+    | Ni kunde  | Sie konnten |
+
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     | svenska:       | tyska:            |
     |----------------+-------------------|
@@ -482,6 +506,7 @@ Be careful: although most of the German tenses and moods look very much like the
     | ni har kunnat  | ihr habt gekonnt  |
     | dom har kunnat | sie haben gekonnt |
     | Ni har kunnat  | sie haben gekonnt |
+
     In the present perfect or past perfect tense with another verb, the double infinitive construction is used, as in the following examples:
 
     wir haben schwimmen können = we were able to swim 
@@ -507,8 +532,11 @@ Be careful: although most of the German tenses and moods look very much like the
     |----------+--------|
     |          |        |
 
-
+    
 *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. 
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
 
 
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
