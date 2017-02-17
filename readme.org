@@ -125,9 +125,9 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
    
    Using "er", "es", und die starke verb "tun (att göra / to do)"
 
-   |                 |                        | MOOD                    |                   |           |
+   | TENSE           |                        | MOOD                    |                   |           |
    |-----------------+------------------------+-------------------------+-------------------+-----------|
-   | TENSE           | Indikativ              | Konjunktiv I            | Konjunktiv II     | Imperativ |
+   |                 | Indikativ              | Konjunktiv I            | Konjunktiv II     | Imperativ |
    |-----------------+------------------------+-------------------------+-------------------+-----------|
    | Präsens         | Er tut es              | Er tue es               | Er würde es tun   | Tu(e) es! |
    | Präteritum      | Er tat es              | Er habe es getan        | Er hätte es getan |           |
