@@ -107,7 +107,37 @@ Eva gillade den nya fina bilen.
   Finns det fler övnignar här? 
 
   die Freundin von mir
-          
+  
+
+https://en.wikipedia.org/wiki/German_pronouns AWESOME
+http://germanforenglishspeakers.com/pronouns/interrogative-pronouns/
+http://germanforenglishspeakers.com/pronouns/relative-pronouns/
+http://germanforenglishspeakers.com/nouns/case/
+http://germanforenglishspeakers.com/nouns/some-rules-of-noun-formation/
+http://germanforenglishspeakers.com/verbs/perfect-tenses/
+http://germanforenglishspeakers.com/verbs/perfect-vs-preterite/
+
+
+
+  
+** Tenses & mood
+   
+   Using "er", "es", und die starke verb "tun (att göra / to do)"
+
+   |                 |                        | MOOD                    |                   |           |
+   |-----------------+------------------------+-------------------------+-------------------+-----------|
+   | TENSE           | Indikativ              | Konjunktiv I            | Konjunktiv II     | Imperativ |
+   |-----------------+------------------------+-------------------------+-------------------+-----------|
+   | Präsens         | Er tut es              | Er tue es               | Er würde es tun   | Tu(e) es! |
+   | Präteritum      | Er tat es              | Er habe es getan        | Er hätte es getan |           |
+   | Perfekt         | Er hat es getan        |                         |                   |           |
+   | Plusquamperfekt | Er hatte es getan      |                         |                   |           |
+   | Futur I         | Er wird es tun         | Er werde es tun         |                   |           |
+   | Futur II        | Er wird es getan haben | Er werde es getan haben |                   |           |
+
+Be careful: although most of the German tenses and moods look very much like their English counterparts, there are some big differences in how they're used. In particular, the present and perfect tenses (Präsens and Perfekt) account for a huge proportion of actual German speech. The Perfekt is used for almost anything that happened in the past, and the Präsens is used for much of the future as well as the present. You still need to know the other four tenses, but they’re not used as often as their English equivalents.
+
+
 ** Personliga promonen:
 
 |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
@@ -143,7 +173,7 @@ Eva gillade den nya fina bilen.
     #  |          |        |
 
 
-    # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
+    # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, eventuellt undvika fylla?.
     #  | svenska: | tyska: |
     #  |----------+--------|
     #  |          |        |
@@ -267,6 +297,11 @@ Eva gillade den nya fina bilen.
   - tief
 
 * Verb
+  
+  svinbra resurs för verb
+  http://germanforenglishspeakers.com/verbs/present-and-simple-past/
+
+
 ** sein
    Typ: irregular
 
@@ -294,7 +329,7 @@ Eva gillade den nya fina bilen.
    | dom är   | sie sind |
    | Ni är    | Sie sind |
 
-*** Imperfekt:
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, ev undvika?
     | svenska: | tyska:    |
     | jag var  | ich war   |
     | du var   | du warst  |
@@ -413,7 +448,7 @@ Eva gillade den nya fina bilen.
     | dom kan  | sie können |
     | Ni kan   | Sie können |
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, ev undvika?
     | svenska:  | tyska:      |
     |-----------+-------------|
     | jag kunde | ich konnte  |
@@ -446,4 +481,70 @@ Eva gillade den nya fina bilen.
 
     
 
+    
+** werden
+   typ: TYP-AV-VERB
+   
+   att bli
+
+   Används för att skapa futurum vid andra verb
+
+*** Meningar:
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Presens används för att beskriva saker som händer eller är nu
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. Kan vara så att det används VÄLDIGT lite i tal, ev undvika?
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Pluskvamperfekt används för att visa att en händelse ägde rum före en annan händelse i det förflutna, pluskvamperfekt bildas med ett huvudverb och hjälpverbet "hade"
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Futurum används för att beskriva något som kommer hända i framtiden, futurum bildas med hjälpverben "ska / skall" och "kommer att" och ett huvudverb
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Futurum exaktum används för att beskriva något som kommer definitivt göras i framtiden
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Imperativ används för att beskriva en uppmaning, kommando eller befallning
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+                            
+
+*** Subjunctive I - Konjunktiv I används för att beskriva något som inte är säkert eller önsketänkande, används ofta med verb som uttrycker ånger eller ett förslag
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Subjunctive II - Konjunktiv II används för att beskriva önsketänkande, och för att vara artig (skulle t.ex.)
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
     
