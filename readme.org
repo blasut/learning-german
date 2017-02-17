@@ -60,6 +60,11 @@ Eva gillade den nya fina bilen.
     - Dativ
     - Genitiv
 - Personliga promonen
+  - Singular
+  - Första person
+  - Andra person
+  - Tredje person
+  - Plural
     - Nominativ
     - Ackusativ
     - Dativ
@@ -72,6 +77,20 @@ Eva gillade den nya fina bilen.
         - Genitiv
 
 
+* Grammatik
+          
+** Personliga promonen:
+|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------+
+|                            | Singular      |               |               |       |               | Plural       |               |              | Formal (singular and plural) | 
+|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------+
+| Case                       | First Person  | Second Person | Third Person  |       |               | First Person | Second Person | Third Person | Second Person                |
+|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------+
+| (English nominative)       | I             | you           | he            | she   | null / it     | we           | you           | they         | you                          |
+|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------+
+| Nominative (subject)       | ich           | du            | er            | sie   | es            | wir          | ihr           | sie          | Sie                          | 
+| Accusative (direct object) | mich          | dich          | ihn           | sie   | es            | uns          | euch          | sie          | Sie                          | 
+| Dative (indirect object)   | mir           | dir           | ihm           | ihr   | ihm           | uns          | euch          | ihnen        | Ihnen                        | 
+| Genitive                   | meiner (mein) | deiner (dein) | seiner (sein) | ihrer | seiner (sein) | unser        | euer          | ihrer        | Ihrer                        | 
 
 
 
@@ -169,10 +188,12 @@ Eva gillade den nya fina bilen.
 * Fraser
   Tanken är att dom flesta fraser ska kategoriseras under ett verb
   
+  Poängen med dokumentet är dock inte att ha en fet samling fraser, utan dom ska hamna i AnkiApp istället. Några exempel-fraser per verb/adjektiv är okej. Men detta är framförallt referens för grammatik.
+  
   Detta är en slaskhink
   
   Viktigast är dock att allting hamnar i Ankiapp för repitition
-
+  
 ** Osorterat
      | svenska:             | tyska:                   |
      |----------------------+--------------------------|
@@ -208,6 +229,12 @@ Eva gillade den nya fina bilen.
   - gross
   - klein
   - gesund
+  - ruhig
+  - alt
+  - teuer
+  - schwer
+  - sauber
+  - tief
 
 * Verb
 ** sein
