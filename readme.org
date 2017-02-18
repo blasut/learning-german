@@ -324,6 +324,13 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
   svinbra resurs för verb
   http://germanforenglishspeakers.com/verbs/present-and-simple-past/
   
+  Vanligaste 100 verben i tyskan: http://www.thegermanprofessor.com/top-100-german-verbs/
+
+** grammtik
+*** dativ verb 
+  En lista på alla dativ-verb i tyskan: http://germanforenglishspeakers.com/reference/dative-verbs/ dativ-verb är alltså verb som alltså säter objektet i dativ (alltså det indirekta objektet) 
+
+*** imperfekt lr perfekt?
   Ska en använda imperfekt eller perfekt? Verkar som "perfekt" i tal 
 
   http://germanforenglishspeakers.com/verbs/perfect-vs-preterite/
@@ -372,6 +379,8 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
   Meine Vorfahren haben Deutschland vor 150 Jahren verlassen.
   My ancestors left Germany 150 years ago.
+ 
+*** separerbara lr oseparerbara verb
   
   Verb prefixes in German can be separable or inseparable. A separable prefix moves to the end of a sentence when  the verb is conjugated.* For example, the mixed verb bringen (to bring) can add the separable prefix mit (with) to become the verb mitbringen (to bring along, bring with). Or add the separable prefix zu (to) to the weak verb hören (to hear) to make zuhören (to listen to):
 
@@ -405,17 +414,19 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     
 
     Trött:
-    | svenska                 | tyska                       |
-    |-------------------------+-----------------------------|
-    | Jag är trött            | Ich bin müde                |
-    | Du är trött             | Du bist müde                |
-    | Hon är trött            | Sie ist müde                |
-    | Ni är trött             | Sie sind müde               |
-    | dom är trötta           | sie sind müde               |
-    |-------------------------+-----------------------------|
-    | Jag är trött pga jobbet | Ich bin müde von der Arbeit |
-    | Jag är trött pga jobbet | Ich bin von der Arbeit müde |
-    |-------------------------+-----------------------------|
+    | svenska                 | tyska                       | kommentar                                                  |
+    |-------------------------+-----------------------------+------------------------------------------------------------|
+    | Jag är trött            | Ich bin müde                |                                                            |
+    | Du är trött             | Du bist müde                |                                                            |
+    | Hon är trött            | Sie ist müde                |                                                            |
+    | Ni är trött             | Sie sind müde               |                                                            |
+    | dom är trötta           | sie sind müde               |                                                            |
+    | Jag var trött           | Ich war müde                |                                                            |
+    | jag har varit trött     | Ich war müde                | Se "imperfekt lr perfekt?" Båda betyder samma sak i tyskan |
+    |-------------------------+-----------------------------+------------------------------------------------------------|
+    | Jag är trött pga jobbet | Ich bin müde von der Arbeit |                                                            |
+    | Jag är trött pga jobbet | Ich bin von der Arbeit müde |                                                            |
+    |-------------------------+-----------------------------+------------------------------------------------------------|
     
 
 
@@ -432,8 +443,9 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
    | dom är   | sie sind |
    | Ni är    | Sie sind |
    
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. 
+*** Imperfekt (preteritum/Präterium):  används för att beskriva att saker hände eller var tidigare. 
     | svenska: | tyska:    |
+    |----------+-----------|
     | jag var  | ich war   |
     | du var   | du warst  |
     | han var  | er war    |
@@ -446,6 +458,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 *** Perfekt:
     | svenska       | tyska            |
+    |---------------+------------------|
     | jag har varit | ich bin gewesen  |
     | du har varit  | du bist gewesen  |
     | han har varit | er ist gewesen   |
@@ -458,6 +471,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 *** Pluskvamperfekt är en tempusform som visar att en händelse ägde rum före en annan händelse i det förflutna
     | svenska        | tyska             |
+    |----------------+-------------------|
     | jag hade varit | ich war gewesen   |
     | du hade varit  | du warst gewesen  |
     | han hade varit | er warst gewesen  |
@@ -471,6 +485,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 *** Futurum: 
     Note: The future tense, especially with "sein," is used much less in German than in English. Very often the present tense is used with an adverb instead. (Er kommt am Dienstag. = He'll arrive on Tuesday.)
     | svenska             | tyska           |
+    |---------------------+-----------------|
     | jag kommer att vara | ich werde sein  |
     | du kommer att vara  | du wirst sein   |
     | han kommer att vara | er wird sein    |
@@ -483,6 +498,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 *** Futurum exaktum:
     | svenska                 | tyska                   |
+    |-------------------------+-------------------------|
     | jag kommer att ha varit | ich werde gewesen sein  |
     | du kommer att ha varit  | du wirst gewesen sein   |
     | han kommer att ha varit | er wird gewesen sein    |
@@ -496,6 +512,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 *** Imperativ: 
     There are three command (imperative) forms, one for each German "you" word. In addition, the "let's" form is used with wir (we).
     | svenska: | tyska:     |
+    |----------+------------|
     | (du) är  | (du) sei   |
     | (ni) är  | (ihr) seid |
     | (Ni) är  | seien Sie  |
@@ -508,6 +525,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 *** Subjunctive II - Konjunktiv II
    The Subjunctive II (Konjunktiv II) expresses wishful thinking, contrary-to-reality situations and is used to express politeness. The Subjunctive II is based on the simple past tense (Imperfekt). This "sein" form resembles English examples, such as "If I were you, I wouldn't do that."
    | svenska:    | tyska:      |
+   |-------------+-------------|
    | jag skulle: | ich wäre    |
    | du var:     | du wär(e)st |
    | han skulle: | er wäre     |
@@ -521,6 +539,7 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
    Since the Subjunctive is a mood and not a tense, it can also be used in various tenses. Below are several examples.
 
    | svenska                 | tyska                     |
+   |-------------------------+---------------------------|
    | jag skulle ha varit     | ich wäre gewesen          |
    | var han här, skulle han | wäre er hier, würde er... |
    | dom skulle ha varit     | sie wären gewsen          |
