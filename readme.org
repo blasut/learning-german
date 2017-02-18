@@ -311,26 +311,40 @@ Be careful: although most of the German tenses and moods look very much like the
 
   1. Always use the preterite for sein:
   Ich war glücklich.
-  I was happy. 	Es war schönes Wetter auf der Insel.
+  I was happy. 	
+
+  Es war schönes Wetter auf der Insel.
   The weather on the island was nice.
+
   Warst du zu Hause?
-  Were you home? 	Wir waren noch nie in Griechenland.
+  Were you home? 	
+
+  Wir waren noch nie in Griechenland.
   We've never been to Greece.
 
   2. Always use the preterite for modal verbs:
   Ich konnte es nicht sehen.
-  I couldn't see it. 	Das solltest du schon gestern machen.
+  I couldn't see it. 	
+
+  Das solltest du schon gestern machen.
   You were supposed to do that yesterday.
+
   Durfte er nicht mitkommen?
-  Wasn't he allowed to come along? 	Wir wollten aber nicht.
+  Wasn't he allowed to come along? 	
+
+  Wir wollten aber nicht.
   But we didn't want to.
 
   3. Use the perfect tense for everything else:
   Ich bin ihm am Sonntag begegnet.
-  I met him on Sunday. 	Was hast du ihm gesagt?
+  I met him on Sunday. 	
+
+  Was hast du ihm gesagt?
   What did you say to him?
+
   Es ist vor langer Zeit gemacht worden.
   It was done a long time ago.
+
   Meine Vorfahren haben Deutschland vor 150 Jahren verlassen.
   My ancestors left Germany 150 years ago.
 
