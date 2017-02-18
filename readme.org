@@ -2,6 +2,10 @@
 
 Det här är ett levande dokument för min tyska träning.
 
+# Org hilfe:
+# You can make words ´*bold*´, ´/italic/´, ´_underlined_´, ´=verbatim=´ and ´~code~´, and, if you must, ‘+strike-through+’. Text in the code and verbatim string is not processed for Org mode specific syntax, it is exported verbatim. 
+ 
+
 * Generellt
 
 Tyska
@@ -76,7 +80,6 @@ Eva gillade den nya fina bilen.
         - Dativ
         - Genitiv
 
-
 * Grammatik
 
   You will often hear that the genitive is “dying out” in German, or being “replaced by the dative,” but what does this mean exactly? 
@@ -136,22 +139,33 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
    | Futur I         | Er wird es tun         | Er werde es tun         |                   |           |
    | Futur II        | Er wird es getan haben | Er werde es getan haben |                   |           |
 
-Be careful: although most of the German tenses and moods look very much like their English counterparts, there are some big differences in how they're used. In particular, the present and perfect tenses (Präsens and Perfekt) account for a huge proportion of actual German speech. The Perfekt is used for almost anything that happened in the past, and the Präsens is used for much of the future as well as the present. You still need to know the other four tenses, but they’re not used as often as their English equivalents.
-
+   Be careful: although most of the German tenses and moods look very much like their English counterparts, there are some big differences in how they're used. In particular, the present and perfect tenses (Präsens and Perfekt) account for a huge proportion of actual German speech. The Perfekt is used for almost anything that happened in the past, and the Präsens is used for much of the future as well as the present. You still need to know the other four tenses, but they’re not used as often as their English equivalents.
 
 ** Personliga promonen:
 
-|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-|                            | Singular      |               |               |       |               | Plural       |               |              | Formal (singular and plural) |
-|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-| *Case*                       | *First Person*  | *Second Person* | *Third Person*  |       |               | *First Person* | *Second Person* | *Third Person* | *Second Person*                |
-|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-| *(English nominative)*       | /I/             | /you/           | /he/            | /she/   | /null / it/     | /we/           | /you/           | /they/         | /you/                          |
-|----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-| *Nominative (subject)*       | ich           | du            | er            | sie   | es            | wir          | ihr           | sie          | Sie                          |
-| *Accusative (direct object)* | mich          | dich          | ihn           | sie   | es            | uns          | euch          | sie          | Sie                          |
-| *Dative (indirect object)*   | mir           | dir           | ihm           | ihr   | ihm           | uns          | euch          | ihnen        | Ihnen                        |
-| *Genitive*                   | meiner (mein) | deiner (dein) | seiner (sein) | ihrer | seiner (sein) | unser        | euer          | ihrer        | Ihrer                        |
+   |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
+   |                            | Singular      |               |               |       |               | Plural       |               |              | Formal (singular and plural) |
+   |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
+   | *Case*                       | *First Person*  | *Second Person* | *Third Person*  |       |               | *First Person* | *Second Person* | *Third Person* | *Second Person*                |
+   |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
+   | *(English nominative)*       | /I/             | /you/           | /he/            | /she/   | /null / it/     | /we/           | /you/           | /they/         | /you/                          |
+   |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
+   | *Nominative (subject)*       | ich           | du            | er            | sie   | es            | wir          | ihr           | sie          | Sie                          |
+   | *Accusative (direct object)* | mich          | dich          | ihn           | sie   | es            | uns          | euch          | sie          | Sie                          |
+   | *Dative (indirect object)*   | mir           | dir           | ihm           | ihr   | ihm           | uns          | euch          | ihnen        | Ihnen                        |
+   | *Genitive*                   | meiner (mein) | deiner (dein) | seiner (sein) | ihrer | seiner (sein) | unser        | euer          | ihrer        | Ihrer                        |
+
+** reflexiva pronomen
+   
+  |         |        | Singular |                |   | Plural    |           |            |   | Formal     |
+  |---------+--------+----------+----------------+---+-----------+-----------+------------+---+------------|
+  |         | *1st*    | *2nd*      | *3rd*            |   | *1st*       | *2nd*       | *3rd*        |   | *2nd*        |
+  |---------+--------+----------+----------------+---+-----------+-----------+------------+---+------------|
+  | *ACC*     | mich   | dich     | sich           |   | uns       | euch      | sich       |   | sich       |
+  | *DAT*     | mir    | dir      | sich           |   | uns       | euch      | sich       |   | sich       |
+  |---------+--------+----------+----------------+---+-----------+-----------+------------+---+------------|
+  | /English/ | /myself/ | yourself | /him,her,itself/ |   | /ourselves/ | /yourselvs/ | /themselves/ |   | /yourselves/ |
+
 
 * Mallar
 *** Mall för verb
@@ -254,32 +268,33 @@ Be careful: although most of the German tenses and moods look very much like the
   Viktigast är dock att allting hamnar i Ankiapp för repitition
   
 ** Osorterat
-     | svenska:             | tyska:                   |
-     |----------------------+--------------------------|
-     | Vi äter fiskarna     | Wir essen die Fische     |
-     | Vi äter jordgubbar   | Wir essen Erdbeeren      |
-     | Jag har katter       | Ich habe Katzen          |
-     | Jag har katter hemma | Ich habe Katzen zu hause |
-     | Köttet är dåligt     | Das Fleisch ist schlecht |
-     | Nej, du är grym      | Nein, du bist toll       |
-     | Hon är dålig         | Sie ist schlecht         |
-     | Dom är svaga         | Sie sind schwach         |
-     | Du är högljudd       | Du bist laut             |
-     | Du är tyst           | Du bist leise            |
-     | Det är tyst          | Es ist leise             |
-     | Vi är lugna          | Wir sind ruhig           |
-     | Din mamma är liten   | Deine mutter ist klein   |
-     | Mannen är ledsen     | Der Mann ist traurig     |
-     | Det är roligt        | Es ist lustig            |
-     | Jag är klar          | Ich bin fertig           |
-     | Är maten dyr?        | Ist das Essen teuer?     |
-     | Det är långt         | Es ist weit              |
-     | Du är gammal         | Du bist alt              |
-     | Hon är gammal        | Sie ist alt              |
-     | Djuret är tungt      | Das Tier ist schwer      |
-     | Är grönsakerna rena? | Ist das Gemüse sauber?   |
-     | Är vattnet djupt?    | Ist das Wasser tief?     |
-     |                      |                          |
+
+   | svenska:             | tyska:                   |
+   |----------------------+--------------------------|
+   | Vi äter fiskarna     | Wir essen die Fische     |
+   | Vi äter jordgubbar   | Wir essen Erdbeeren      |
+   | Jag har katter       | Ich habe Katzen          |
+   | Jag har katter hemma | Ich habe Katzen zu hause |
+   | Köttet är dåligt     | Das Fleisch ist schlecht |
+   | Nej, du är grym      | Nein, du bist toll       |
+   | Hon är dålig         | Sie ist schlecht         |
+   | Dom är svaga         | Sie sind schwach         |
+   | Du är högljudd       | Du bist laut             |
+   | Du är tyst           | Du bist leise            |
+   | Det är tyst          | Es ist leise             |
+   | Vi är lugna          | Wir sind ruhig           |
+   | Din mamma är liten   | Deine mutter ist klein   |
+   | Mannen är ledsen     | Der Mann ist traurig     |
+   | Det är roligt        | Es ist lustig            |
+   | Jag är klar          | Ich bin fertig           |
+   | Är maten dyr?        | Ist das Essen teuer?     |
+   | Det är långt         | Es ist weit              |
+   | Du är gammal         | Du bist alt              |
+   | Hon är gammal        | Sie ist alt              |
+   | Djuret är tungt      | Das Tier ist schwer      |
+   | Är grönsakerna rena? | Ist das Gemüse sauber?   |
+   | Är vattnet djupt?    | Ist das Wasser tief?     |
+   |                      |                          |
 
 * Adjektiv
 
@@ -347,7 +362,23 @@ Be careful: although most of the German tenses and moods look very much like the
 
   Meine Vorfahren haben Deutschland vor 150 Jahren verlassen.
   My ancestors left Germany 150 years ago.
+  
+  Verb prefixes in German can be separable or inseparable. A separable prefix moves to the end of a sentence when  the verb is conjugated.* For example, the mixed verb bringen (to bring) can add the separable prefix mit (with) to become the verb mitbringen (to bring along, bring with). Or add the separable prefix zu (to) to the weak verb hören (to hear) to make zuhören (to listen to):
 
+   *Ich bringe* morgen meinen Freund *mit*.
+   I’ll bring my friend along tomorrow.
+
+   *Sie hörte* mir zu.
+   She listened to me.
+   
+   When the verb is not conjugated – when it’s used with a modal verb, for example – the prefix stays attached:
+   
+   *Darf* ich meinen Freund *mitbringen*?
+   *May I bring* my friend *along*?
+
+   Er *will* mir nicht *zuhören*.
+   He doesn’t *want to listen* to me.  
+   
 
 ** sein
    Typ: irregular
