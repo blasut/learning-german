@@ -354,10 +354,13 @@ Be careful: although most of the German tenses and moods look very much like the
 
 *** meningar
 
-    | svenska                       | tyska                             |
-    |-------------------------------+-----------------------------------|
-    | Jag är väldigt dålig på tyska | Ich bin ganz schlecht auf deutsch |
-    | Hon är grym på att festa      | Sie ist super bei Party           |
+    | svenska                          | tyska                                |
+    |----------------------------------+--------------------------------------|
+    | Jag är väldigt dålig på tyska    | Ich bin ganz schlecht auf deutsch    |
+    | Jag är sämst på tyska            | Ich bin am schlechtesten auf Deutsch |
+    | Jag är bäst på tyska             | Ich bin am besten auf Deutsch        |
+    | Jag är tillräckligt bra på tyska | Ich bin genügend gut auf Deutsch     |
+    | Hon är grym på att festa         | Sie ist super bei Party              |
     
 
     Trött:
@@ -372,9 +375,6 @@ Be careful: although most of the German tenses and moods look very much like the
     | Jag är trött pga jobbet | Ich bin müde von der Arbeit |
     | Jag är trött pga jobbet | Ich bin von der Arbeit müde |
     |-------------------------+-----------------------------|
-    | Du ser trött ut         | Du siehst müde aus          |
-    | Hon ser trött ut        | Sie sieht müde aus          |
-    |                         |                             |
     
 
 
@@ -541,8 +541,6 @@ Be careful: although most of the German tenses and moods look very much like the
     wir haben schwimmen können = we were able to swim 
     ich hatte schwimmen können = I had been able to swim
     
-
-    
 ** werden
    typ: TYP-AV-VERB
    
@@ -615,3 +613,66 @@ Be careful: although most of the German tenses and moods look very much like the
     |----------+--------|
     |          |        |
     
+** sehen
+   typ: TYP-AV-VERB
+
+*** Meningar:
+    | svenska:         | tyska:             |
+    |------------------+--------------------|
+    | Du ser trött ut  | Du siehst müde aus |
+    | Hon ser trött ut | Sie sieht müde aus |
+    |                  |                    |
+
+
+*** Presens används för att beskriva saker som händer eller är nu
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Pluskvamperfekt används för att visa att en händelse ägde rum före en annan händelse i det förflutna, pluskvamperfekt bildas med ett huvudverb och hjälpverbet "hade"
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Futurum används för att beskriva något som kommer hända i framtiden, futurum bildas med hjälpverben "ska / skall" och "kommer att" och ett huvudverb
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Futurum exaktum används för att beskriva något som kommer definitivt göras i framtiden
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Imperativ används för att beskriva en uppmaning, kommando eller befallning
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+                             
+
+*** Subjunctive I - Konjunktiv I används för att beskriva något som inte är säkert eller önsketänkande, används ofta med verb som uttrycker ånger eller ett förslag
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+
+
+*** Subjunctive II - Konjunktiv II används för att beskriva önsketänkande, och för att vara artig (skulle t.ex.)
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
