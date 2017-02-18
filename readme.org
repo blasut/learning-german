@@ -144,14 +144,14 @@ Be careful: although most of the German tenses and moods look very much like the
 |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
 |                            | Singular      |               |               |       |               | Plural       |               |              | Formal (singular and plural) |
 |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-| Case                       | First Person  | Second Person | Third Person  |       |               | First Person | Second Person | Third Person | Second Person                |
+| *Case*                       | *First Person*  | *Second Person* | *Third Person*  |       |               | *First Person* | *Second Person* | *Third Person* | *Second Person*                |
 |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-| (English nominative)       | I             | you           | he            | she   | null / it     | we           | you           | they         | you                          |
+| *(English nominative)*       | /I/             | /you/           | /he/            | /she/   | /null / it/     | /we/           | /you/           | /they/         | /you/                          |
 |----------------------------+---------------+---------------+---------------+-------+---------------+--------------+---------------+--------------+------------------------------|
-| Nominative (subject)       | ich           | du            | er            | sie   | es            | wir          | ihr           | sie          | Sie                          |
-| Accusative (direct object) | mich          | dich          | ihn           | sie   | es            | uns          | euch          | sie          | Sie                          |
-| Dative (indirect object)   | mir           | dir           | ihm           | ihr   | ihm           | uns          | euch          | ihnen        | Ihnen                        |
-| Genitive                   | meiner (mein) | deiner (dein) | seiner (sein) | ihrer | seiner (sein) | unser        | euer          | ihrer        | Ihrer                        |
+| *Nominative (subject)*       | ich           | du            | er            | sie   | es            | wir          | ihr           | sie          | Sie                          |
+| *Accusative (direct object)* | mich          | dich          | ihn           | sie   | es            | uns          | euch          | sie          | Sie                          |
+| *Dative (indirect object)*   | mir           | dir           | ihm           | ihr   | ihm           | uns          | euch          | ihnen        | Ihnen                        |
+| *Genitive*                   | meiner (mein) | deiner (dein) | seiner (sein) | ihrer | seiner (sein) | unser        | euer          | ihrer        | Ihrer                        |
 
 * Mallar
 *** Mall för verb
@@ -340,13 +340,28 @@ Be careful: although most of the German tenses and moods look very much like the
 
 *** meningar
 
-    | svenska                                                              | tyska                                                                  |
-    |----------------------------------------------------------------------+------------------------------------------------------------------------|
-    | Jag kommer att vara mycket bra på tyska                              | Ich werde sein sehr gut auf Deutsch                                    |
-    | Jag kommer att vara mycket bra på tyska efter sex månader            | Ich werde sein sehr gut Deutsch sprechen nach sechs Monaten            |
-    | Jag kommer att vara mycket bra på tyska efter sex månader av träning | Ich werde sein sprechen sehr gut Deutsch nach sechs Monaten von lernen |
-    | Jag är väldigt dålig på tyska                                        | Ich bin ganz schlecht auf deutsch                                      |
-    | Hon är grym på att festa                                             | Sie ist super bei Party                                                |
+    | svenska                       | tyska                             |
+    |-------------------------------+-----------------------------------|
+    | Jag är väldigt dålig på tyska | Ich bin ganz schlecht auf deutsch |
+    | Hon är grym på att festa      | Sie ist super bei Party           |
+    
+
+    Trött:
+    | svenska                 | tyska                       |
+    |-------------------------+-----------------------------|
+    | Jag är trött            | Ich bin müde                |
+    | Du är trött             | Du bist müde                |
+    | Hon är trött            | Sie ist müde                |
+    | Ni är trött             | Sie sind müde               |
+    | ni är trötta            | sie sind müde               |
+    |-------------------------+-----------------------------|
+    | Jag är trött pga jobbet | Ich bin müde von der Arbeit |
+    | Jag är trött pga jobbet | Ich bin von der Arbeit müde |
+    |-------------------------+-----------------------------|
+    | Du ser trött ut         | Du siehst müde aus          |
+    | Hon ser trött ut        | Sie sieht müde aus          |
+    |                         |                             |
+    
 
 
 *** Presens:
@@ -522,9 +537,15 @@ Be careful: although most of the German tenses and moods look very much like the
    Används för att skapa futurum vid andra verb
 
 *** Meningar:
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
+    | svenska:                                                             | tyska:                                                                 |
+    |----------------------------------------------------------------------+------------------------------------------------------------------------|
+    | Jag kommer att vara mycket bra på tyska                              | Ich werde sein sehr gut auf Deutsch                                    |
+    | Jag kommer att vara mycket bra på tyska efter sex månader            | Ich werde sein sehr gut Deutsch sprechen nach sechs Monaten            |
+    | Jag kommer att vara mycket bra på tyska efter sex månader av träning | Ich werde sein sprechen sehr gut Deutsch nach sechs Monaten von lernen |
+    | Jag kommer prata mycket bra tyska efter sex månader                  | Ich werde sein, nach sechs Monaten, sehr gut Deutsch sprechen          |
+    | Jag kommer tillbaka                                                  | Ich werde zurückkommen.                                                |
+    | Jag kommer prata bra tyska                                           | Ich werde gut deutsch sprechen                                         |
+    |                                                                      |                                                                        |
 
 
 *** Presens används för att beskriva saker som händer eller är nu
