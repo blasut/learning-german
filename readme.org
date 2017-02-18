@@ -165,6 +165,10 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
   | *DAT*     | mir    | dir      | sich           |   | uns       | euch      | sich       |   | sich       |
   |---------+--------+----------+----------------+---+-----------+-----------+------------+---+------------|
   | /English/ | /myself/ | yourself | /him,her,itself/ |   | /ourselves/ | /yourselvs/ | /themselves/ |   | /yourselves/ |
+  
+** prepositioner
+
+   http://germanforenglishspeakers.com/prepositions/introduction-to-prepositions/
 
 
 * Mallar
