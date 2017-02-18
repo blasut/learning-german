@@ -370,7 +370,7 @@ Be careful: although most of the German tenses and moods look very much like the
     | Du är trött             | Du bist müde                |
     | Hon är trött            | Sie ist müde                |
     | Ni är trött             | Sie sind müde               |
-    | ni är trötta            | sie sind müde               |
+    | dom är trötta           | sie sind müde               |
     |-------------------------+-----------------------------|
     | Jag är trött pga jobbet | Ich bin müde von der Arbeit |
     | Jag är trött pga jobbet | Ich bin von der Arbeit müde |
