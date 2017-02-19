@@ -168,7 +168,31 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
   
 ** prepositioner
 
+   After the first 6 months of learning German, you should at least know the following prepositions:
+
+   Prepositions with accusative; the most important are:
+   durch, bis, für, ohne, entlang, gegen, um
+
+   Prepositions with dative:
+   bei, mit, seit, aus, zu, nach, von
+
+   Two-way-prepositions. These can use the dative as well as the accusative:
+   hinter, an, neben, auf, unter, zwischen, vor, in, über
+
    http://germanforenglishspeakers.com/prepositions/introduction-to-prepositions/
+   
+*** contractions
+
+    Contractions
+
+    A few common preposition-article pairs are usually contracted, as follows:
+    |--------------------+----------------------+--------------------|
+    | an dem > am        | hinter dem > hinterm | unter dem > unterm |
+    | an das > ans       | in das > ins         | von dem > vom      |
+    | auf das > aufs     | in dem > im          | vor das > vors     |
+    | bei dem > beim     | über das > übers     | vor dem > vorm     |
+    | durch das > durchs | um das > ums         | zu dem > zum       |
+    | für das > fürs     | unter das > unters   | zu der > zur       |
 
 
 * Mallar
