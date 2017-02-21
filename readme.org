@@ -123,7 +123,17 @@ http://germanforenglishspeakers.com/verbs/perfect-vs-preterite/
 http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 
-  
+** mening-struktur
+
+   I *verb* something.
+   [What/why/when/how…] *verb* I something?
+   
+   I tyskan startar alla frågor med ett w-ord
+   
+
+
+
+
 ** Tenses & mood
    
    Using "er", "es", und die starke verb "tun (att göra / to do)"
@@ -209,57 +219,129 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 
     # *** Presens används för att beskriva saker som händer eller är nu
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
-    # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. används ej för tal
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
     # *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
     # *** Pluskvamperfekt används för att visa att en händelse ägde rum före en annan händelse i det förflutna, pluskvamperfekt bildas med ett huvudverb och hjälpverbet "hade"
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
     # *** Futurum används för att beskriva något som kommer hända i framtiden, futurum bildas med hjälpverben "ska / skall" och "kommer att" och ett huvudverb
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
     # *** Futurum exaktum används för att beskriva något som kommer definitivt göras i framtiden
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
     # *** Imperativ används för att beskriva en uppmaning, kommando eller befallning
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
                                   
 
     # *** Subjunctive I - Konjunktiv I används för att beskriva något som inte är säkert eller önsketänkande, används ofta med verb som uttrycker ånger eller ett förslag
-    #  | svenska: | tyska: |
-    #  |----------+--------|
-    #  |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 
     # *** Subjunctive II - Konjunktiv II används för att beskriva önsketänkande, och för att vara artig (skulle t.ex.)
     # | svenska: | tyska: |
     # |----------+--------|
-    # |          |        |
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 *** Mall för modalverb
     # ** können
@@ -272,19 +354,43 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     # 
     # 
     # *** Presens används för att beskriva saker som händer eller är nu
-    #    | svenska: | tyska: |
-    #    |----------+--------|
-    #    |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
     # 
     # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
-    #    | svenska: | tyska: |
-    #    |----------+--------|
-    #    |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
     # 
     # *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
-    #    | svenska: | tyska: |
-    #    |----------+--------|
-    #    |          |        |
+    # | svenska: | tyska: |
+    # |----------+--------|
+    # | jag      | ich    |
+    # | du       | du     |
+    # | han      | er     |
+    # | hon      | sie    |
+    # | det      | es     |
+    # | vi       | wir    |
+    # | ni       | ihr    |
+    # | dom      | sie    |
+    # | Ni       | Sie    |
 
 * Fraser
   Tanken är att dom flesta fraser ska kategoriseras under ett verb
@@ -598,19 +704,6 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     | dom kan  | sie können |
     | Ni kan   | Sie können |
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
-    | svenska:  | tyska:      |
-    |-----------+-------------|
-    | jag kunde | ich konnte  |
-    | du kunde  | du konntest |
-    | han kunde | er konnte   |
-    | hon kunde | sie konnte  |
-    | det kunde | es konnte   |
-    | vi kunde  | wir konnten |
-    | ni kunde  | ihr konntet |
-    | dom kunde | sie konnten |
-    | Ni kunde  | Sie konnten |
-
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     | svenska:       | tyska:            |
     |----------------+-------------------|
@@ -654,12 +747,6 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     |          |        |
 
     
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. 
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
-
-
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     | svenska: | tyska: |
     |----------+--------|
@@ -718,12 +805,6 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     |          |        |
 
 
-*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare.
-    | svenska: | tyska: |
-    |----------+--------|
-    |          |        |
-
-
 *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     | svenska: | tyska: |
     |----------+--------|
@@ -761,6 +842,43 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
 
 
 *** Subjunctive II - Konjunktiv II används för att beskriva önsketänkande, och för att vara artig (skulle t.ex.)
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+** wollen
+   typ: modalverb
+    
+*** Meningar:
+    | svenska:                   | tyska:                           |
+    |----------------------------+----------------------------------|
+    | Jag vill dricka en kall öl | Ich will ein kaltes Bier trinken |
+    
+    Talspråk:
+    | svenska:                  | tyska:                      |
+    |---------------------------+-----------------------------|
+    | Jag vill /ha/ en cool cykel | Ich will ein cooles Fahrrad |
+    |                           |                             |
+ 
+ 
+*** Presens används för att beskriva saker som händer eller är nu
+    | svenska: | tyska:     |
+    |----------+------------|
+    | jag vill | ich will   |
+    | du vill  | du willst  |
+    | han vill | er will    |
+    | hon vill | sie will   |
+    | den vill | es will    |
+    | vi vill  | wir wollen |
+    | ni vill  | ihr wollt  |
+    | dom vill | sie wollen |
+    | Ni vill  | Sie wollen |
+ 
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
+    | svenska: | tyska: |
+    |----------+--------|
+    |          |        |
+ 
+*** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     | svenska: | tyska: |
     |----------+--------|
     |          |        |
