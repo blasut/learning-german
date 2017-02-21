@@ -221,127 +221,127 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     # *** Presens används för att beskriva saker som händer eller är nu
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare. används ej för tal
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Pluskvamperfekt används för att visa att en händelse ägde rum före en annan händelse i det förflutna, pluskvamperfekt bildas med ett huvudverb och hjälpverbet "hade"
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Futurum används för att beskriva något som kommer hända i framtiden, futurum bildas med hjälpverben "ska / skall" och "kommer att" och ett huvudverb
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Futurum exaktum används för att beskriva något som kommer definitivt göras i framtiden
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Imperativ används för att beskriva en uppmaning, kommando eller befallning
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
                                   
 
     # *** Subjunctive I - Konjunktiv I används för att beskriva något som inte är säkert eller önsketänkande, används ofta med verb som uttrycker ånger eller ett förslag
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 
     # *** Subjunctive II - Konjunktiv II används för att beskriva önsketänkande, och för att vara artig (skulle t.ex.)
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 *** Mall för modalverb
     # ** können
@@ -356,41 +356,41 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     # *** Presens används för att beskriva saker som händer eller är nu
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
     # 
     # *** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
     # 
     # *** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
     # | svenska: | tyska: |
     # |----------+--------|
-    # | jag      | ich    |
-    # | du       | du     |
-    # | han      | er     |
-    # | hon      | sie    |
-    # | det      | es     |
-    # | vi       | wir    |
-    # | ni       | ihr    |
-    # | dom      | sie    |
-    # | Ni       | Sie    |
+    # | jag verb | ich    |
+    # | du verb  | du     |
+    # | han verb | er     |
+    # | hon verb | sie    |
+    # | det verb | es     |
+    # | vi verb  | wir    |
+    # | ni verb  | ihr    |
+    # | dom verb | sie    |
+    # | Ni verb  | Sie    |
 
 * Fraser
   Tanken är att dom flesta fraser ska kategoriseras under ett verb
@@ -882,3 +882,105 @@ http://germanforenglishspeakers.com/verbs/prefix-verbs/
     | svenska: | tyska: |
     |----------+--------|
     |          |        |
+** müssen
+   typ: modalverb
+
+   müssen används för att säga: /måste/ och /behöver göra/ 
+    
+*** Meningar:
+    | svenska:                                | tyska:                                |
+    |-----------------------------------------+---------------------------------------|
+    | jag måste gå nu                         | Ich muss jetzt gehen                  |
+    | jag måste gå till universitetet imorgon | Ich muss morgen zur Univärsitet gehen |
+    | jag måste göra (på toa)                 | Ich muss mal                          |
+    |                                         |                                       |
+ 
+ 
+*** Presens används för att beskriva saker som händer eller är nu
+    | svenska:  | tyska:     |
+    |-----------+------------|
+    | jag måste | ich muss   |
+    | du måste  | du musst   |
+    | han måste | er muss    |
+    | hon måste | sie muss   |
+    | det måste | es muss    |
+    | vi måste  | wir müssen |
+    | ni måste  | ihr müsst  |
+    | dom måste | sie müssen |
+    | Ni måste  | Sie müssen |
+ 
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
+    | svenska: | tyska: |
+    |----------+--------|
+    | jag      | ich    |
+    | du       | du     |
+    | han      | er     |
+    | hon      | sie    |
+    | det      | es     |
+    | vi       | wir    |
+    | ni       | ihr    |
+    | dom      | sie    |
+    | Ni       | Sie    |
+ 
+*** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
+    | svenska: | tyska: |
+    |----------+--------|
+    | jag      | ich    |
+    | du       | du     |
+    | han      | er     |
+    | hon      | sie    |
+    | det      | es     |
+    | vi       | wir    |
+    | ni       | ihr    |
+    | dom      | sie    |
+    | Ni       | Sie    |
+** mögen
+   typ: modalverb
+   
+   att gilla
+
+*** Meningar:
+    | svenska:                             | tyska:                            |
+    |--------------------------------------+-----------------------------------|
+    | Jag gillar dig. Gillar du mig också? | Ich mag dich. Magst du mich auch? |
+    | Thomas tycker mycket om öl           | Thomas mag Bier sehr              |
+
+
+*** Presens används för att beskriva saker som händer eller är nu
+    | svenska:   | tyska:    |
+    |------------+-----------|
+    | jag gillar | ich mag   |
+    | du gillar  | du magst  |
+    | han gillar | er mag    |
+    | hon gillar | sie mag   |
+    | det gillar | es mag    |
+    | vi gillar  | wir mögen |
+    | ni gillar  | ihr mögt  |
+    | dom gillar | sie mögen |
+    | Ni gillar  | Sie mögen |
+
+*** Imperfekt (preteritum):  används för att beskriva att saker hände eller var tidigare
+    | svenska: | tyska: |
+    |----------+--------|
+    | jag verb | ich    |
+    | du verb  | du     |
+    | han verb | er     |
+    | hon verb | sie    |
+    | det verb | es     |
+    | vi verb  | wir    |
+    | ni verb  | ihr    |
+    | dom verb | sie    |
+    | Ni verb  | Sie    |
+
+*** Perfekt: används för att beskriva saker som är fullbordade, perfekt bildas med ett huvudverb och hjälpverbet "har". Har sätts alltid före huvudverbet
+    | svenska: | tyska: |
+    |----------+--------|
+    | jag verb | ich    |
+    | du verb  | du     |
+    | han verb | er     |
+    | hon verb | sie    |
+    | det verb | es     |
+    | vi verb  | wir    |
+    | ni verb  | ihr    |
+    | dom verb | sie    |
+    | Ni verb  | Sie    |
